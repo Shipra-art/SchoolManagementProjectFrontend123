@@ -1,0 +1,2532 @@
+/*
+   Admin Dashboard */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.adm-layout {
+  display: flex;
+  height: 100vh;
+  background-color: #f5f7fb;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+
+.adm-sidebar {
+  width: 250px;
+  background-color: #1e293b;
+  color: white;
+  padding: 25px;
+}
+
+.adm-sidebar-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.adm-nav {
+  list-style: none;
+}
+
+.adm-nav-item {
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  background-color: #334155;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.adm-nav-item:hover {
+  background-color: #475569;
+}
+
+.adm-logout {
+  margin-top: 40px;
+  background-color: #dc2626;
+}
+
+.adm-logout:hover {
+  background-color: #b91c1c;
+}
+
+/* Main */
+
+.adm-main {
+  flex: 1;
+  padding: 30px;
+}
+
+/* Topbar */
+
+.adm-topbar {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.adm-topbar-title {
+  color: #1e293b;
+}
+
+.adm-welcome {
+  font-weight: 600;
+  color: #64748b;
+}
+
+/* Cards */
+
+.adm-cards {
+  display: flex;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.adm-card {
+  width: 320px;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.adm-card-title {
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+.adm-card-desc {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+
+.adm-btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.adm-btn-green {
+  background-color: #16a34a;
+}
+
+.adm-btn-green:hover {
+  background-color: #15803d;
+}
+
+.adm-btn-blue {
+  background-color: #2563eb;
+}
+
+.adm-btn-blue:hover {
+  background-color: #1d4ed8;
+}
+
+/*
+   Home Page */
+
+.home-wrapper {
+  height: 100vh;
+  background-color: #f4f7fc;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+
+.home-header {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.home-header-title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* Main */
+
+.home-main {
+  flex: 1;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.home-image {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.home-title {
+  margin-top: 25px;
+  font-size: 36px;
+  color: #1e293b;
+}
+
+.home-description {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #64748b;
+}
+
+.home-btn {
+  margin-top: 30px;
+  padding: 12px 30px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.home-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Footer */
+
+.home-footer {
+  background-color: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/*
+   Login Page */
+
+.login-page {
+  height: 100vh;
+  background: #f4f7fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.login-card {
+  width: 400px;
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.login-title {
+  text-align: center;
+  color: #1e3a8a;
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-input {
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+.login-input:focus {
+  border-color: #2563eb;
+}
+
+.login-btn {
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #1d4ed8;
+}
+
+.login-error {
+  color: red;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.sea-page {
+  min-height: 100vh;
+  background: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sea-card {
+  width: 500px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sea-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1e293b;
+}
+
+.sea-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.sea-field {
+  margin-bottom: 18px;
+}
+
+.sea-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.sea-input,
+.sea-input-number {
+  width: 100%;
+}
+
+.sea-error {
+  color: red;
+  font-size: 12px;
+}
+
+.sea-btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/*
+   Student List Page */
+
+.student-page {
+  padding: 30px;
+  background: #f4f6f9;
+  min-height: 100vh;
+}
+
+/* Header */
+
+.student-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.student-title {
+  color: #1e293b;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.student-add-btn {
+  background: #16a34a;
+  border: none;
+}
+
+.student-add-btn:hover {
+  background: #15803d;
+}
+
+/* Card */
+
+.student-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* DataTable */
+
+.p-datatable {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  background: #1e3a8a;
+  color: white;
+  text-align: center;
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+  text-align: center;
+}
+
+.p-paginator {
+  margin-top: 10px;
+}
+
+/* Action Buttons */
+
+.action-btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.action-btns .p-button {
+  width: 35px;
+  height: 35px;
+}
+/*
+   Teacher Page */
+
+.tch-page {
+  padding: 30px;
+  min-height: 100vh;
+  background: #f4f6f9;
+}
+
+/* Header */
+
+.tch-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.tch-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Table Card */
+
+.tch-table-wrapper {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* DataTable */
+
+.tch-table {
+  width: 100%;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  background: #16a34a;
+  color: white;
+  text-align: center;
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+  text-align: center;
+}
+
+/* Action Buttons */
+
+.tch-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tch-actions .p-button {
+  width: 35px;
+  height: 35px;
+}
+
+/* Add Teacher Button */
+
+.p-button-success {
+  background: #16a34a;
+  border: none;
+}
+
+.p-button-success:hover {
+  background: #15803d;
+}
+
+/*
+   Teacher Add/Edit Page */
+
+.tea-page {
+  min-height: 100vh;
+  background: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tea-card {
+  width: 500px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tea-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1e293b;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.tea-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.tea-field {
+  margin-bottom: 18px;
+}
+
+.tea-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.tea-input {
+  width: 100%;
+}
+
+.tea-input .p-inputtext,
+.tea-input.p-inputtext {
+  width: 100%;
+}
+
+.tea-error {
+  color: #dc2626;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.tea-btn {
+  width: 100%;
+  margin-top: 10px;
+  background: #16a34a;
+  border: none;
+}
+
+.tea-btn:hover {
+  background: #15803d;
+}
+
+/*
+   Attendance Page */
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f6f9;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 250px;
+  background: #1e293b;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  background: #334155;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar ul li:hover {
+  background: #475569;
+}
+
+/* Main Content */
+
+.container {
+  flex: 1;
+  padding: 30px;
+}
+
+.container h2 {
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+/* Attendance Table Card */
+
+.attendance-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* PrimeReact DataTable */
+
+.p-datatable {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  background: #2563eb;
+  color: white;
+  text-align: center;
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+  text-align: center;
+}
+
+.p-paginator {
+  margin-top: 10px;
+}
+
+/* Search Box */
+
+.p-inputtext {
+  padding: 8px 12px;
+}
+
+.p-input-icon-left i {
+  margin-top: -8px;
+}
+
+/* Delete Button */
+
+.p-button-danger {
+  width: 35px;
+  height: 35px;
+}
+/*
+   Parent Dashboard */
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f6f9;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 250px;
+  background: #1e293b;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  background: #334155;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar ul li:hover {
+  background: #475569;
+}
+
+/* Main Content */
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.main-content h1 {
+  color: #1e293b;
+  margin-bottom: 30px;
+}
+
+/* Cards */
+
+.cards {
+  display: flex;
+  gap: 25px;
+}
+
+.card {
+  width: 280px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #2563eb;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/*
+   Parent Homework Page */
+
+.ph-container {
+  flex: 1;
+  padding: 30px;
+  background: #f4f6f9;
+}
+
+.ph-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.ph-card .p-card-title {
+  font-size: 24px;
+  color: #1e293b;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* DataTable */
+
+.ph-table {
+  margin-top: 10px;
+}
+
+.ph-table .p-datatable-thead > tr > th {
+  background: #2563eb;
+  color: white;
+  text-align: center;
+}
+
+.ph-table .p-datatable-tbody > tr > td {
+  text-align: center;
+}
+
+.ph-table .p-paginator {
+  margin-top: 10px;
+}
+
+/* Card Hover */
+
+.ph-card:hover {
+  transition: 0.3s;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Due Date Column Highlight */
+
+.ph-table .p-datatable-tbody tr td:last-child {
+  font-weight: 600;
+  color: #dc2626;
+}
+
+/*
+   Marks Page */
+
+.marks-container {
+  flex: 1;
+  padding: 30px;
+  background: #f4f6f9;
+}
+
+.marks-header {
+  margin-bottom: 25px;
+}
+
+.marks-title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Card */
+
+.marks-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* DataTable */
+
+.marks-table {
+  margin-top: 10px;
+}
+
+.marks-table .p-datatable-thead > tr > th {
+  background: #2563eb;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+}
+
+.marks-table .p-datatable-tbody > tr > td {
+  text-align: center;
+}
+
+.marks-table .p-paginator {
+  margin-top: 10px;
+}
+
+/* Marks Column Highlight */
+
+.marks-table .p-datatable-tbody tr td:last-child {
+  font-weight: bold;
+  color: #16a34a;
+}
+
+/* Hover Effect */
+
+.marks-card:hover {
+  transition: 0.3s;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+/*
+   Report Card Page */
+
+.report-container {
+  flex: 1;
+  padding: 30px;
+  background: #f4f6f9;
+}
+
+.report-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 25px;
+}
+
+/* Student Info Card */
+
+.student-info-card {
+  background: #ffffff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.student-info-card p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #334155;
+}
+
+.student-info-card strong {
+  color: #0f172a;
+}
+
+/* Report Table */
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.report-table thead {
+  background: #2563eb;
+  color: white;
+}
+
+.report-table th,
+.report-table td {
+  padding: 14px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.report-table tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.report-table tbody tr:hover {
+  background: #eef4ff;
+}
+
+/* Remarks Section */
+
+.remarks-section {
+  margin-top: 25px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.remarks-section h4 {
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.remarks-section p {
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* Loading */
+
+.report-loading {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f6f9;
+}
+
+.report-loading h2 {
+  color: #1e293b;
+}
+/*
+   Time Table Page */
+
+.tt-container {
+  flex: 1;
+  padding: 30px;
+  background: #f4f6f9;
+}
+
+.tt-title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 25px;
+}
+
+/* Card */
+
+.tt-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Table */
+
+.tt-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tt-table th {
+  background: #2563eb;
+  color: white;
+  padding: 14px;
+  text-align: center;
+  border: 1px solid #dbeafe;
+}
+
+.tt-table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+}
+
+.tt-table tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.tt-table tbody tr:hover {
+  background: #eef4ff;
+}
+
+/* Lunch Break Row */
+
+.lunch-row {
+  background: #fef3c7;
+  font-weight: bold;
+}
+
+.lunch-row td {
+  color: #92400e;
+}
+
+/* Period Column */
+
+.tt-table td:first-child {
+  font-weight: 600;
+  background: #f1f5f9;
+}
+
+/* Card Hover */
+
+.tt-card:hover {
+  transition: 0.3s;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+/* MARKS PAGE */
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f7fc;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 280px;
+  min-width: 280px;
+  background: #16233b;
+  color: white;
+  padding: 30px 20px;
+  flex-shrink: 0;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.sidebar ul li:hover {
+  background: #2c3e61;
+  transform: translateX(5px);
+}
+
+/* Main Content */
+
+.marks-container {
+  flex: 1;
+  padding: 30px;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+/* Header */
+
+.marks-header {
+  margin-bottom: 25px;
+}
+
+.marks-title {
+  font-size: 38px;
+  font-weight: bold;
+  color: #1565c0;
+  text-align: center;
+}
+
+/* Card */
+
+.marks-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+/* DataTable */
+
+.marks-table {
+  width: 100%;
+}
+
+.p-datatable-wrapper {
+  overflow-x: auto;
+}
+
+.marks-table .p-datatable-thead > tr > th {
+  background: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.marks-table .p-datatable-tbody > tr > td {
+  text-align: center;
+  padding: 14px;
+}
+
+.marks-table .p-datatable-tbody > tr:hover {
+  background: #f5f9ff;
+}
+
+.marks-table .p-paginator {
+  border-top: 1px solid #e0e0e0;
+}
+
+/*
+   STUDENT COURSES PAGE */
+
+.courses-container {
+  flex: 1;
+  padding: 30px;
+  background: #f4f7fc;
+  min-height: 100vh;
+}
+
+.courses-title {
+  text-align: center;
+  color: #1565c0;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.courses-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.courses-image {
+  width: 350px;
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.courses-details {
+  flex: 1;
+}
+
+.courses-details h2 {
+  color: #1565c0;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.subject-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.subject-item {
+  background: linear-gradient(135deg, #1565c0, #42a5f5);
+  color: white;
+  padding: 18px;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.subject-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(21, 101, 192, 0.3);
+}
+/*
+   STUDENT HOMEWORK PAGE */
+
+.homework-container {
+  flex: 1;
+  padding: 30px;
+  background: #f4f7fc;
+  min-height: 100vh;
+}
+
+.homework-title {
+  text-align: center;
+  color: #1565c0;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.homework-card {
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+}
+
+/*
+   DATATABLE */
+
+.homework-table {
+  width: 100%;
+}
+
+.homework-table .p-datatable-thead > tr > th {
+  background: #1565c0;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.homework-table .p-datatable-tbody > tr > td {
+  text-align: center;
+  padding: 14px;
+  vertical-align: middle;
+}
+
+.homework-table .p-datatable-tbody > tr:hover {
+  background: #f0f7ff;
+}
+
+.homework-table .p-paginator {
+  border-top: 1px solid #e0e0e0;
+}
+
+/*
+   SUBJECT BADGE */
+
+.subject-badge {
+  background: linear-gradient(135deg, #1565c0, #42a5f5);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/*
+   DUE DATE */
+
+.due-date {
+  background: #fff3cd;
+  color: #856404;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/*
+   DESCRIPTION COLUMN */
+
+.homework-table .p-datatable-tbody td:nth-child(3) {
+  max-width: 400px;
+  white-space: normal;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+/*
+   CARD ANIMATION */
+
+.homework-card:hover {
+  transform: translateY(-3px);
+  transition: 0.3s ease;
+}
+
+/*
+   STUDENT MARKS PAGE */
+
+.viewmarks-container {
+  flex: 1;
+  padding: 30px;
+  background: #f4f7fc;
+  min-height: 100vh;
+}
+
+.heading {
+  text-align: center;
+  color: #1565c0;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/*
+   TABLE CARD */
+
+.table-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+/*
+   DATATABLE */
+
+.p-datatable {
+  width: 100%;
+}
+
+.p-datatable-wrapper {
+  overflow-x: auto;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  background: #1565c0;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px;
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+  text-align: center;
+  padding: 12px;
+}
+
+.p-datatable .p-datatable-tbody > tr:hover {
+  background: #f1f8ff;
+}
+
+.p-datatable .p-paginator {
+  border-top: 1px solid #ddd;
+}
+
+/*
+   MARKS COLORS */
+
+.p-datatable .p-datatable-tbody > tr td:last-child {
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+/*
+   STUDENT PROFILE PAGE */
+
+.profile-card {
+  flex: 1;
+  margin: 30px;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #1565c0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.details {
+  flex: 1;
+}
+
+.details p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding: 12px 15px;
+  background: #f4f7fc;
+  border-left: 5px solid #1565c0;
+  border-radius: 8px;
+  color: #333;
+}
+
+.details b {
+  color: #1565c0;
+  margin-right: 5px;
+}
+
+/*
+   PROFILE HEADER EFFECT */
+
+.profile-card:hover {
+  transform: translateY(-4px);
+  transition: 0.3s ease;
+}
+
+/*
+   STUDENT QUERY PAGE */
+
+.query-container {
+  flex: 1;
+  padding: 30px;
+  background: #f4f7fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.query-card {
+  width: 100%;
+  max-width: 700px;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.query-card h1 {
+  text-align: center;
+  color: #1565c0;
+  margin-bottom: 30px;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* PrimeReact Inputs */
+
+.form-box .p-inputtext,
+.form-box .p-inputtextarea {
+  width: 100%;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 15px;
+}
+
+.form-box .p-inputtext:focus,
+.form-box .p-inputtextarea:focus {
+  border-color: #1565c0;
+  box-shadow: 0 0 0 0.2rem rgba(21, 101, 192, 0.15);
+}
+
+/* Submit Button */
+
+.query-btn {
+  background: #1565c0;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.query-btn:hover {
+  background: #0d47a1;
+}
+
+/*
+   STUDENT ATTENDANCE PAGE */
+
+.container {
+  flex: 1;
+  padding: 30px;
+  background: #f4f7fc;
+  min-height: 100vh;
+}
+
+.container h2 {
+  text-align: center;
+  color: #1565c0;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/*
+   DATATABLE CARD */
+
+.p-datatable {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.p-datatable-wrapper {
+  overflow-x: auto;
+}
+
+/*
+   TABLE HEADER */
+
+.p-datatable .p-datatable-thead > tr > th {
+  background: #1565c0;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px;
+}
+
+/*
+   TABLE BODY */
+
+.p-datatable .p-datatable-tbody > tr > td {
+  text-align: center;
+  padding: 14px;
+  font-size: 15px;
+}
+
+.p-datatable .p-datatable-tbody > tr:hover {
+  background: #f1f8ff;
+}
+
+/*
+   PAGINATOR */
+
+.p-paginator {
+  border-top: 1px solid #ddd;
+  padding: 10px;
+}
+
+/*
+   SEARCH BAR */
+
+.p-input-icon-left {
+  position: relative;
+}
+
+.p-input-icon-left i {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: #777;
+}
+
+.p-input-icon-left input {
+  padding-left: 35px;
+  border-radius: 8px;
+}
+
+/*
+   STATUS COLORS */
+
+.present-status {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.absent-status {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+/*
+   STUDENT DASHBOARD */
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background: #f4f7fc;
+  min-height: 100vh;
+}
+
+.main-content h1 {
+  color: #1565c0;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/*
+   NOTIFICATION BELL */
+
+.ant-badge {
+  cursor: pointer;
+}
+
+.ant-badge .ant-scroll-number {
+  box-shadow: none;
+}
+
+.notification-bell {
+  font-size: 32px;
+  color: #1565c0;
+  transition: 0.3s;
+}
+
+.notification-bell:hover {
+  color: #0d47a1;
+  transform: scale(1.1);
+}
+
+/*
+   DASHBOARD CARDS */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  color: #1565c0;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.card p {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+}
+
+/*
+   NOTIFICATION MODAL */
+
+.ant-modal-content {
+  border-radius: 20px;
+}
+
+.ant-modal-title {
+  font-size: 22px;
+  color: #1565c0;
+  font-weight: bold;
+}
+
+.notification-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 12px;
+  background: #f9fbff;
+}
+
+.notification-item p {
+  margin: 5px 0;
+}
+
+.notification-date {
+  color: #777;
+  font-size: 13px;
+}
+
+.notification-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/*
+   WELCOME CARD */
+
+.welcome-card {
+  background: linear-gradient(135deg, #1565c0, #42a5f5);
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(21, 101, 192, 0.2);
+}
+
+.welcome-card h2 {
+  margin-bottom: 10px;
+  font-size: 32px;
+}
+
+.welcome-card p {
+  font-size: 18px;
+}
+/*
+   STUDENT TIMETABLE PAGE */
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background: #f4f7fc;
+  min-height: 100vh;
+}
+
+.main-content h1 {
+  text-align: center;
+  color: #1565c0;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/*
+   TIMETABLE CARD */
+
+.table-box {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  overflow-x: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/*
+   TABLE */
+
+.table-box table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.table-box th {
+  background: #1565c0;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.table-box td {
+  padding: 14px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  font-size: 15px;
+}
+
+.table-box tr:nth-child(even) {
+  background: #f8fbff;
+}
+
+.table-box tr:hover {
+  background: #eaf4ff;
+}
+
+/*
+   LUNCH BREAK ROW */
+
+.table-box tr:nth-child(4) {
+  background: #fff3cd;
+  font-weight: bold;
+  color: #856404;
+}
+
+.table-box tr:nth-child(4):hover {
+  background: #ffe69c;
+}
+
+/*
+   PERIOD COLUMN */
+
+.table-box td:first-child {
+  font-weight: 600;
+  color: #1565c0;
+}
+
+/* TEACHER PAGES */
+
+/*
+   TEACHER ATTENDANCE PAGE */
+
+.container {
+  flex: 1;
+  padding: 30px;
+  background: #f4f7fc;
+  min-height: 100vh;
+}
+
+.container h2 {
+  text-align: center;
+  color: #1565c0;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/*
+   ATTENDANCE CARD */
+
+.p-datatable {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.p-datatable-wrapper {
+  overflow-x: auto;
+}
+
+/*
+   TABLE HEADER */
+
+.p-datatable .p-datatable-thead > tr > th {
+  background: #1565c0;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/*
+   TABLE BODY */
+
+.p-datatable .p-datatable-tbody > tr > td {
+  text-align: center;
+  padding: 14px;
+  font-size: 15px;
+}
+
+.p-datatable .p-datatable-tbody > tr:hover {
+  background: #eef6ff;
+}
+
+/*
+   STATUS BADGES */
+
+.present-status {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.absent-status {
+  background: #ffebee;
+  color: #c62828;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/*
+   PAGINATOR */
+
+.p-paginator {
+  border-top: 1px solid #ddd;
+  padding: 10px;
+}
+
+/*
+   SEARCH BOX */
+
+.p-input-icon-left {
+  position: relative;
+}
+
+.p-input-icon-left i {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: #777;
+}
+
+.p-input-icon-left .p-inputtext {
+  padding-left: 35px;
+  border-radius: 8px;
+}
+
+/*
+   DELETE BUTTON */
+
+.p-button-danger {
+  border-radius: 50%;
+}
+
+/*
+   TEACHER CLASSES PAGE */
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background: #f4f7fc;
+  min-height: 100vh;
+}
+
+.main-content h1 {
+  text-align: center;
+  color: #1565c0;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/*
+   TABLE CARD */
+
+.table-box {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 25px;
+  overflow-x: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/*
+   TIMETABLE TABLE */
+
+.table-box table {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: collapse;
+}
+
+.table-box th {
+  background: #1565c0;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.table-box td {
+  padding: 14px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  font-size: 15px;
+}
+
+.table-box tr:nth-child(even) {
+  background: #f8fbff;
+}
+
+.table-box tr:hover {
+  background: #eaf4ff;
+}
+
+/*
+   PERIOD COLUMN */
+
+.table-box td:first-child {
+  font-weight: 600;
+  color: #1565c0;
+  background: #f5f9ff;
+}
+
+/*
+   LUNCH BREAK */
+
+.lunch-row {
+  background: #fff3cd;
+  color: #856404;
+  font-weight: bold;
+}
+
+.lunch-row:hover {
+  background: #ffe69c;
+}
+
+/*
+   TEACHER REPORT CARD PAGE */
+
+.report-container {
+  flex: 1;
+  padding: 30px;
+  background: #f4f7fc;
+  min-height: 100vh;
+}
+
+.report-container h1 {
+  text-align: center;
+  color: #1565c0;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/*
+   STUDENT INFO CARD */
+
+.student-info {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.student-info p {
+  margin: 0;
+  padding: 12px;
+  background: #f8fbff;
+  border-left: 4px solid #1565c0;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.student-info strong {
+  color: #1565c0;
+}
+
+/*
+   REPORT TABLE */
+
+.report-container table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.report-container th {
+  background: #1565c0;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.report-container td {
+  padding: 14px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+.report-container tr:nth-child(even) {
+  background: #f8fbff;
+}
+
+.report-container tr:hover {
+  background: #eef6ff;
+}
+
+/*
+   REMARKS SECTION */
+
+.remarks-section {
+  margin-top: 25px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 20px;
+  border-left: 5px solid #1565c0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.remarks-section h4 {
+  color: #1565c0;
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.remarks-section p {
+  line-height: 1.7;
+  color: #444;
+  font-size: 16px;
+}
+
+/*
+   LOADING & ERROR */
+
+.report-container h2 {
+  text-align: center;
+  color: #1565c0;
+  margin-top: 100px;
+}
+
+/*
+   Teacher RESULT QUERY PAGE */
+
+.content {
+  flex: 1;
+  padding: 30px;
+  background: #f4f7fc;
+  min-height: 100vh;
+}
+
+.content h1 {
+  color: #1565c0;
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/*
+   DATATABLE */
+
+.p-datatable {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.p-datatable .p-datatable-header {
+  background: #1565c0;
+  color: white;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  background: #1565c0;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  padding: 14px;
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+  text-align: center;
+  padding: 12px;
+}
+
+.p-datatable .p-datatable-tbody > tr:nth-child(even) {
+  background: #f8fbff;
+}
+
+.p-datatable .p-datatable-tbody > tr:hover {
+  background: #eaf4ff;
+}
+
+/*
+   ACTION BUTTONS */
+
+.p-button-success {
+  background: #2e7d32;
+  border: none;
+}
+
+.p-button-success:hover {
+  background: #1b5e20;
+}
+
+.p-button-danger {
+  background: #d32f2f;
+  border: none;
+}
+
+.p-button-danger:hover {
+  background: #b71c1c;
+}
+
+/*
+   STATUS TAGS */
+
+.p-tag {
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/*
+   DIALOG BOX */
+
+.p-dialog {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.p-dialog .p-dialog-header {
+  background: #1565c0;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.p-dialog .p-dialog-content {
+  padding: 25px;
+}
+
+.p-dialog label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #444;
+}
+
+/*
+   INPUT NUMBER */
+
+.p-inputnumber {
+  width: 100%;
+}
+
+.p-inputnumber-input {
+  width: 100%;
+  padding: 10px;
+}
+
+/*
+   TOAST */
+
+.p-toast {
+  z-index: 9999;
+}
+
+/*
+   TEACHER DASHBOARD */
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background: #f4f7fc;
+  min-height: 100vh;
+}
+
+.main-content h1 {
+  font-size: 38px;
+  color: #1565c0;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/*
+   NOTIFICATION BELL */
+
+.notification-section {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.notification-icon {
+  font-size: 32px;
+  cursor: pointer;
+  color: #1565c0;
+  transition: 0.3s;
+}
+
+.notification-icon:hover {
+  transform: scale(1.1);
+}
+
+/*DASHBOARD CARDS */
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.cards {
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.cards:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cards h3 {
+  color: #1565c0;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.cards p {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* ANT DESIGN MODAL */
+
+.ant-modal-content {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.ant-modal-header {
+  background: #1565c0;
+  padding: 15px;
+}
+
+.ant-modal-title {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.ant-modal-body {
+  padding: 20px;
+}
+
+/* NOTIFICATION CARD */
+
+.notification-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #fafafa;
+  transition: 0.3s;
+}
+
+.notification-card:hover {
+  background: #f0f7ff;
+}
+
+.notification-card p {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.notification-card small {
+  color: #888;
+}
+
+/* TEACHER PROFILE PAGE */
+
+.profile-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: #f4f7fc;
+  min-height: 100vh;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 650px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 35px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Profile Image */
+
+.teacher-avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #1565c0;
+  margin-bottom: 20px;
+}
+
+/* Teacher Name */
+
+.profile-card h2 {
+  color: #1565c0;
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+/* Subject */
+
+.subject {
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+/* Details */
+
+.profile-details {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.profile-details p {
+  background: #f8fbff;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border-left: 5px solid #1565c0;
+  font-size: 16px;
+}
+
+.profile-details strong {
+  color: #1565c0;
+}
+
+/* View Marks Page */
+
+.viewmarks-container {
+  padding: 20px;
+  background-color: #f4f7fc;
+  min-height: 100vh;
+}
+
+.heading {
+  color: #1565c0;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.table-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Table Header */
+
+.table-box .p-datatable-thead > tr > th {
+    background-color: #1565c0;
+    color: white;
+    text-align: center;
+    font-weight: normal;
+}
+
+/* Table Data */
+
+.table-box .p-datatable-tbody > tr > td {
+    text-align: center;
+    color: black;
+    padding: 10px;
+    font-weight: normal;
+}
+
+/* Hover Effect */
+
+.table-box .p-datatable-tbody > tr:hover {
+  background-color: #f0f8ff;
+}
+
+/* Pagination */
+
+.table-box .p-paginator {
+  margin-top: 10px;
+}
+
+/*  UPDATE MARKS DIALOG */
+
+.p-dialog .p-dialog-header {
+  background: #1565c0;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.p-dialog .p-dialog-content {
+  padding: 25px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label {
+  font-weight: 600;
+  color: #333;
+}
+
+.field input {
+  width: 100%;
+}
+
+.field .p-inputtext {
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* Update Button */
+.p-button-success {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 12px;
+}
