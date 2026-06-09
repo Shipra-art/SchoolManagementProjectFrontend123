@@ -34,6 +34,7 @@ import ParentMarks from './Parent/ParentMarks'
 import ParentTimeTable from './Parent/ParentTimeTable'
 import ParentHomework from './Parent/ParentHomework'
 import Homework from './Studentpages/Homework'
+import Register from './Components/Register'
 // import Notification from "./Components/Notification"
 // import Practice from "./Components/Practice"
 
@@ -75,6 +76,7 @@ const App = () => {
         <Route path="/parent-time-table" element={<ParentTimeTable />} />
         <Route path="/parent-homework" element={<ParentHomework />} />
         <Route path="/Homework" element={<Homework />} />
+        <Route path="/Register" element={<Register />} />
         {/* <Route path="/practice" element={<Practice />} /> */}
 
         {/* Student and teacher routes */}
