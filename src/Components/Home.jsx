@@ -30,12 +30,11 @@ function Home() {
           Manage students, teachers, attendance and more in a simple way.
         </p>
 
-        <button
-          onClick={() => navigate("/login")}
-          className="home-btn"
-        >
-          Go to Login
-        </button>
+        <div className="button-container">
+          <button onClick={() => navigate("/login")}  className="home-btn">Login</button>
+          <button onClick={() => navigate("/Register")} className="home-btn">Register</button>
+        </div>
+
       </main>
 
       {/* Footer */}

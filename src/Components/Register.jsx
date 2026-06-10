@@ -1,74 +1,99 @@
 import React, { useState } from "react";
-import axios from "axios";
+import api from "../api/axios";
+import "../App.css";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
-  const [user, setUser] = useState({
-    name: "",
-    email: "",
-    password: "",
-    role: "Student"
-  });
+    const navigate = useNavigate();
 
-  const handleChange = (e) => {
-    setUser({
-      ...user,
-      [e.target.name]: e.target.value
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        password: "",
+        role: ""
     });
-  };
 
-  const handleRegister = async (e) => {
-    e.preventDefault();
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
 
-    try {
-      const res = await axios.post(
-        "https://localhost:5001/api/auth/register",
-        user
-      );
+    const handleRegister = async (e) => {
+        e.preventDefault();
 
-      alert(res.data);
-    } catch (error) {
-      alert("Registration Failed");
-    }
-  };
+        try {
+            await api.post("/auth/register", formData);
 
-  return (
-    <div className="register-container">
-      <h2>Register</h2>
+            alert("Registration Successful");
+            navigate("/login");
 
-      <form onSubmit={handleRegister}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Enter Name"
-          onChange={handleChange}
-        />
+        } catch (error) {
+            alert("Registration Failed");
+            console.log(error);
+        }
+    };
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter Email"
-          onChange={handleChange}
-        />
+    return (
+    
+        <div className="register-page">
+            <div className="register-card">
+                <h2 className="register-title">Register</h2>
 
-        <input
-          type="password"
-          name="password"
-          placeholder="Enter Password"
-          onChange={handleChange}
-        />
+                <form onSubmit={handleRegister} className="register-form">
 
-        <select name="role" onChange={handleChange}>
-          <option>Student</option>
-          <option>Teacher</option>
-          <option>Parent</option>
-        </select>
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Enter Name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        className="register-input"
+                    />
 
-        <button type="submit">
-          Register
-        </button>
-      </form>
-    </div>
-  );
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Enter Email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        className="register-input"
+                    />
+
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Enter Password"
+                        value={formData.password}
+                        onChange={handleChange}
+                        required
+                        className="register-input"
+                    />
+
+                    <select
+                        name="role"
+                        value={formData.role}
+                        onChange={handleChange}
+                        className="register-input"
+                    >
+                        <option value="">Select Role</option>
+                        <option value="Student">Student</option>
+                        <option value="Teacher">Teacher</option>
+                        <option value="Parent">Parent</option>
+                    </select>
+
+                    <button type="submit" className="register-btn">
+                        Register
+                    </button>
+
+                </form>
+            </div>
+        </div>
+
+    );
 }
 
 export default Register;
