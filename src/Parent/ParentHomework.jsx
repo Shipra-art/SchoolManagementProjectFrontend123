@@ -33,29 +33,13 @@ function ParentHomework() {
                 <h2>Parent Panel</h2>
 
                 <ul>
-                    <li onClick={() => navigate("/parent-dashboard")}>
-                        Dashboard
-                    </li>
-
-                    <li onClick={() => navigate("/parent-attendance")}>
-                        Attendance
-                    </li>
-
-                    <li onClick={() => navigate("/parent-report-card")}>
-                        Report Card
-                    </li>
-
-                    <li onClick={() => navigate("/parent-time-table")}>
-                        Time Table
-                    </li>
-
-                    <li onClick={() => navigate("/parent-marks")}>
-                        Marks
-                    </li>
-
-                    <li onClick={() => navigate("/login")}>
-                        Logout
-                    </li>
+                    <li onClick={() => navigate("/parent-dashboard")}>Dashboard</li>
+                    <li onClick={() => navigate("/parent-attendance")}>Attendance</li>
+                    <li onClick={() => navigate("/parent-report-card")}>Report Card</li>
+                    <li style={{ backgroundColor: "#007bff", color: "white" }}>Homework</li>
+                    <li onClick={() => navigate("/parent-time-table")}>Time Table</li>
+                    <li onClick={() => navigate("/parent-marks")}>Marks</li>
+                    <li onClick={() => navigate("/login")}>Logout</li>
                 </ul>
 
             </div>

@@ -112,7 +112,7 @@ function Attendance() {
     );
 
     return (
-        
+
         <div>
             <div className="dashboard">
 
@@ -122,6 +122,7 @@ function Attendance() {
 
                     <ul>
                         <li onClick={() => navigate("/parent-dashboard")}>Dashboard</li>
+                        <li style={{ backgroundColor: "#007bff", color: "white" }}>Attendance</li>
                         <li onClick={() => navigate("/parent-report-card")}>Report Card</li>
                         <li onClick={() => navigate("/parent-homework")}>Homework</li>
                         <li onClick={() => navigate("/parent-time-table")}>Time Table</li>

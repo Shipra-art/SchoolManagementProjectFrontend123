@@ -81,29 +81,13 @@ function Marks() {
                 <h2>Parent Panel</h2>
 
                 <ul>
-                    <li onClick={() => navigate("/parent-dashboard")}>
-                        Dashboard
-                    </li>
-
-                    <li onClick={() => navigate("/parent-attendance")}>
-                        Attendance
-                    </li>
-
-                    <li onClick={() => navigate("/parent-homework")}>
-                        Homework
-                    </li>
-
-                    <li onClick={() => navigate("/parent-report-card")}>
-                        Report Card
-                    </li>
-
-                    <li onClick={() => navigate("/parent-time-table")}>
-                        Time Table
-                    </li>
-
-                    <li onClick={() => navigate("/login")}>
-                        Logout
-                    </li>
+                    <li onClick={() => navigate("/parent-dashboard")}>Dashboard</li>
+                    <li onClick={() => navigate("/parent-attendance")}>Attendance</li>
+                    <li onClick={() => navigate("/parent-report-card")}>Report Card</li>
+                    <li onClick={() => navigate("/parent-homework")}>Homework</li>
+                    <li onClick={() => navigate("/parent-time-table")}>Time Table</li>
+                    <li style={{ backgroundColor: "#007bff", color: "white" }}>Marks</li>
+                    <li onClick={() => navigate("/login")}>Logout</li>
                 </ul>
 
             </div>
