@@ -14,12 +14,13 @@ function Classes() {
         <h2>Teacher Panel</h2>
 
         <ul>
-          <li onClick={() => navigate("/teacher-dashboard")}>Teacher Dashboard</li>
+          <li onClick={() => navigate("/teacher-dashboard")}> Dashboard</li>
           <li onClick={() => navigate("/teacher-profile")}>Profile</li>
-          <li onClick={() => navigate("/view-marks")}>Marks</li>
+          <li style={{backgroundColor: "#007bff", color: "white"}}>Classes</li>
           <li onClick={() => navigate("/report-card")}>Report Card</li>
-          <li onClick={() => navigate("/query")}>Query</li>
+          <li onClick={() => navigate("/view-marks")}>Marks</li>
           <li onClick={() => navigate("/attendance")}>Attendance</li>
+          <li onClick={() => navigate("/query")}>Query</li>
           <li onClick={() => navigate("/login")}>Logout</li>
         </ul>
       </div>

@@ -485,6 +485,16 @@
   background: #15803d;
 }
 
+.p-button-danger{
+  background:#c62828;
+  border:none;
+  
+}
+
+.p-button-danger:hover{
+  background: #c62828;
+}
+
 /*
    Teacher Add/Edit Page */
 

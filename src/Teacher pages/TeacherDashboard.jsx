@@ -73,6 +73,7 @@ function TeacherDashboard() {
         <h2>Teacher Dashboard</h2>
 
         <ul>
+        <li style={{ backgroundColor: "#007bff", color: "white" }}> Dashboard</li>
           <li onClick={() => navigate("/teacher-profile")}>Profile</li>
           <li onClick={() => navigate("/classes")}>Classes</li>
           <li onClick={() => navigate("/report-card")}>Report Card</li>

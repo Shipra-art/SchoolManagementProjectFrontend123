@@ -17,7 +17,6 @@ function StudentResultQuery() {
 
     const navigate = useNavigate()
     const toast = useRef(null)
-
     const [queries, setQueries] = useState([])
     const [approveDialog, setApproveDialog] = useState(false)
     const [selectedQuery, setSelectedQuery] = useState(null)
@@ -160,12 +159,12 @@ function StudentResultQuery() {
             >
                 <div style={{ marginBottom: '20px' }}>
                     <label>Updated Marks</label>
+
                     <InputNumber
                         value={updatedMarks}
                         onValueChange={(e) => setUpdatedMarks(e.value)}
                         mode="decimal"
-                        showButtons
-                        min={0}
+                        showButton
                         max={100}
                         style={{ width: '100%', marginTop: '10px' }}
                     />
@@ -176,17 +175,19 @@ function StudentResultQuery() {
                     className="p-button-success"
                     onClick={handleApprove}
                 />
+                <Button label=""/>
             </Dialog>
 
             <div className="sidebar">
                 <h2>Teacher Panel</h2>
                 <ul>
-                    <li onClick={() => navigate("/teacher-dashboard")}>Teacher Dashboard</li>
+                    <li onClick={() => navigate("/teacher-dashboard")}> Dashboard</li>
                     <li onClick={() => navigate("/teacher-profile")}>Profile</li>
                     <li onClick={() => navigate("/classes")}>Classes</li>
                     <li onClick={() => navigate("/report-card")}>Report Card</li>
-                    <li onClick={() => navigate("/attendance")}>Attendance</li>
                     <li onClick={() => navigate("/view-marks")}>Marks</li>
+                    <li onClick={() => navigate("/attendance")}>Attendance</li>
+                    <li style={{ backgroundColor: "#007bff", color: "white" }}>Query</li>
                     <li onClick={() => navigate("/login")}>Logout</li>
                 </ul>
             </div>
@@ -194,7 +195,7 @@ function StudentResultQuery() {
             <div className="content" style={{ width: '100%', padding: '20px' }}>
                 <h1>Student Result Queries</h1>
                 <DataTable value={queries} stripedRows paginator rows={5}>
-                    <Column field="studentId" header="Student ID" />
+                    {/* <Column field="studentId" header="Student ID" /> */}
                     <Column field="studentName" header="Student Name" />
                     <Column field="subject" header="Subject" />
                     <Column field="currentMarks" header="Current Marks" />

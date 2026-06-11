@@ -64,9 +64,10 @@ function ReportCard() {
                 <h2>Teacher Panel</h2>
 
                 <ul>
-                    <li onClick={() => navigate("/teacher-dashboard")}>Dashboard</li>
+                    <li onClick={() => navigate("/teacher-dashboard")}> Dashboard</li>
                     <li onClick={() => navigate("/teacher-profile")}>Profile</li>
                     <li onClick={() => navigate("/classes")}>Classes</li>
+                    <li style={{ backgroundColor: "#007bff", color: "white" }}>Report Card</li>
                     <li onClick={() => navigate("/view-marks")}>Marks</li>
                     <li onClick={() => navigate("/attendance")}>Attendance</li>
                     <li onClick={() => navigate("/query")}>Query</li>
@@ -81,29 +82,26 @@ function ReportCard() {
                 <h1>Student Report Card</h1>
 
                 <div className="student-info">
-                    <p>
-                        <strong>Student ID:</strong>{" "}
-                        {report.studentId || "N/A"}
-                    </p>
+
 
                     <p>
                         <strong>Student Name:</strong>{" "}
-                        {report.studentName || "N/A"}
+                        {report.studentName}
                     </p>
 
                     <p>
                         <strong>Total Marks:</strong>{" "}
-                        {report.totalMarks || 0}
+                        {report.totalMarks}
                     </p>
 
                     <p>
                         <strong>Percentage:</strong>{" "}
-                        {report.percentage || 0}%
+                        {report.percentage}%
                     </p>
 
                     <p>
                         <strong>Grade:</strong>{" "}
-                        {report.grade || "N/A"}
+                        {report.grade}
                     </p>
                 </div>
 

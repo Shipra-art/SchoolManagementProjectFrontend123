@@ -118,11 +118,12 @@ function Attendance() {
                 <h2>Teacher Dashboard</h2>
 
                 <ul>
-                    <li onClick={() => navigate("/teacher-dashboard")}>Dashboard</li>
+                    <li onClick={()=>navigate("/teacher-dashboard")}> Dashboard</li>
                     <li onClick={() => navigate("/teacher-profile")}>Profile</li>
                     <li onClick={() => navigate("/classes")}>Classes</li>
                     <li onClick={() => navigate("/report-card")}>Report Card</li>
                     <li onClick={() => navigate("/view-marks")}>Marks</li>
+                    <li style={{ backgroundColor: "#007bff", color: "white" }}>Attendance</li>
                     <li onClick={() => navigate("/query")}>Query</li>
                     <li onClick={() => navigate("/login")}>Logout</li>
                 </ul>

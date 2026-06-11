@@ -24,13 +24,13 @@ function ViewMarks() {
 
 
     // GET ALL MARKS
-    
+
     const fetchStudents = async () => {
 
         try {
 
             const res = await api.get('/Marks')
-            const withSerial = res.data.map((item, index) => ({...item,serialNo: index + 1}))
+            const withSerial = res.data.map((item, index) => ({ ...item, serialNo: index + 1 }))
             setStudents(withSerial)
         }
 
@@ -43,9 +43,9 @@ function ViewMarks() {
         fetchStudents()
     }, [])
 
-    
+
     // OPEN UPDATE DIALOG
-    
+
     const approveResult = (student) => {
         setSelectedStudent(student)
         setUpdatedMarks(student.marksObtained)
@@ -53,12 +53,12 @@ function ViewMarks() {
     }
 
     // UPDATE MARKS
-    
+
     const updateMarks = async () => {
 
         try {
             const updatedData = {
-                studentId: selectedStudent.studentId,
+
                 studentName: selectedStudent.studentName,
                 class: selectedStudent.class,
                 examType: selectedStudent.examType,
@@ -106,11 +106,12 @@ function ViewMarks() {
 
                 <h2>Teacher Panel</h2>
                 <ul>
-                    <li onClick={() => navigate("/teacher-dashboard")}>Teacher Dashboard</li>
+                    <li onClick={() => navigate("/teacher-dashboard")}> Dashboard</li>
                     <li onClick={() => navigate("/teacher-profile")}>Profile</li>
                     <li onClick={() => navigate("/classes")}>Classes</li>
-                    <li onClick={() => navigate("/attendance")}>Attendance</li>
                     <li onClick={() => navigate("/report-card")}>Report Card</li>
+                    <li style={{ backgroundColor: "#007bff", color: "white" }}>Marks</li>
+                    <li onClick={() => navigate("/attendance")}>Attendance</li>
                     <li onClick={() => navigate("/query")}>Query</li>
                     <li onClick={() => navigate("/login")}>Logout</li>
                 </ul>
@@ -127,7 +128,7 @@ function ViewMarks() {
 
                     <DataTable value={students} stripedRows paginator rows={5} responsiveLayout="scroll">
                         <Column field="serialNo" header="S.No" />
-                        <Column field="studentId" header="Student ID" />
+                        {/* <Column field="studentId" header="Student ID" /> */}
                         <Column field="studentName" header="Student Name" />
                         <Column field="subjectTeacher" header="Subject Teacher" />
                         <Column field="class" header="Class" />
