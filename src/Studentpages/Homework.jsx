@@ -77,41 +77,12 @@ function StudentHomework() {
 
                 <Card className="homework-card">
 
-                    <DataTable
-                        value={homeworks}
-                        paginator
-                        rows={5}
-                        stripedRows
-                        showGridlines
-                        responsiveLayout="scroll"
-                        className="homework-table"
-                        emptyMessage="No Homework Available"
-                    >
-
-                        <Column
-                            field="subject"
-                            header="Subject"
-                            body={subjectTemplate}
-                            sortable
-                        />
-
-                        <Column
-                            field="title"
-                            header="Title"
-                            sortable
-                        />
-
-                        <Column
-                            field="description"
-                            header="Description"
-                        />
-
-                        <Column
-                            field="dueDate"
-                            header="Due Date"
-                            body={dueDateTemplate}
-                            sortable
-                        />
+                    <DataTable value={homeworks} paginator rows={5} stripedRows showGridlines  className="homework-table">
+                        
+                        <Column field="subject" header="Subject" body={subjectTemplate}/>
+                        <Column field="title" header="Title"/>
+                        <Column field="description" header="Description"/>
+                        <Column field="dueDate" header="Due Date" body={dueDateTemplate}/>
 
                     </DataTable>
 

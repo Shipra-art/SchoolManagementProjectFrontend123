@@ -53,7 +53,7 @@ function Marks() {
 
         student.subjects.map((subject, subjectIndex) => ({
 
-            serialNo: subjectIndex + 1,
+            serialNo: studentIndex + 1,
 
             // studentId: student.studentId,
 
@@ -87,7 +87,7 @@ function Marks() {
                     <li onClick={() => navigate("/courses")}>My Courses</li>
                     <li onClick={() => navigate("/query-form")}>Queries</li>
                     <li onClick={() => navigate("/Homework")}>Homework</li>
-                    <li style={{ backgroundColor: "#007bff", color: "white" }}>Marks</li>
+                    <li style={{ backgroundColor: "#007bff", color: "white" }}> </li>
                     <li onClick={() => navigate("/student-attendance")}>Attendance</li>
                     <li onClick={() => navigate("/timetable")}>Timetable</li>
                     <li onClick={() => navigate("/login")}>Logout</li>
