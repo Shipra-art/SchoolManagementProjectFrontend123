@@ -25,6 +25,9 @@ function Login() {
 
     try {
       const res = await api.post("/auth/login", formData);
+
+      console.log("Response Data:",res.data)
+
       const data = res.data;
 
       localStorage.setItem("token", data.token);
@@ -32,9 +35,9 @@ function Login() {
 
       if (data.role === "admin") {
         navigate("/admin-dashboard");
-      } else if (data.role === "teacher") {
+      } else if (data.role === "Teacher") {
         navigate("/teacher-dashboard");
-      } else if (data.role === "student") {
+      } else if (data.role === "Student") {
         navigate("/student-dashboard");
       } else if (data.role === "Parent") {
         navigate("/parent-dashboard");
