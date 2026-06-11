@@ -35,7 +35,7 @@ function StudentProfile() {
           <li onClick={() => navigate("/student-dashboard")}>My Dashboard</li>
           <li onClick={() => navigate("/courses")}> My Courses</li>
           <li onClick={() => navigate("/query-form")}>Queries</li>
-              <li onClick={() => navigate("/Homework")}>Homework</li>
+          <li onClick={() => navigate("/Homework")}>Homework</li>
           <li onClick={() => navigate("/student-attendance")}>Attendance</li>
           <li onClick={() => navigate("/timetable")}>Timetable</li>
           <li onClick={() => navigate("/marks")}>Marks</li>

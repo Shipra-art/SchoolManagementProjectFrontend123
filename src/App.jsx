@@ -93,3 +93,10 @@ const App = () => {
 }
 
 export default App
+
+// VS code Git Symbols
+//M=Modified (file change hui hai)
+//U=Untracked(new file hai, Git track nahi kar raha)
+//A=Added(git add ho chuki hai)
+//D=Deleted (file delete hui hai)
+//R=Renamed(file ka naam change hua hai)

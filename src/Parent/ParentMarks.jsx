@@ -54,7 +54,7 @@ function Marks() {
 
             serialNo: studentIndex + 1,
 
-            studentId: student.studentId,
+            // studentId: student.studentId,
 
             studentName: student.studentName,
 

@@ -55,7 +55,7 @@ function Marks() {
 
             serialNo: subjectIndex + 1,
 
-            studentId: student.studentId,
+            // studentId: student.studentId,
 
             studentName: student.studentName,
 
@@ -117,10 +117,10 @@ function Marks() {
                             header="S.No"
                         />
 
-                        <Column
+                        {/* <Column
                             field="studentId"
                             header="Student ID"
-                        />
+                        /> */}
 
                         <Column
                             field="studentName"
