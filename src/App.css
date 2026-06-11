@@ -193,7 +193,7 @@
 .button-container {
   display: flex;
   justify-content: center;
-  gap: 15px; 
+  gap: 15px;
 }
 
 .home-btn {
@@ -206,8 +206,6 @@
   font-size: 18px;
   cursor: pointer;
 }
-
-
 
 /* Footer */
 
@@ -485,12 +483,16 @@
   background: #15803d;
 }
 
-.p-button-danger{
-  background:#c62828;
-  border:none;
+.p-button-danger {
+  width: 40px;
+  height: 30px;
+}
+.p-button-danger {
+  background: #c62828;
+  border: none;
 }
 
-.p-button-danger:hover{
+.p-button-danger:hover {
   background: #c62828;
 }
 
@@ -2128,128 +2130,154 @@
 /*
    Teacher RESULT QUERY PAGE */
 
+/* =========================
+   Dashboard Layout
+========================= */
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f7fc;
+}
+
+/* =========================
+   Sidebar
+========================= */
+
+.sidebar {
+  width: 280px;
+  background: #0f2347;
+  color: white;
+  padding: 20px;
+  flex-shrink: 0;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  background: #334766;
+  margin-bottom: 15px;
+  padding: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 18px;
+}
+
+.sidebar ul li:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* Active menu */
+.sidebar ul li.active {
+  background: #007bff;
+  color: white;
+}
+
+/*Content */
+
 .content {
   flex: 1;
   padding: 30px;
-  background: #f4f7fc;
-  min-height: 100vh;
+  overflow-x: auto;
 }
 
 .content h1 {
   color: #1565c0;
-  font-size: 34px;
-  font-weight: 700;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  font-size: 42px;
+  font-weight: bold;
 }
 
-/*
-   DATATABLE */
+/* =========================
+   Table Wrapper
+========================= */
+
+.table-wrapper {
+  background: white;
+  border-radius: 20px;
+  padding: 10px;
+  overflow-x: auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   PrimeReact DataTable
+========================= */
 
 .p-datatable {
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-}
-
-.p-datatable .p-datatable-header {
-  background: #1565c0;
-  color: white;
 }
 
 .p-datatable .p-datatable-thead > tr > th {
-  background: #1565c0;
-  color: white;
+  background: #1565c0 !important;
+  color: white !important;
   text-align: center;
-  font-weight: 600;
-  padding: 14px;
+  font-size: 16px;
+  padding: 15px;
 }
 
 .p-datatable .p-datatable-tbody > tr > td {
   text-align: center;
-  padding: 12px;
+  padding: 18px;
+  vertical-align: middle;
 }
 
 .p-datatable .p-datatable-tbody > tr:nth-child(even) {
-  background: #f8fbff;
+  background: #f7f9fc;
 }
 
-.p-datatable .p-datatable-tbody > tr:hover {
-  background: #eaf4ff;
+/* =========================
+   Query Message Column
+========================= */
+
+.message-column {
+  max-width: 350px;
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.5;
 }
 
-/*
-   ACTION BUTTONS */
+/* =========================
+   Action Buttons
+========================= */
 
-.p-button-success {
-  background: #2e7d32;
-  border: none;
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  min-width: 140px;
 }
 
-.p-button-success:hover {
-  background: #1b5e20;
+.action-buttons .p-button {
+  width: 45px;
+  height: 45px;
 }
 
-.p-button-danger {
-  background: #d32f2f;
-  border: none;
-}
-
-.p-button-danger:hover {
-  background: #b71c1c;
-}
-
-/*
-   STATUS TAGS */
-
-.p-tag {
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 20px;
-}
-
-/*
-   DIALOG BOX */
-
-.p-dialog {
-  border-radius: 18px;
-  overflow: hidden;
-}
+/* =========================
+   Dialog
+========================= */
 
 .p-dialog .p-dialog-header {
-  background: #1565c0;
-  color: white;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.p-dialog .p-dialog-content {
-  padding: 25px;
-}
-
-.p-dialog label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: 600;
-  color: #444;
-}
-
-/*
-   INPUT NUMBER */
-
-.p-inputnumber {
-  width: 100%;
-}
-
-.p-inputnumber-input {
-  width: 100%;
-  padding: 10px;
-}
-
-/*
-   TOAST */
-
-.p-toast {
-  z-index: 9999;
+.p-dialog-content {
+  padding: 20px;
 }
 
 /*
@@ -2474,19 +2502,19 @@
 /* Table Header */
 
 .table-box .p-datatable-thead > tr > th {
-    background-color: #1565c0;
-    color: white;
-    text-align: center;
-    font-weight: normal;
+  background-color: #1565c0;
+  color: white;
+  text-align: center;
+  font-weight: normal;
 }
 
 /* Table Data */
 
 .table-box .p-datatable-tbody > tr > td {
-    text-align: center;
-    color: black;
-    padding: 10px;
-    font-weight: normal;
+  text-align: center;
+  color: black;
+  padding: 10px;
+  font-weight: normal;
 }
 
 /* Hover Effect */
@@ -2542,7 +2570,6 @@
   font-weight: 600;
   padding: 12px;
 }
-
 
 /* Register Page */
 .register-page {
