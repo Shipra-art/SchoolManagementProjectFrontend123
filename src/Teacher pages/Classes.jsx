@@ -11,7 +11,7 @@ function Classes() {
 
       {/* Sidebar */}
       <div className='sidebar'>
-        <h2>Teacher Panel</h2>
+        <h2>Teacher Dashboard</h2>
 
         <ul>
           <li onClick={() => navigate("/teacher-dashboard")}> Dashboard</li>

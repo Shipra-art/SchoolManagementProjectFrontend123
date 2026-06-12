@@ -137,10 +137,10 @@ function Attendance() {
                 {/* DataTable */}
                 <DataTable value={attendance} paginator rows={5} stripedRows showGridlines tableStyle={{ minWidth: "70rem", minHeight: "400px" }}>
                     {/* <Column field="studentId" header="Student ID" sortable /> */}
-                    <Column field="studentName" header="Student Name" sortable />
-                    <Column field="class" header="Class" sortable />
-                    <Column field="date" header="Date" body={dateBodyTemplate} sortable />
-                    <Column field="status" header="Status" sortable />
+                    <Column field="studentName" header="Student Name"  />
+                    <Column field="class" header="Class"  />
+                    <Column field="date" header="Date" body={dateBodyTemplate}  />
+                    <Column field="status" header="Status"  />
                     {/* <Column header="Action" body={actionBodyTemplate} /> */}
                 </DataTable>
             </div>
