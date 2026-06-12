@@ -192,7 +192,7 @@ function StudentResultQuery() {
                 <h2>Teacher Dashboard</h2>
 
                 <ul>
-                      <li onClick={() => navigate("/teacher-dashboard")}> Dashboard</li>
+                    <li onClick={() => navigate("/teacher-dashboard")}> Dashboard</li>
                     <li onClick={() => navigate("/teacher-profile")}>Profile</li>
                     <li onClick={() => navigate("/classes")}>Classes</li>
                     <li onClick={() => navigate("/view-marks")}>Marks</li>
