@@ -73,7 +73,7 @@ function StudentDashboard() {
       {/* Sidebar */}
       <div className="sidebar">
 
-        <h2>Student Panel</h2>
+        <h2>Student Dashboard</h2>
 
         <ul>
           <li style={{ backgroundColor: "#007bff", color: "white" }}> Dashboard</li>

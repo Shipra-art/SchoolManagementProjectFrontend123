@@ -52,7 +52,7 @@ function StudentHomework() {
             {/* Sidebar */}
             <div className="sidebar">
 
-                <h2>Student Panel</h2>
+                <h2>Student Dashboard</h2>
 
                 <ul>
                     <li onClick={() => navigate("/student-dashboard")}>Dashboard</li>

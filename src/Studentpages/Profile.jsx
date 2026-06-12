@@ -29,7 +29,7 @@ function StudentProfile() {
   return (
     <div className="dashboard">
       <div className="sidebar">
-        <h2>Student Panel</h2>
+        <h2>Student Dashboard</h2>
 
 
         <ul>
