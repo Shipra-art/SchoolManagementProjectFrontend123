@@ -66,13 +66,13 @@ function ParentHomework() {
                         <Column
                             field="subject"
                             header="Subject"
-                            sortable
+                            
                         />
 
                         <Column
                             field="title"
                             header="Title"
-                            sortable
+                            
                         />
 
                         <Column
@@ -83,7 +83,7 @@ function ParentHomework() {
                         <Column
                             field="dueDate"
                             header="Due Date"
-                            sortable
+                            
                         />
 
                     </DataTable>
