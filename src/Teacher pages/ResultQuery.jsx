@@ -192,37 +192,14 @@ function StudentResultQuery() {
                 <h2>Teacher Dashboard</h2>
 
                 <ul>
-                    <li onClick={() => navigate("/teacher-dashboard")}>
-                        Dashboard
-                    </li>
-
-                    <li onClick={() => navigate("/teacher-profile")}>
-                        Profile
-                    </li>
-
-                    <li onClick={() => navigate("/classes")}>
-                        Classes
-                    </li>
-
-                    <li onClick={() => navigate("/report-card")}>
-                        Report Card
-                    </li>
-
-                    <li onClick={() => navigate("/view-marks")}>
-                        Marks
-                    </li>
-
-                    <li onClick={() => navigate("/attendance")}>
-                        Attendance
-                    </li>
-
-                    <li className="active">
-                        Query
-                    </li>
-
-                    <li onClick={() => navigate("/login")}>
-                        Logout
-                    </li>
+                      <li onClick={() => navigate("/teacher-dashboard")}> Dashboard</li>
+                    <li onClick={() => navigate("/teacher-profile")}>Profile</li>
+                    <li onClick={() => navigate("/classes")}>Classes</li>
+                    <li onClick={() => navigate("/view-marks")}>Marks</li>
+                    <li onClick={() => navigate("/attendance")}>Attendance</li>
+                    <li onClick={() => navigate("/report-card")}>Report Card</li>
+                    <li style={{ backgroundColor: "#007bff", color: "white" }}>Query</li>
+                    <li onClick={() => navigate("/login")}>Logout</li>
                 </ul>
             </div>
 
