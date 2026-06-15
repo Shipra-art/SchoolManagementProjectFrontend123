@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../api/axios";
+
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { Button } from "primereact/button";
@@ -9,25 +10,28 @@ import { InputText } from "primereact/inputtext";
 import "primereact/resources/themes/lara-light-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
-import Input from "antd/es/input/Input";
 
 function Attendance() {
     const navigate = useNavigate();
 
     const [attendance, setAttendance] = useState([]);
+
     const [studentId, setStudentId] = useState("");
     const [studentName, setStudentName] = useState("");
     const [studentClass, setStudentClass] = useState("");
     const [status, setStatus] = useState("Present");
-    const [globalFilter, setGlobalFilter] = useState("");
 
     const [editId, setEditId] = useState(null);
 
+    // ================= GET =================
     const fetchAttendance = async () => {
         try {
             const res = await API.get("/attendance");
+            console.log("Attendance Data:", res.data);
+
             setAttendance(res.data);
         } catch (err) {
+            console.log("GET Error:", err.response?.data);
             console.log(err);
         }
     };
@@ -36,12 +40,12 @@ function Attendance() {
         fetchAttendance();
     }, []);
 
-    // CREATE
+    // ================= ADD =================
     const addAttendance = async (e) => {
         e.preventDefault();
 
         const data = {
-
+            studentId,
             studentName,
             class: studentClass,
             date: new Date(),
@@ -49,22 +53,24 @@ function Attendance() {
         };
 
         try {
-            await API.post("/attendance", data);
+            const res = await API.post("/attendance", data);
+
+            console.log(res.data);
 
             alert("Attendance Added Successfully");
 
-            setStudentId("");
-            setStudentName("");
-            setStudentClass("");
-            setStatus("Present");
+            clearForm();
 
             fetchAttendance();
         } catch (err) {
+            console.log("POST Error:", err.response?.data);
             console.log(err);
+
+            alert("Failed to Add Attendance");
         }
     };
 
-    // UPDATE
+    // ================= UPDATE =================
     const updateAttendance = async (e) => {
         e.preventDefault();
 
@@ -77,46 +83,69 @@ function Attendance() {
         };
 
         try {
-            await API.put(`/attendance/${editId}`, data);
+            const res = await API.put(
+                `/attendance/${editId}`,
+                data
+            );
+
+            console.log(res.data);
 
             alert("Attendance Updated Successfully");
 
+            clearForm();
+
             setEditId(null);
-            setStudentId("");
-            setStudentName("");
-            setStudentClass("");
-            setStatus("Present");
 
             fetchAttendance();
         } catch (err) {
+            console.log("PUT Error:", err.response?.data);
             console.log(err);
+
+            alert("Failed to Update Attendance");
         }
     };
 
-    // DELETE
+    // ================= DELETE =================
     const deleteAttendance = async (id) => {
-        if (!window.confirm("Delete this attendance record?")) return;
+        if (!window.confirm("Delete this attendance record?"))
+            return;
 
         try {
             await API.delete(`/attendance/${id}`);
+
+            alert("Attendance Deleted Successfully");
+
             fetchAttendance();
         } catch (err) {
+            console.log("DELETE Error:", err.response?.data);
             console.log(err);
         }
     };
 
-    // EDIT
+    // ================= EDIT =================
     const editAttendance = (rowData) => {
         setEditId(rowData.id || rowData._id);
-        setStudentName(rowData.studentName);
-        setStudentClass(rowData.class);
-        setStatus(rowData.status);
+
+        setStudentId(rowData.studentId || "");
+        setStudentName(rowData.studentName || "");
+        setStudentClass(rowData.class || "");
+        setStatus(rowData.status || "Present");
     };
 
+    // ================= CLEAR =================
+    const clearForm = () => {
+        setStudentId("");
+        setStudentName("");
+        setStudentClass("");
+        setStatus("Present");
+    };
+
+    // ================= DATE FORMAT =================
     const dateBodyTemplate = (rowData) => {
         return new Date(rowData.date).toLocaleDateString();
     };
 
+    // ================= ACTION BUTTONS =================
     const actionBodyTemplate = (rowData) => {
         return (
             <div style={{ display: "flex", gap: "10px" }}>
@@ -132,15 +161,14 @@ function Attendance() {
                     severity="danger"
                     rounded
                     onClick={() =>
-                        deleteAttendance(rowData.id || rowData._id)
+                        deleteAttendance(
+                            rowData.id || rowData._id
+                        )
                     }
                 />
             </div>
         );
     };
-
-
-
 
     return (
         <div className="dashboard">
@@ -149,36 +177,44 @@ function Attendance() {
                 <h2>Teacher Dashboard</h2>
 
                 <ul>
-                    <li onClick={() => navigate("/teacher-dashboard")}>Dashboard </li>
+                    <li onClick={() => navigate("/teacher-dashboard")}>Dashboard</li>
                     <li onClick={() => navigate("/teacher-profile")}>Profile</li>
                     <li onClick={() => navigate("/classes")}>Classes</li>
                     <li onClick={() => navigate("/report-card")}>Report Card</li>
                     <li onClick={() => navigate("/view-marks")}>Marks</li>
-                    <li style={{ backgroundColor: "#007bff", color: "white", }}>Attendance</li>
+                    <li style={{backgroundColor: "#007bff",color: "#fff",}}>Attendance</li>
                     <li onClick={() => navigate("/query")}>Query</li>
                     <li onClick={() => navigate("/login")}>Logout</li>
                 </ul>
             </div>
 
-            {/* Main Content */}
-            <div className="container" style={{ padding: "20px" }}>
+            {/* Main */}
+            <div
+                className="container"
+                style={{ padding: "20px" }}
+            >
                 <h2>Attendance Management</h2>
 
-                {/* Form */}
                 <form
-                    onSubmit={editId ? updateAttendance : addAttendance}
+                    onSubmit={
+                        editId
+                            ? updateAttendance
+                            : addAttendance
+                    }
                     style={{
                         display: "flex",
                         gap: "10px",
-                        marginBottom: "20px",
                         flexWrap: "wrap",
-                        alignItems: "center",
+                        marginBottom: "20px",
                     }}
                 >
-                    <InputText placeholder="Student Id"
+                    <InputText
+                        placeholder="Student ID"
                         value={studentId}
                         onChange={(e) =>
-                            setStudentId(e.target.value)} />
+                            setStudentId(e.target.value)
+                        }
+                    />
 
                     <InputText
                         placeholder="Student Name"
@@ -203,7 +239,6 @@ function Attendance() {
                         }
                         style={{
                             padding: "10px",
-                            border: "1px solid #ccc",
                             borderRadius: "6px",
                         }}
                     >
@@ -237,28 +272,25 @@ function Attendance() {
                             severity="secondary"
                             onClick={() => {
                                 setEditId(null);
-                                setStudentName("");
-                                setStudentClass("");
-                                setStatus("Present");
+                                clearForm();
                             }}
                         />
                     )}
                 </form>
 
-                {/* DataTable */}
                 <DataTable
                     value={attendance}
                     paginator
                     rows={5}
                     stripedRows
                     showGridlines
-                    globalFilter={globalFilter}
-
-                    tableStyle={{
-                        minWidth: "70rem",
-                        minHeight: "400px",
-                    }}
+                    tableStyle={{ minWidth: "70rem" }}
                 >
+                    <Column
+                        field="studentId"
+                        header="Student ID"
+                    />
+
                     <Column
                         field="studentName"
                         header="Student Name"
@@ -281,7 +313,7 @@ function Attendance() {
                     />
 
                     <Column
-                        header="Action"
+                        header="Actions"
                         body={actionBodyTemplate}
                     />
                 </DataTable>
