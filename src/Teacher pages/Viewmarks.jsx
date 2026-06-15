@@ -21,7 +21,15 @@ function ViewMarks() {
     const [showForm, setShowForm] = useState(false)
     const [selectedStudent, setSelectedStudent] = useState(null)
     const [updatedMarks, setUpdatedMarks] = useState("")
-
+    const [isAddMode, setIsAddMode] = useState(false);
+    const [formData, setFormData] = useState({
+        studentName: "",
+        class: "",
+        examType: "",
+        subject: "",
+        subjectTeacher: "",
+        marksObtained: ""
+    });
 
     // GET ALL MARKS
 
@@ -43,6 +51,44 @@ function ViewMarks() {
         fetchStudents()
     }, [])
 
+    //Add Marks Function(CREATE)
+    const addMarks = async () => {
+        try {
+
+            await api.post("/Marks", formData);
+
+            toast.current.show({
+                severity: "success",
+                summary: "Success",
+                detail: "Marks Added Successfully",
+                life: 3000
+            });
+
+            setShowForm(false);
+
+            setFormData({
+                studentName: "",
+                class: "",
+                examType: "",
+                subject: "",
+                subjectTeacher: "",
+                marksObtained: ""
+            });
+
+            fetchStudents();
+
+        } catch (error) {
+
+            console.log("POST ERROR :", error);
+
+            toast.current.show({
+                severity: "error",
+                summary: "Error",
+                detail: "Add Failed",
+                life: 3000
+            });
+        }
+    };
 
     // OPEN UPDATE DIALOG
 
@@ -95,6 +141,62 @@ function ViewMarks() {
                 life: 3000
             })
         }
+
+        //Delete Function
+        const deleteMarks = async (id) => {
+
+            if (!window.confirm("Delete this record?")) return;
+
+            try {
+
+                await api.delete(`/Marks/${id}`);
+
+                toast.current.show({
+                    severity: "success",
+                    summary: "Deleted",
+                    detail: "Marks Deleted Successfully",
+                    life: 3000
+                });
+
+                fetchStudents();
+
+            } catch (error) {
+
+                console.log("DELETE ERROR :", error);
+
+                toast.current.show({
+                    severity: "error",
+                    summary: "Error",
+                    detail: "Delete Failed",
+                    life: 3000
+                });
+            }
+        };
+
+
+        const actionTemplate = (rowData) => {
+            return (
+                <div style={{ display: "flex", gap: "10px" }}>
+
+                    <Button
+                        icon="pi pi-pencil"
+                        severity="warning"
+                        rounded
+                        onClick={() => approveResult(rowData)}
+                    />
+
+                    <Button
+                        icon="pi pi-trash"
+                        severity="danger"
+                        rounded
+                        onClick={() =>
+                            deleteMarks(rowData.id || rowData._id)
+                        }
+                    />
+
+                </div>
+            );
+        };
     }
 
     return (
@@ -121,7 +223,110 @@ function ViewMarks() {
             {/* MAIN CONTENT */}
             <div className="viewmarks-container">
                 <Toast ref={toast} />
-                <h1 className="heading">Student Dashboard</h1>
+                <h1 className="heading">Student Marks Dashboard</h1>
+
+                <form>
+                    {isAddMode ? (
+                        <>
+                            <InputText
+                                placeholder="Student Name"
+                                value={formData.studentName}
+                                onChange={(e) =>
+                                    setFormData({
+                                        ...formData,
+                                        studentName: e.target.value
+                                    })
+                                }
+                            />
+
+                            <InputText
+                                placeholder="Class"
+                                value={formData.class}
+                                onChange={(e) =>
+                                    setFormData({
+                                        ...formData,
+                                        class: e.target.value
+                                    })
+                                }
+                            />
+
+                            <InputText
+                                placeholder="Exam Type"
+                                value={formData.examType}
+                                onChange={(e) =>
+                                    setFormData({
+                                        ...formData,
+                                        examType: e.target.value
+                                    })
+                                }
+                            />
+
+                            <InputText
+                                placeholder="Subject"
+                                value={formData.subject}
+                                onChange={(e) =>
+                                    setFormData({
+                                        ...formData,
+                                        subject: e.target.value
+                                    })
+                                }
+                            />
+
+                            <InputText
+                                placeholder="Subject Teacher"
+                                value={formData.subjectTeacher}
+                                onChange={(e) =>
+                                    setFormData({
+                                        ...formData,
+                                        subjectTeacher: e.target.value
+                                    })
+                                }
+                            />
+
+                            <InputText
+                                placeholder="Marks"
+                                value={formData.marksObtained}
+                                onChange={(e) =>
+                                    setFormData({
+                                        ...formData,
+                                        marksObtained: e.target.value
+                                    })
+                                }
+                            />
+
+                            <Button
+                                label="Save"
+                                icon="pi pi-plus"
+                                onClick={addMarks}
+                            />
+                        </>
+                    ) : (
+                        <>
+                            <InputText
+                                value={selectedStudent?.studentName || ""}
+                                disabled
+                            />
+
+                            <InputText
+                                value={selectedStudent?.subject || ""}
+                                disabled
+                            />
+
+                            <InputText
+                                value={updatedMarks}
+                                onChange={(e) =>
+                                    setUpdatedMarks(e.target.value)
+                                }
+                            />
+
+                            <Button
+                                label="Update"
+                                icon="pi pi-check"
+                                onClick={updateMarks}
+                            />
+                        </>
+                    )}
+                </form>
 
                 {/* TABLE */}
                 <div className="table-box">

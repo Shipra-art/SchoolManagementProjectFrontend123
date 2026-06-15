@@ -84,7 +84,7 @@ function Attendance() {
             clearForm();
             setEditId(null);
             fetchAttendance();
-            
+
         } catch (err) {
             console.log("PUT Error:", err.response?.data);
             console.log(err);
@@ -136,8 +136,8 @@ function Attendance() {
     const actionBodyTemplate = (rowData) => {
         return (
             <div style={{ display: "flex", gap: "10px" }}>
-                <Button icon="pi pi-pencil" severity="warning" rounded onClick={() => editAttendance(rowData)}/>
-                <Button icon="pi pi-trash" severity="danger" rounded onClick={() =>deleteAttendance(rowData._id)}/>
+                <Button icon="pi pi-pencil" severity="warning" rounded onClick={() => editAttendance(rowData)} />
+                <Button icon="pi pi-trash" severity="danger" rounded onClick={() => deleteAttendance(rowData._id)} />
             </div>
         );
     };
@@ -166,16 +166,16 @@ function Attendance() {
 
                 <h2>Attendance Management</h2>
 
-                <form onSubmit={ editId ? updateAttendance : addAttendance } style={{ display: "flex", gap: "10px",flexWrap: "wrap", marginBottom: "20px",}}>
+                <form onSubmit={editId ? updateAttendance : addAttendance} style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginBottom: "20px", }}>
 
-                    <InputText placeholder="Student ID" value={studentId} onChange={(e) =>setStudentId(e.target.value)}/>
+                    <InputText placeholder="Student ID" value={studentId} onChange={(e) => setStudentId(e.target.value)} />
 
-                    <InputText placeholder="Student Name" value={studentName} onChange={(e) => setStudentName(e.target.value)}/>
+                    <InputText placeholder="Student Name" value={studentName} onChange={(e) => setStudentName(e.target.value)} />
 
-                    <InputText placeholder="Class" value={studentClass} onChange={(e) =>setStudentClass(e.target.value)}/>
+                    <InputText placeholder="Class" value={studentClass} onChange={(e) => setStudentClass(e.target.value)} />
 
 
-                    <select value={status}onChange={(e) => setStatus(e.target.value) }style={{padding: "10px",borderRadius: "6px",}}>
+                    <select value={status} onChange={(e) => setStatus(e.target.value)} style={{ padding: "10px", borderRadius: "6px", }}>
 
                         <option value="Present">
                             Present
@@ -201,7 +201,8 @@ function Attendance() {
                     />
 
                     {editId && (
-                        <Button type="button" label="Cancel" severity="secondary" onClick={() => { setEditId(null); clearForm(); }} />)} </form>
+                        <Button type="button" label="Cancel" severity="secondary" onClick={() => { setEditId(null); clearForm(); }} />)}
+                </form>
 
                 <DataTable value={attendance} paginator rows={5} stripedRows showGridlines tableStyle={{ minWidth: "70rem" }}>
                     <Column field="studentId" header="Student ID" />
@@ -212,6 +213,7 @@ function Attendance() {
                     <Column header="Actions" body={actionBodyTemplate} />
                 </DataTable>
             </div>
+
         </div>
     );
 }
