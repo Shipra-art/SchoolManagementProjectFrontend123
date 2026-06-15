@@ -84,6 +84,7 @@ function Attendance() {
             clearForm();
             setEditId(null);
             fetchAttendance();
+            
         } catch (err) {
             console.log("PUT Error:", err.response?.data);
             console.log(err);
