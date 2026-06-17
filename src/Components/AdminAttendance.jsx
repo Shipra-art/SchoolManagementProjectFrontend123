@@ -179,7 +179,7 @@ function Attendance() {
                     <li onClick={() => navigate("/teacher")} className="adm-nav-item">
                         Teacher List
                     </li>
-                    <li onClick={() => navigate("/AdminAttendenace")} className="adm-nav-item">
+                    <li onClick={() => navigate("/AdminAttendance")} className="adm-nav-item">
                         Attendance List</li>
 
                     <li onClick={() => navigate("/")} className="adm-nav-item adm-logout">

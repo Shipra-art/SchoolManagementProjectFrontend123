@@ -36,6 +36,8 @@ import ParentHomework from './Parent/ParentHomework'
 import Homework from './Studentpages/Homework'
 import Register from './Components/Register'
 import AdminAttendance from "./Components/AdminAttendance"
+import EditAddMarks from './Components/EditAddMarks'
+
 // import Notification from "./Components/Notification"
 // import Practice from "./Components/Practice"
 
@@ -44,11 +46,11 @@ const App = () => {
   const toast = useRef(null)
 
   return (
-    <>                         
+    <>
       <Toast ref={toast} />
       <ConfirmDialog />
 
-      <Routes>                  
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
 
@@ -65,8 +67,8 @@ const App = () => {
         <Route path="/marks" element={<Marks />} />
         <Route path="/view-marks" element={<Viewmarks />} />
         <Route path="/query" element={<ResultQuery />} />
-        <Route path="/query-form" element={<Query/>}/> 
-        <Route path="/timetable" element={<Timetable/>}/>
+        <Route path="/query-form" element={<Query />} />
+        <Route path="/timetable" element={<Timetable />} />
         <Route path="/report-card" element={<ReportCard />} />
         <Route path="/attendance" element={<Attendance />} />
         <Route path="/student-attendance" element={<StudentAttendance />} />
@@ -78,7 +80,8 @@ const App = () => {
         <Route path="/parent-homework" element={<ParentHomework />} />
         <Route path="/Homework" element={<Homework />} />
         <Route path="/Register" element={<Register />} />
-        <Route path="/AdminAttendenace" element={<AdminAttendance/>}/>
+        <Route path="/AdminAttendance" element={<AdminAttendance />} />
+        <Route path="/EditAddMarks" element={<EditAddMarks />} />
         {/* <Route path="/practice" element={<Practice />} /> */}
 
         {/* Student and teacher routes */}

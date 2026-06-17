@@ -13,6 +13,7 @@ import 'primeicons/primeicons.css'
 import { useNavigate } from 'react-router-dom'
 
 
+
 function ViewMarks() {
 
     const navigate = useNavigate()
