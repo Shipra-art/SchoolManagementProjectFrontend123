@@ -1,0 +1,336 @@
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import API from "../api/axios";
+import { DataTable } from "primereact/datatable";
+import { Column } from "primereact/column";
+import { Button } from "primereact/button";
+import { InputText } from "primereact/inputtext";
+import "primereact/resources/themes/lara-light-blue/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
+
+function Attendance() {
+    const navigate = useNavigate();
+
+    const [attendance, setAttendance] = useState([]);
+
+    const [studentId, setStudentId] = useState("");
+    const [studentName, setStudentName] = useState("");
+    const [studentClass, setStudentClass] = useState("");
+    const [date, setStudentDate] = useState("");
+    const [status, setStatus] = useState("Present");
+
+    const [editId, setEditId] = useState(null);
+
+    //GET 
+    const fetchAttendance = async () => {
+        try {
+            const res = await API.get("/attendance");
+            setAttendance(res.data);
+        } catch (err) {
+            console.log("GET Error:", err);
+        }
+    };
+
+    useEffect(() => {
+        fetchAttendance();
+    }, []);
+
+    //ADD
+    const addAttendance = async (e) => {
+        e.preventDefault();
+
+        const data = {
+            studentId,
+            studentName,
+            class: studentClass,
+            date,
+            status,
+        };
+        console.log("Sending Data:", data);
+
+        try {
+            await API.post("/attendance", data);
+
+            alert("Attendance Added Successfully");
+
+            clearForm();
+            fetchAttendance();
+        } catch (err) {
+            console.log("POST Error:", err.response?.data);
+            alert("Failed To Add Attendance");
+        }
+    };
+
+    //UPDATE
+    const updateAttendance = async (e) => {
+        e.preventDefault();
+
+        const data = {
+            studentId,
+            studentName,
+            class: studentClass,
+            date,
+            status,
+        };
+
+        try {
+            await API.put(`/attendance/${editId}`, data);
+
+            alert("Attendance Updated Successfully");
+
+            clearForm();
+            setEditId(null);
+
+            fetchAttendance();
+        } catch (err) {
+            console.log("PUT Error:", err.response?.data);
+            alert("Failed To Update Attendance");
+        }
+    };
+
+    //DELETE
+    const deleteAttendance = async (id) => {
+        const confirmDelete = window.confirm(
+            "Are you sure you want to delete this record?"
+        );
+
+        if (!confirmDelete) return;
+
+        try {
+            await API.delete(`/attendance/${id}`);
+
+            alert("Attendance Deleted Successfully");
+
+            fetchAttendance();
+        } catch (err) {
+            console.log("DELETE Error:", err.response?.data);
+            alert("Failed To Delete Attendance");
+        }
+    };
+
+    //EDIT
+    const editAttendance = (rowData) => {
+        setEditId(rowData.id || rowData._id);
+
+        setStudentId(rowData.studentId || "");
+        setStudentName(rowData.studentName || "");
+        setStudentClass(rowData.class || "");
+
+        setStudentDate(
+            rowData.date
+                ? new Date(rowData.date).toISOString().split("T")[0]
+                : ""
+        );
+
+        setStatus(rowData.status || "Present");
+    };
+
+    //CLEAR
+    const clearForm = () => {
+        setStudentId("");
+        setStudentName("");
+        setStudentClass("");
+        setStudentDate("");
+        setStatus("Present");
+    };
+
+    //  DATE FORMAT 
+    const dateBodyTemplate = (rowData) => {
+        return rowData.date
+            ? new Date(rowData.date).toLocaleDateString()
+            : "";
+    };
+
+    //ACTION BUTTONS 
+    const actionBodyTemplate = (rowData) => {
+        return (
+            <div style={{ display: "flex", gap: "10px" }}>
+                <Button
+                    icon="pi pi-pencil"
+                    severity="warning"
+                    rounded
+                    onClick={() => editAttendance(rowData)}
+                />
+
+                <Button
+                    icon="pi pi-trash"
+                    severity="danger"
+                    rounded
+                    onClick={() =>
+                        deleteAttendance(rowData.id || rowData._id)
+                    }
+                />
+            </div>
+        );
+    };
+
+    return (
+        <div className="adm-layout">
+
+            {/* Sidebar */}
+            <div className="adm-sidebar">
+                <h2 className="adm-sidebar-title">School System</h2>
+
+                <ul className="adm-nav">
+                    <li onClick={() => navigate("/student-list")}
+                        className="adm-nav-item">Student List</li>
+
+                    <li onClick={() => navigate("/teacher")} className="adm-nav-item">
+                        Teacher List
+                    </li>
+                    <li onClick={() => navigate("/AdminAttendenace")} className="adm-nav-item">
+                        Attendance List</li>
+
+                    <li onClick={() => navigate("/")} className="adm-nav-item adm-logout">
+                        Logout
+                    </li>
+                </ul>
+            </div>
+
+            {/* Main Content */}
+            <div className="container" style={{ padding: "20px" }}>
+                <h2>Attendance Management</h2>
+
+                <form
+                    onSubmit={
+                        editId
+                            ? updateAttendance
+                            : addAttendance
+                    }
+                    style={{
+                        display: "flex",
+                        gap: "10px",
+                        flexWrap: "wrap",
+                        marginBottom: "20px",
+                    }}
+                >
+                    <InputText
+                        placeholder="Student ID"
+                        value={studentId}
+                        onChange={(e) =>
+                            setStudentId(e.target.value)
+                        }
+                    />
+
+                    <InputText
+                        placeholder="Student Name"
+                        value={studentName}
+                        onChange={(e) =>
+                            setStudentName(e.target.value)
+                        }
+                    />
+
+                    <InputText
+                        placeholder="Class"
+                        value={studentClass}
+                        onChange={(e) =>
+                            setStudentClass(e.target.value)
+                        }
+                    />
+
+                    {/* FIXED DATE INPUT */}
+                    <input
+                        type="date"
+                        value={date}
+                        onChange={(e) =>
+                            setStudentDate(e.target.value)
+                        }
+                        style={{
+                            padding: "10px",
+                            border: "1px solid #ccc",
+                            borderRadius: "6px",
+                        }}
+                    />
+
+                    <select
+                        value={status}
+                        onChange={(e) =>
+                            setStatus(e.target.value)
+                        }
+                        style={{
+                            padding: "10px",
+                            borderRadius: "6px",
+                        }}
+                    >
+                        <option value="Present">
+                            Present
+                        </option>
+
+                        <option value="Absent">
+                            Absent
+                        </option>
+                    </select>
+
+                    <Button
+                        type="submit"
+                        label={
+                            editId
+                                ? "Update Attendance"
+                                : "Add Attendance"
+                        }
+                        icon={
+                            editId
+                                ? "pi pi-check"
+                                : "pi pi-plus"
+                        }
+                    />
+
+                    {editId && (
+                        <Button
+                            type="button"
+                            label="Cancel"
+                            severity="secondary"
+                            onClick={() => {
+                                setEditId(null);
+                                clearForm();
+                            }}
+                        />
+                    )}
+                </form>
+
+                <DataTable
+                    value={attendance}
+                    paginator
+                    rows={5}
+                    stripedRows
+                    showGridlines
+                    tableStyle={{ minWidth: "70rem" }}
+                >
+                    <Column
+                        field="studentId"
+                        header="Student ID"
+                    />
+
+                    <Column
+                        field="studentName"
+                        header="Student Name"
+                    />
+
+                    <Column
+                        field="class"
+                        header="Class"
+                    />
+
+                    <Column
+                        field="date"
+                        header="Date"
+                        body={dateBodyTemplate}
+                    />
+
+                    <Column
+                        field="status"
+                        header="Status"
+                    />
+
+                    <Column
+                        header="Actions"
+                        body={actionBodyTemplate}
+                    />
+                </DataTable>
+            </div>
+        </div>
+    );
+}
+
+export default Attendance;

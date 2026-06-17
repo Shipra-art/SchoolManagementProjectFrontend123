@@ -133,31 +133,26 @@ function StudentList({ toast }) {
           <Column
             field="serialNo"
             header="Sr No"
-            sortable
           />
 
           <Column
             field="name"
             header="Name"
-            sortable
           />
 
           <Column
             field="age"
             header="Age"
-            sortable
           />
 
           <Column
             field="course"
             header="Course"
-            sortable
           />
 
           <Column
             field="marks"
             header="Marks"
-            sortable
           />
 
           <Column

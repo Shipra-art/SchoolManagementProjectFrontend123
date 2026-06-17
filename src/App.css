@@ -362,6 +362,8 @@
 .student-add-btn {
   background: #16a34a;
   border: none;
+  height:50px;
+  width:120px;
 }
 
 .student-add-btn:hover {
