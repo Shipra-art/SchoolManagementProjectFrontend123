@@ -13,18 +13,11 @@ function AdminDashboard() {
         <h2 className="adm-sidebar-title">School System</h2>
 
         <ul className="adm-nav">
-          <li onClick={() => navigate("/student-list")}
-            className="adm-nav-item">Student List</li>
-
-          <li onClick={() => navigate("/teacher")} className="adm-nav-item">
-            Teacher List
-          </li>
-          <li onClick={()=>navigate("/AdminAttendance")} className="adm-nav-item">
-            Attendance List</li>
-
-          <li onClick={() => navigate("/")} className="adm-nav-item adm-logout">
-            Logout
-          </li>
+          <li onClick={() => navigate("/student-list")} className="adm-nav-item">Student List</li>
+          <li onClick={() => navigate("/teacher")} className="adm-nav-item">Teacher List</li>
+          <li onClick={() => navigate("/AdminAttendance")} className="adm-nav-item"> Attendance List</li>
+          <li onClick={() => navigate("/EditAddMarks")} className="adm-nav-item">Edit Marks</li>
+          <li onClick={() => navigate("/")} className="adm-nav-item adm-logout">Logout</li>
         </ul>
       </div>
 

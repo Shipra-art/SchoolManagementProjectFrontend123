@@ -76,21 +76,17 @@ function EditAddMarks() {
             {/* Sidebar */}
             <div className="sidebar">
 
-                <h2>Student Dashboard</h2>
+                <div className="adm-sidebar">
+                    <h2 className="adm-sidebar-title">School System</h2>
 
-                <ul>
-                    <li onClick={() => navigate("/student-dashboard")}>My Dashboard</li>
-                    <li onClick={() => navigate("/profile")}>My Profile</li>
-                    <li onClick={() => navigate("/courses")}>My Courses</li>
-                    <li onClick={() => navigate("/query-form")}>Queries</li>
-                    <li onClick={() => navigate("/Homework")}>Homework</li>
-                    <li style={{ backgroundColor: "#007bff", color: "white" }}>Marks </li>
-                    <li onClick={() => navigate("/student-attendance")}>Attendance</li>
-                    <li onClick={() => navigate("/timetable")}>Timetable</li>
-                    <li onClick={() => navigate("/login")}>Logout</li>
-                </ul>
-
-
+                    <ul className="adm-nav">
+                        <li onClick={() => navigate("/student-list")} className="adm-nav-item">Student List</li>
+                        <li onClick={() => navigate("/teacher")} className="adm-nav-item">Teacher List</li>
+                        <li onClick={() => navigate("/AdminAttendance")} className="adm-nav-item"> Attendance List</li>
+                        <li onClick={() => navigate("/EditAddMarks")} className="adm-nav-item">Edit Marks</li>
+                        <li onClick={() => navigate("/")} className="adm-nav-item adm-logout">Logout</li>
+                    </ul>
+                </div>
 
             </div>
 
