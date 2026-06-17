@@ -33,11 +33,11 @@ import { Button } from 'primereact/button'           // Submit button
 
 import '../App.css'
 
-// ─────────────────────────────────────────────
+
 // Props:
-//   toast → parent (App.jsx) se aaya hua ref
-//           success/error notification dikhane ke liye use hota hai
-// ─────────────────────────────────────────────
+// toast → parent (App.jsx) se aaya hua ref
+// success/error notification dikhane ke liye use hota hai
+
 function StudentEditAdd({ toast }) {
 
   // navigate('/path') → us path pe redirect kar deta hai
@@ -49,9 +49,9 @@ function StudentEditAdd({ toast }) {
   const { id } = useParams()
   console.log("StudentEditAdd ID =>", id)
 
-  // ──────────────────────────────────────────
+
   // useForm Hook — form ka brain hai yeh
-  // ──────────────────────────────────────────
+  
   const {
     handleSubmit,         // form submit wrap karta hai, pehle validation karta hai
     control,              // Controller component ko form se jodne ke liye
@@ -68,9 +68,9 @@ function StudentEditAdd({ toast }) {
     }
   })
 
-  // ──────────────────────────────────────────
+ 
   // onSubmit — jab form submit ho aur validation pass ho
-  // ──────────────────────────────────────────
+ 
   const onSubmit = async (data) => {
     // 'data' mein form ke saare filled values hain
     // (Yup validation already pass ho chuki hai yahan tak pahunchne ke liye)
@@ -88,21 +88,21 @@ function StudentEditAdd({ toast }) {
     try {
 
       if (id) {
-        // ✏️ EDIT MODE — id hai matlab student exist karta hai
+        //  EDIT MODE — id hai matlab student exist karta hai
         // PUT request → /student/7  (pura record update karta hai)
         const res = await api.put(`/student/${id}`, payload)
         console.log("Update Response =>", res.data)
 
         // Success notification dikhao
         toast.current.show({
-          severity: 'success',  // green color
+          severity: 'success', // green color
           summary: 'Updated',
           detail: 'Student updated successfully',
-          life: 3000            // 3 second baad khud gayab ho jayega
+          life: 3000 // 3 second baad khud gayab ho jayega
         })
 
       } else {
-        // ➕ ADD MODE — id nahi hai matlab naya student banana hai
+        // ADD MODE — id nahi hai matlab naya student banana hai
         // POST request → /student  (naya record create karta hai)
         const res = await api.post('/student', payload)
         console.log("Add Response =>", res.data)
@@ -133,10 +133,10 @@ function StudentEditAdd({ toast }) {
     }
   }
 
-  // ──────────────────────────────────────────
+
   // useEffect — Component mount hote hi chalti hai
   // Kaam: Edit mode mein existing student ka data fetch karke form mein bhar do
-  // ──────────────────────────────────────────
+
   useEffect(() => {
 
     if (id) {
@@ -163,9 +163,9 @@ function StudentEditAdd({ toast }) {
     // Jab bhi 'id' ya 'reset' change ho, yeh effect dobara chalega
   }, [id, reset])
 
-  // ──────────────────────────────────────────
+
   // JSX — Form UI
-  // ──────────────────────────────────────────
+ 
   return (
 
     <div className="sea-page"> {/* Full page wrapper */}
@@ -221,7 +221,7 @@ function StudentEditAdd({ toast }) {
 
           </div>
 
-          {/* ── AGE FIELD ── */}
+          {/* AGE FIELD*/}
           <div className="sea-field">
 
             <label className="sea-label">Age</label>
@@ -275,7 +275,7 @@ function StudentEditAdd({ toast }) {
 
           </div>
 
-          {/* ── MARKS FIELD ── */}
+          {/*  MARKS FIELD  */}
           <div className="sea-field">
 
             <label className="sea-label">Marks</label>
@@ -300,7 +300,7 @@ function StudentEditAdd({ toast }) {
 
           </div>
 
-          {/* ── SUBMIT BUTTON ── */}
+          {/*SUBMIT BUTTON */}
           {/* id hai to "Update Student" dikhao, nahi to "Add Student" */}
           <Button
             label={id ? 'Update Student' : 'Add Student'}
