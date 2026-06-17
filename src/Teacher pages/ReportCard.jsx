@@ -138,7 +138,7 @@ function ReportCard() {
                 <div className="remarks-section">
                     <h4>Remarks</h4>
                     <p>
-                        Esha, excellent performance!
+                        Excellent performance!
                         You have been promoted to the next class.
                         Keep up the good work.
                     </p>
