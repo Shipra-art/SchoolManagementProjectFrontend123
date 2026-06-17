@@ -1325,9 +1325,22 @@
 
 .viewmarks-container {
   flex: 1;
-  padding: 30px;
+  padding: 20px;
   background: #f4f7fc;
-  min-height: 100vh;
+  min-height: 50vh;
+}
+/* Action Column */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.action-buttons .p-button {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
 }
 
 .heading {

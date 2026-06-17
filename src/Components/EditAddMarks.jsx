@@ -173,11 +173,11 @@ function EditAddMarks() {
         }))
     );
 
-    // ================= ACTION BUTTONS =================
+    //  ACTION BUTTONS 
 
     const actionTemplate = (rowData) => {
         return (
-            <div style={{ display: "flex", gap: "10px" }}>
+            <div  className="action-buttons">
 
                 <Button
                     icon="pi pi-pencil"
@@ -209,49 +209,11 @@ function EditAddMarks() {
 
                     <ul className="adm-nav">
 
-                        <li
-                            onClick={() =>
-                                navigate("/student-list")
-                            }
-                            className="adm-nav-item"
-                        >
-                            Student List
-                        </li>
-
-                        <li
-                            onClick={() =>
-                                navigate("/teacher")
-                            }
-                            className="adm-nav-item"
-                        >
-                            Teacher List
-                        </li>
-
-                        <li
-                            onClick={() =>
-                                navigate("/AdminAttendance")
-                            }
-                            className="adm-nav-item"
-                        >
-                            Attendance List
-                        </li>
-
-                        <li
-                            onClick={() =>
-                                navigate("/EditAddMarks")
-                            }
-                            className="adm-nav-item"
-                        >
-                            Edit Marks
-                        </li>
-
-                        <li
-                            onClick={() => navigate("/")}
-                            className="adm-nav-item adm-logout"
-                        >
-                            Logout
-                        </li>
-
+                        <li onClick={() => navigate("/student-list")} className="adm-nav-item"> Student List</li>
+                        <li onClick={() => navigate("/teacher")} className="adm-nav-item"> Teacher List</li>
+                        <li onClick={() => navigate("/AdminAttendance")} className="adm-nav-item">Attendance List </li>
+                        <li onClick={() => navigate("/EditAddMarks")} className="adm-nav-item"> Edit Marks</li>
+                        <li onClick={() => navigate("/")} className="adm-nav-item adm-logout">Logout </li>
                     </ul>
 
                 </div>
@@ -280,53 +242,21 @@ function EditAddMarks() {
 
                 <div className="table-box">
 
-                    <DataTable
-                        value={tableData}
-                        stripedRows
-                        showGridlines
-                        paginator
-                        rows={10}
-                    >
-{/* 
+                    <DataTable value={tableData} stripedRows showGridlines paginator rows={10}>
+                        {/* 
                         <Column
                             field="serialNo"
                             header="S.No"
                         /> */}
 
-                        <Column
-                            field="studentName"
-                            header="Student Name"
-                        />
+                        <Column field="studentName" header="Student Name" />
 
-                        <Column
-                            field="subjectTeacher"
-                            header="Teacher"
-                        />
-
-                        <Column
-                            field="class"
-                            header="Class"
-                        />
-
-                        <Column
-                            field="examType"
-                            header="Exam Type"
-                        />
-
-                        <Column
-                            field="subject"
-                            header="Subject"
-                        />
-
-                        <Column
-                            field="marks"
-                            header="Marks"
-                        />
-
-                        <Column
-                            header="Action"
-                            body={actionTemplate}
-                        />
+                        <Column field="subjectTeacher" header="Teacher" />
+                        <Column field="class" header="Class" />
+                        <Column field="examType" header="Exam Type" />
+                        <Column field="subject" header="Subject" />
+                        <Column field="marks" header="Marks" />
+                        <Column header="Action" body={actionTemplate} />
 
                     </DataTable>
 
