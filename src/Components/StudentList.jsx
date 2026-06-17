@@ -96,10 +96,61 @@ function StudentList({ toast }) {
     );
   };
 
-  return (
-    <div className="student-page">
+ return (
+  <div className="dashboard">
 
-      <ConfirmDialog />
+    <ConfirmDialog />
+
+    {/* Sidebar */}
+    <div className="sidebar">
+      <div className="adm-sidebar">
+
+        <h2 className="adm-sidebar-title">
+          School System
+        </h2>
+
+        <ul className="adm-nav">
+          <li
+            onClick={() => navigate("/student-list")}
+            className="adm-nav-item"
+          >
+            Student List
+          </li>
+
+          <li
+            onClick={() => navigate("/teacher")}
+            className="adm-nav-item"
+          >
+            Teacher List
+          </li>
+
+          <li
+            onClick={() => navigate("/AdminAttendance")}
+            className="adm-nav-item"
+          >
+            Attendance List
+          </li>
+
+          <li
+            onClick={() => navigate("/EditAddMarks")}
+            className="adm-nav-item"
+          >
+            Edit Marks
+          </li>
+
+          <li
+            onClick={() => navigate("/")}
+            className="adm-nav-item adm-logout"
+          >
+            Logout
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+    {/* Main Content */}
+    <div className="main-content">
 
       {/* Header */}
       <div className="student-header">
@@ -117,7 +168,7 @@ function StudentList({ toast }) {
 
       </div>
 
-      {/* Table Card */}
+      {/* Table */}
       <div className="student-card">
 
         <DataTable
@@ -129,43 +180,20 @@ function StudentList({ toast }) {
           responsiveLayout="scroll"
           emptyMessage="No Students Found"
         >
-
-          <Column
-            field="serialNo"
-            header="Sr No"
-          />
-
-          <Column
-            field="name"
-            header="Name"
-          />
-
-          <Column
-            field="age"
-            header="Age"
-          />
-
-          <Column
-            field="course"
-            header="Course"
-          />
-
-          <Column
-            field="marks"
-            header="Marks"
-          />
-
-          <Column
-            header="Actions"
-            body={actionTemplate}
-          />
-
+          <Column field="serialNo" header="Sr No" />
+          <Column field="name" header="Name" />
+          <Column 
+          field="age" header="Age" />
+          <Column field="course" header="Course" />
+          <Column field="marks" header="Marks" />
+          <Column header="Actions" body={actionTemplate} />
         </DataTable>
 
       </div>
 
     </div>
-  );
-}
 
+  </div>
+);
+}
 export default StudentList;

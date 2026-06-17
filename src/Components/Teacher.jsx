@@ -140,88 +140,113 @@ function Teacher({ toast }) {
 
   return (
 
-    // Main page container
-    <div className="tch-page">
+  <div className="dashboard">
 
-      {/* Confirmation Dialog */}
-      <ConfirmDialog />
+    <ConfirmDialog />
 
-      {/* Header Section */}
+    {/* Sidebar */}
+    <div className="sidebar">
+
+      <div className="adm-sidebar">
+
+        <h2 className="adm-sidebar-title">
+          School System
+        </h2>
+
+        <ul className="adm-nav">
+
+          <li
+            onClick={() => navigate("/student-list")}
+            className="adm-nav-item"
+          >
+            Student List
+          </li>
+
+          <li
+            onClick={() => navigate("/teacher")}
+            className="adm-nav-item"
+          >
+            Teacher List
+          </li>
+
+          <li
+            onClick={() => navigate("/AdminAttendance")}
+            className="adm-nav-item"
+          >
+            Attendance List
+          </li>
+
+          <li
+            onClick={() => navigate("/EditAddMarks")}
+            className="adm-nav-item"
+          >
+            Edit Marks
+          </li>
+
+          <li
+            onClick={() => navigate("/")}
+            className="adm-nav-item adm-logout"
+          >
+            Logout
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    {/* Main Content */}
+    <div className="main-content">
+
+      {/* Header */}
       <div className="tch-header">
 
-        {/* Page Title */}
         <h2 className="tch-title">
           Teachers
         </h2>
 
-        {/* Add Teacher Button */}
         <Button
-
           label="Add Teacher"
           icon="pi pi-plus"
           className="p-button-success"
-
-          // Add teacher page navigate
-          onClick={() => navigate('/add-teacher')}
-
+          onClick={() => navigate("/add-teacher")}
         />
 
       </div>
 
-      {/* Table Wrapper */}
+      {/* Table */}
       <div className="tch-table-wrapper">
 
         <DataTable
-
-          // Table data
           value={teacher}
-
-          // Pagination enable
           paginator
-
-          // Per page rows
           rows={5}
-
-          // Alternate row color
           stripedRows
-
-          // Table borders
           showGridlines
-
-          // Custom class
           className="tch-table"
-
         >
 
-          {/* Serial Number Column */}
           <Column
-            field='serialNo'
+            field="serialNo"
             header="Serial No."
-            sortable
           />
 
-          {/* Name Column */}
           <Column
             field="name"
             header="Name"
-            sortable
           />
 
-          {/* Subject Column */}
           <Column
             field="subject"
             header="Subject"
-            sortable
           />
 
-          {/* Email Column */}
           <Column
             field="email"
             header="Email"
-            sortable
           />
 
-          {/* Action Column */}
           <Column
             header="Action"
             body={actionTemplate}
@@ -232,8 +257,12 @@ function Teacher({ toast }) {
       </div>
 
     </div>
-  )
+
+  </div>
+
+);
 }
+
 
 // Component export
 export default Teacher
