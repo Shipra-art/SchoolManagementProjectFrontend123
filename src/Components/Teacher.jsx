@@ -1,13 +1,6 @@
-// React hooks import
 import React, { useEffect, useState } from 'react'
-
-// Navigation ke liye
 import { useNavigate } from 'react-router-dom'
-
-// Axios API file
 import api from "../api/axios"
-
-// CSS file
 import "../App.css";
 
 // PrimeReact Components
