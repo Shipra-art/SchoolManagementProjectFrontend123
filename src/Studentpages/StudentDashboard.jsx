@@ -222,11 +222,8 @@ function StudentDashboard() {
 
               ))
           }
-
         </Modal>
-
       </div>
-
     </div>
   );
 }

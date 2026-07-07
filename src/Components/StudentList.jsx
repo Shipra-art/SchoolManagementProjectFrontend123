@@ -161,7 +161,7 @@ function StudentList({ toast }) {
 
         <Button
           label="Add Student"
-          icon="pi pi-plus"
+          icon=" pi pi-plus"
           className="student-add-btn"
           onClick={() => navigate("/add-student")}
         />

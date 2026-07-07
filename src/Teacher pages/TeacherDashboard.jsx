@@ -195,13 +195,7 @@ function TeacherDashboard() {
                     }
                   </small>
 
-                  <div
-                    style={{
-                      marginTop: "10px",
-                      display: "flex",
-                      gap: "10px"
-                    }}
-                  >
+                  <div className="top-bar">
 
                     {
                       !n.isRead &&

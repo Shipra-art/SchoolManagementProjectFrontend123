@@ -6,10 +6,11 @@ function AdminDashboard() {
   const navigate = useNavigate();
 
   return (
-    <div className="adm-layout">
+    <div className="dashboard">
 
       {/* Sidebar */}
-      <div className="adm-sidebar">
+
+      <div className="sidebar">
         <h2 className="adm-sidebar-title">School System</h2>
 
         <ul className="adm-nav">
