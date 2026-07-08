@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Schoolboy from "../assets/Schoolboy.png";
+import School from "../assets/school.jpg";
+import SchoolBoy from "../assets/Schoolboy.png";
 import Teacher from "../assets/Teacher.png";
 import "../App.css";
 
@@ -8,9 +9,14 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="hero">
-      {/* ================= NAVBAR ================= */}
+    <div
+      className="hero"
+      style={{ backgroundImage: `url(${School})` }}
+    >
+      {/* Overlay */}
+      <div className="overlay"></div>
 
+      {/* Navbar */}
       <nav className="navbar">
         <div className="logo">
           🎓 <span>Edu School</span>
@@ -31,19 +37,17 @@ function Home() {
 
           <button
             className="register-btn"
-            onClick={() => navigate("/register")}
+            onClick={() => navigate("/Register")}
           >
             Register
           </button>
         </div>
       </nav>
 
-      {/* ================= HERO ================= */}
-
+      {/* Hero Section */}
       <div className="hero-content">
 
         {/* Left Side */}
-
         <div className="hero-left">
 
           <span className="tag">
@@ -51,46 +55,67 @@ function Home() {
           </span>
 
           <h1>
-            Your Kids
-            <br />
-            Deserve The
-            <br />
+            Your Kids <br />
+            Deserve The <br />
             <span>Best Education</span>
           </h1>
 
           <p>
             Manage Students, Teachers, Attendance,
-            Homework, Results and Parent Portal
-            in one place.
+            Homework, Results, Parents and more with one
+            powerful school management platform.
           </p>
 
-          <button
-            className="admission-btn"
-            onClick={() => navigate("/login")}
-          >
-            Get Started
-          </button>
+          <div className="hero-buttons">
+            <button
+              className="admission-btn"
+              onClick={() => navigate("/login")}
+            >
+              Get Started
+            </button>
+
+            <button
+              className="learn-btn"
+              onClick={() => navigate("/Register")}
+            >
+              Learn More
+            </button>
+          </div>
 
         </div>
 
         {/* Right Side */}
-
         <div className="hero-right">
 
           <div className="circle"></div>
 
-       
+          {/* <img
+            src={Teacher}
+            alt="Teacher"
+            className="teacher-image"
+          />
 
-           <img
-            src={Schoolboy}
-            alt="School Boy"
-            className="student-img"
-          /> 
+          <img
+            src={SchoolBoy}
+            alt="Student"
+            className="student-image"
+          /> */}
+
+          <div className="card card1">
+            👨‍🎓 500+ Students
+          </div>
+
+          <div className="card card2">
+            👩‍🏫 50+ Teachers
+          </div>
+
+          <div className="card card3">
+            🏆 98% Results
+          </div>
 
         </div>
 
       </div>
-
     </div>
   );
 }
