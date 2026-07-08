@@ -1,19 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import School from "../assets/school.jpg";      // Background Image
-import SchoolBoy from "../assets/schoolboy.png"; // Boy PNG
+import School from "../assets/school.jpg";
+import Schoolboy from "../assets/Schoolboy.png";
 import "../App.css";
 
 function Home() {
   const navigate = useNavigate();
 
   return (
-    <div
-      className="hero"
-      style={{ backgroundImage: `url(${School})` }}
-    >
-      {/* Dark Overlay */}
-      <div className="overlay"></div>
+    <div className="hero">
 
       {/* Navbar */}
       <nav className="navbar">
@@ -46,9 +41,7 @@ function Home() {
       {/* Hero Section */}
       <div className="hero-content">
 
-        {/* Left Side */}
         <div className="hero-left">
-
           <span className="tag">
             School Management System
           </span>
@@ -61,8 +54,7 @@ function Home() {
 
           <p>
             Manage Students, Teachers, Attendance,
-            Homework, Results, Parents and more with
-            one powerful school management platform.
+            Homework, Results and Parent Portal in one place.
           </p>
 
           <button
@@ -71,20 +63,16 @@ function Home() {
           >
             Get Started
           </button>
-
         </div>
 
-        {/* Right Side */}
         <div className="hero-right">
-
           <div className="circle"></div>
 
           <img
-            src={SchoolBoy}
-            alt="Student"
+            src={Schoolboy}
+            alt="School"
             className="hero-image"
           />
-
         </div>
 
       </div>
