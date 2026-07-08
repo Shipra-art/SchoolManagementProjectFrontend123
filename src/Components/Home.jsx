@@ -24,7 +24,6 @@ function Home() {
 
         <div className="nav-links">
           <a href="/">Home</a>
-          <a href="/">Courses</a>
           <a href="/">About</a>
           <a href="/">Contact</a>
 
@@ -74,12 +73,7 @@ function Home() {
               Get Started
             </button>
 
-            <button
-              className="learn-btn"
-              onClick={() => navigate("/Register")}
-            >
-              Learn More
-            </button>
+         
           </div>
 
         </div>
