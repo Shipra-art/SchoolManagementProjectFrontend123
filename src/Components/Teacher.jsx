@@ -133,127 +133,98 @@ function Teacher({ toast }) {
 
   return (
 
-  <div className="dashboard">
+    <div className="dashboard">
 
-    <ConfirmDialog />
+      <ConfirmDialog />
 
-    {/* Sidebar */}
-    <div className="sidebar">
+      {/* Sidebar */}
+      <div className="sidebar">
 
-      <div className="adm-sidebar">
+        <div className="adm-sidebar">
 
-        <h2 className="adm-sidebar-title">
-          School System
-        </h2>
+          <h2 className="adm-sidebar-title">
+            School System
+          </h2>
 
-        <ul className="adm-nav">
+          <ul className="adm-nav">
+            <li onClick={() => navigate("/student-list")} className="adm-nav-item">Student List  </li>
+            <li style={{ backgroundColor: "#007bff", color: "white" }}>Teacher List</li>
+            <li onClick={() => navigate("/parent-list")} className="adm-nav-item"> Parent List</li>
+            <li onClick={() => navigate("/AdminAttendance")} className="adm-nav-item"> Attendance List</li>
+            <li onClick={() => navigate("/EditAddMarks")} className="adm-nav-item"> Edit Marks</li>
+            <li onClick={() => navigate("/")} className="adm-nav-item adm-logout"> Logout</li>
 
-          <li
-            onClick={() => navigate("/student-list")}
-            className="adm-nav-item"
+          </ul>
+
+        </div>
+
+      </div>
+
+      {/* Main Content */}
+      <div className="main-content">
+
+        {/* Header */}
+        <div className="tch-header">
+
+          <h2 className="tch-title">
+            Teachers
+          </h2>
+
+          <Button
+            label="Add Teacher"
+            icon="pi pi-plus"
+            className="p-button-success"
+            onClick={() => navigate("/add-teacher")}
+          />
+
+        </div>
+
+        {/* Table */}
+        <div className="tch-table-wrapper">
+
+          <DataTable
+            value={teacher}
+            paginator
+            rows={5}
+            stripedRows
+            showGridlines
+            className="tch-table"
           >
-            Student List
-          </li>
 
-          <li
-            onClick={() => navigate("/teacher")}
-            className="adm-nav-item"
-          >
-            Teacher List
-          </li>
+            <Column
+              field="serialNo"
+              header="Serial No."
+            />
 
-          <li
-            onClick={() => navigate("/AdminAttendance")}
-            className="adm-nav-item"
-          >
-            Attendance List
-          </li>
+            <Column
+              field="name"
+              header="Name"
+            />
 
-          <li
-            onClick={() => navigate("/EditAddMarks")}
-            className="adm-nav-item"
-          >
-            Edit Marks
-          </li>
+            <Column
+              field="subject"
+              header="Subject"
+            />
 
-          <li
-            onClick={() => navigate("/")}
-            className="adm-nav-item adm-logout"
-          >
-            Logout
-          </li>
+            <Column
+              field="email"
+              header="Email"
+            />
 
-        </ul>
+            <Column
+              header="Action"
+              body={actionTemplate}
+            />
+
+          </DataTable>
+
+        </div>
 
       </div>
 
     </div>
 
-    {/* Main Content */}
-    <div className="main-content">
-
-      {/* Header */}
-      <div className="tch-header">
-
-        <h2 className="tch-title">
-          Teachers
-        </h2>
-
-        <Button
-          label="Add Teacher"
-          icon="pi pi-plus"
-          className="p-button-success"
-          onClick={() => navigate("/add-teacher")}
-        />
-
-      </div>
-
-      {/* Table */}
-      <div className="tch-table-wrapper">
-
-        <DataTable
-          value={teacher}
-          paginator
-          rows={5}
-          stripedRows
-          showGridlines
-          className="tch-table"
-        >
-
-          <Column
-            field="serialNo"
-            header="Serial No."
-          />
-
-          <Column
-            field="name"
-            header="Name"
-          />
-
-          <Column
-            field="subject"
-            header="Subject"
-          />
-
-          <Column
-            field="email"
-            header="Email"
-          />
-
-          <Column
-            header="Action"
-            body={actionTemplate}
-          />
-
-        </DataTable>
-
-      </div>
-
-    </div>
-
-  </div>
-
-);
+  );
 }
 
 

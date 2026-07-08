@@ -96,104 +96,77 @@ function StudentList({ toast }) {
     );
   };
 
- return (
-  <div className="dashboard">
+  return (
+    <div className="dashboard">
 
-    <ConfirmDialog />
+      <ConfirmDialog />
 
-    {/* Sidebar */}
-    <div className="sidebar">
-      <div className="adm-sidebar">
+      {/* Sidebar */}
+      <div className="sidebar">
+        <div className="adm-sidebar">
 
-        <h2 className="adm-sidebar-title">
-          School System
-        </h2>
+          <h2 className="adm-sidebar-title">
+            School System
+          </h2>
 
-        <ul className="adm-nav">
-          <li
-            onClick={() => navigate("/student-list")}
-            className="adm-nav-item"
-          >
-            Student List
-          </li>
+          <ul className="adm-nav">
+            <li style={{ backgroundColor: "#007bff", color: "white" }}> Student List</li>
+            <li onClick={() => navigate("/teacher")} className="adm-nav-item">Teacher List</li>
+            <li onClick={() => navigate("/parent-list")} className="adm-nav-item"> Parent List</li>
+            <li onClick={() => navigate("/AdminAttendance")} className="adm-nav-item"> Attendance List</li>
+            <li onClick={() => navigate("/EditAddMarks")} className="adm-nav-item"> Edit Marks</li>
+            <li onClick={() => navigate("/")} className="adm-nav-item adm-logout"> Logout</li>
 
-          <li
-            onClick={() => navigate("/teacher")}
-            className="adm-nav-item"
-          >
-            Teacher List
-          </li>
+          </ul>
 
-          <li
-            onClick={() => navigate("/AdminAttendance")}
-            className="adm-nav-item"
-          >
-            Attendance List
-          </li>
-
-          <li
-            onClick={() => navigate("/EditAddMarks")}
-            className="adm-nav-item"
-          >
-            Edit Marks
-          </li>
-
-          <li
-            onClick={() => navigate("/")}
-            className="adm-nav-item adm-logout"
-          >
-            Logout
-          </li>
-        </ul>
-
-      </div>
-    </div>
-
-    {/* Main Content */}
-    <div className="main-content">
-
-      {/* Header */}
-      <div className="student-header">
-
-        <h2 className="student-title">
-          Student Management
-        </h2>
-
-        <Button
-          label="Add Student"
-          icon=" pi pi-plus"
-          className="student-add-btn"
-          onClick={() => navigate("/add-student")}
-        />
-
+        </div>
       </div>
 
-      {/* Table */}
-      <div className="student-card">
+      {/* Main Content */}
+      <div className="main-content">
 
-        <DataTable
-          value={students}
-          paginator
-          rows={5}
-          stripedRows
-          showGridlines
-          responsiveLayout="scroll"
-          emptyMessage="No Students Found"
-        >
-          <Column field="serialNo" header="Sr No" />
-          <Column field="name" header="Name" />
-          <Column 
-          field="age" header="Age" />
-          <Column field="course" header="Course" />
-          <Column field="marks" header="Marks" />
-          <Column header="Actions" body={actionTemplate} />
-        </DataTable>
+        {/* Header */}
+        <div className="student-header">
+
+          <h2 className="student-title">
+            Student Management
+          </h2>
+
+          <Button
+            label="Add Student"
+            icon=" pi pi-plus"
+            className="student-add-btn"
+            onClick={() => navigate("/add-student")}
+          />
+
+        </div>
+
+        {/* Table */}
+        <div className="student-card">
+
+          <DataTable
+            value={students}
+            paginator
+            rows={5}
+            stripedRows
+            showGridlines
+            responsiveLayout="scroll"
+            emptyMessage="No Students Found"
+          >
+            <Column field="serialNo" header="Sr No" />
+            <Column field="name" header="Name" />
+            <Column
+              field="age" header="Age" />
+            <Column field="course" header="Course" />
+            <Column field="marks" header="Marks" />
+            <Column header="Actions" body={actionTemplate} />
+          </DataTable>
+
+        </div>
 
       </div>
 
     </div>
-
-  </div>
-);
+  );
 }
 export default StudentList;

@@ -177,7 +177,7 @@ function EditAddMarks() {
 
     const actionTemplate = (rowData) => {
         return (
-            <div  className="action-buttons">
+            <div className="action-buttons">
 
                 <Button
                     icon="pi pi-pencil"
@@ -209,11 +209,12 @@ function EditAddMarks() {
 
                     <ul className="adm-nav">
 
-                        <li onClick={() => navigate("/student-list")} className="adm-nav-item"> Student List</li>
+                        <li onClick={() => navigate("/student-list")} className="adm-nav-item">Student List  </li>
                         <li onClick={() => navigate("/teacher")} className="adm-nav-item"> Teacher List</li>
-                        <li onClick={() => navigate("/AdminAttendance")} className="adm-nav-item">Attendance List </li>
-                        <li onClick={() => navigate("/EditAddMarks")} className="adm-nav-item"> Edit Marks</li>
-                        <li onClick={() => navigate("/")} className="adm-nav-item adm-logout">Logout </li>
+                        <li onClick={() => navigate("/parent-list")} className="adm-nav-item"> Parent List</li>
+                        <li onClick={() => navigate("/AdminAttendance")} className="adm-nav-item"> Attendance List</li>
+                        <li style={{ backgroundColor: "#007bff", color: "white" }}>Edit Marks </li>
+                        <li onClick={() => navigate("/")} className="adm-nav-item adm-logout"> Logout</li>
                     </ul>
 
                 </div>

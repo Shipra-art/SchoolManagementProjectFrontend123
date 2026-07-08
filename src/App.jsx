@@ -37,6 +37,8 @@ import Homework from './Studentpages/Homework'
 import Register from './Components/Register'
 import AdminAttendance from "./Components/AdminAttendance"
 import EditAddMarks from './Components/EditAddMarks'
+import ParentList from './Components/ParentList'
+// import ParentAddEdit from './Components/ParentsAddEdit'
 
 // import Notification from "./Components/Notification"
 // import Practice from "./Components/Practice"
@@ -92,6 +94,9 @@ const App = () => {
         <Route path="/teacher" element={<Teacher toast={toast} />} />
         <Route path="/add-teacher" element={<TeacherEditAdd toast={toast} />} />
         <Route path="/edit-teacher/:id" element={<TeacherEditAdd toast={toast} />} />
+        <Route path="/parent-list" element={<ParentList toast={toast} />} />
+        {/* <Route path="/add-parent" element={<ParentsAddEdit toast={toast} />} />
+        <Route path="/edit-parent/:id" element={<ParentsAddEdit toast={toast} />} /> */}
       </Routes>
     </>
   )
