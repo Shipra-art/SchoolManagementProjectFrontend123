@@ -137,86 +137,170 @@
   background-color: #1d4ed8;
 }
 
-/*
-   Home Page */
+/*Home Page */
 
-.home-wrapper {
+.hero {
   height: 100vh;
-  background-color: #f4f7fc;
-  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+
+.navbar {
+  position: relative;
+  z-index: 5;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
 }
 
-/* Header */
-
-.home-header {
-  background-color: #1e3a8a;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-}
-
-.home-header-title {
-  font-size: 32px;
-  font-weight: bold;
-}
-
-/* Main */
-
-.home-main {
-  flex: 1;
-  text-align: center;
-  padding-top: 40px;
-}
-
-.home-image {
-  width: 500px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 15px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.home-title {
-  margin-top: 25px;
-  font-size: 36px;
-  color: #1e293b;
-}
-
-.home-description {
-  margin-top: 15px;
-  font-size: 18px;
-  color: #64748b;
-}
-
-.button-container {
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
   display: flex;
-  justify-content: center;
-  gap: 15px;
+  align-items: center;
+  gap: 8px;
 }
 
-.home-btn {
-  margin-top: 30px;
-  padding: 12px 30px;
-  background-color: #2563eb;
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
   color: white;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffb703;
+}
+
+.login-btn,
+.register-btn {
+  padding: 10px 24px;
   border: none;
-  border-radius: 8px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.login-btn {
+  background: #1fa2ff;
+  color: white;
+}
+
+.register-btn {
+  background: #ffb703;
+  color: white;
+}
+
+.login-btn:hover {
+  background: #0f8ce8;
+}
+
+.register-btn:hover {
+  background: #f59e0b;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 80px;
+  height: calc(100vh - 100px);
+}
+
+.hero-left {
+  width: 50%;
+  color: white;
+}
+
+.tag {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #19b5fe;
+  border-radius: 30px;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.hero-left h1 {
+  font-size: 70px;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.hero-left h1 span {
+  font-weight: 300;
+  color: #ddd;
+}
+
+.hero-left p {
+  font-size: 18px;
+  color: #ddd;
+  line-height: 1.8;
+  margin-bottom: 35px;
+  max-width: 550px;
+}
+
+.admission-btn {
+  padding: 15px 35px;
+  border: none;
+  border-radius: 35px;
+  background: #ffb703;
+  color: white;
   font-size: 18px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
-/* Footer */
-
-.home-footer {
-  background-color: #1e293b;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
+.admission-btn:hover {
+  transform: translateY(-4px);
 }
 
+.hero-right {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: #19b5fe;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero-image {
+  position: relative;
+  width: 320px;
+  height: auto;
+  object-fit: contain;
+  z-index: 2;
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.35));
+}
 /*
    Login Page */
 
@@ -362,8 +446,8 @@
 .student-add-btn {
   background: #16a34a;
   border: none;
-  height:50px;
-  width:120px;
+  height: 50px;
+  width: 120px;
 }
 
 .student-add-btn:hover {
@@ -1330,16 +1414,16 @@
 }
 /* Action Column */
 .action-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .action-buttons .p-button {
-    width: 45px;
-    height: 45px;
-    border-radius: 8px;
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
 }
 
 .heading {
