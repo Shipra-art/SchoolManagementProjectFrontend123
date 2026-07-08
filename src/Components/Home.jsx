@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import School from "../assets/school.jpg";
 import Schoolboy from "../assets/Schoolboy.png";
+import Teacher from "../assets/Teacher.png";
 import "../App.css";
 
 function Home() {
@@ -9,8 +9,8 @@ function Home() {
 
   return (
     <div className="hero">
+      {/* ================= NAVBAR ================= */}
 
-      {/* Navbar */}
       <nav className="navbar">
         <div className="logo">
           🎓 <span>Edu School</span>
@@ -31,30 +31,37 @@ function Home() {
 
           <button
             className="register-btn"
-            onClick={() => navigate("/Register")}
+            onClick={() => navigate("/register")}
           >
             Register
           </button>
         </div>
       </nav>
 
-      {/* Hero Section */}
+      {/* ================= HERO ================= */}
+
       <div className="hero-content">
 
+        {/* Left Side */}
+
         <div className="hero-left">
+
           <span className="tag">
             School Management System
           </span>
 
           <h1>
-            Your Kids <br />
-            Deserve The <br />
+            Your Kids
+            <br />
+            Deserve The
+            <br />
             <span>Best Education</span>
           </h1>
 
           <p>
             Manage Students, Teachers, Attendance,
-            Homework, Results and Parent Portal in one place.
+            Homework, Results and Parent Portal
+            in one place.
           </p>
 
           <button
@@ -63,16 +70,23 @@ function Home() {
           >
             Get Started
           </button>
+
         </div>
 
+        {/* Right Side */}
+
         <div className="hero-right">
+
           <div className="circle"></div>
 
-          <img
+       
+
+           <img
             src={Schoolboy}
-            alt="School"
-            className="hero-image"
-          />
+            alt="School Boy"
+            className="student-img"
+          /> 
+
         </div>
 
       </div>
