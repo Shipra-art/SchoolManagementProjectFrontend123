@@ -41,7 +41,7 @@ function Timetable() {
                     <li onClick={() => navigate("/Homework")}>Homework</li>
                     <li onClick={() => navigate("/marks")}>Marks</li>
                     <li onClick={() => navigate("/student-attendance")}>Attendance</li>
-                    <li style={{backgroundColor:"#007bff"}}>Time Table</li>
+                    <li onClick={() => navigate("/timetable")} style={{backgroundColor:"#007bff"}}>Time Table</li>
                     <li onClick={() => navigate("/login")}>Logout</li>
                 </ul>
 

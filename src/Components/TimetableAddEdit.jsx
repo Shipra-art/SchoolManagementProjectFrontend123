@@ -26,9 +26,7 @@ function Timetable() {
         getTimetable();
     }, []);
 
-    // =========================
     // Get Timetable
-    // =========================
     const getTimetable = async () => {
         try {
             const res = await api.get("/Timetable");
@@ -41,9 +39,7 @@ function Timetable() {
         }
     };
 
-    // =========================
     // Input Change
-    // =========================
     const handleChange = (e) => {
         setForm({
             ...form,
@@ -51,9 +47,7 @@ function Timetable() {
         });
     };
 
-    // =========================
     // Add / Update
-    // =========================
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -75,17 +69,13 @@ function Timetable() {
         }
     };
 
-    // =========================
     // Edit
-    // =========================
     const handleEdit = (item) => {
         setForm(item);
         setIsEdit(true);
     };
 
-    // =========================
     // Delete
-    // =========================
     const handleDelete = async (id) => {
 
         if (!window.confirm("Delete this timetable?"))
@@ -101,9 +91,7 @@ function Timetable() {
         }
     };
 
-    // =========================
-    // Reset
-    // =========================
+    // Reset   
     const resetForm = () => {
         setForm({
             id: "",
@@ -126,18 +114,15 @@ function Timetable() {
 
             <div className="sidebar">
 
-                <h2>Student Dashboard</h2>
+                <h2>School System</h2>
+                <ul className="adm-nav">
 
-                <ul>
-                    <li onClick={() => navigate("/student-dashboard")}>Dashboard</li>
-                    <li onClick={() => navigate("/profile")}>My Profile</li>
-                    <li onClick={() => navigate("/courses")}>My Courses</li>
-                    <li onClick={() => navigate("/query-form")}>Queries</li>
-                    <li onClick={() => navigate("/Homework")}>Homework</li>
-                    <li onClick={() => navigate("/marks")}>Marks</li>
-                    <li onClick={() => navigate("/student-attendance")}>Attendance</li>
-                    <li style={{ background: "#007bff" }}>Time Table</li>
-                    <li onClick={() => navigate("/login")}>Logout</li>
+                    <li onClick={() => navigate("/student-list")} className="adm-nav-item">Student List  </li>
+                    <li onClick={() => navigate("/teacher")} className="adm-nav-item"> Teacher List</li>
+                    <li onClick={() => navigate("/parent-list")} className="adm-nav-item"> Parent List</li>
+                    <li onClick={() => navigate("/AdminAttendance")} className="adm-nav-item"> Attendance List</li>
+                    <li onClick={() => navigate("/EditAddMarks")} className="adm-nav-item">Edit Marks </li>
+                    <li onClick={() => navigate("/")} className="adm-nav-item adm-logout"> Logout</li>
                 </ul>
 
             </div>
@@ -298,15 +283,10 @@ function Timetable() {
                                     >
                                         No Timetable Available
                                     </td>
-
                                 </tr>
-
                             )}
-
                         </tbody>
-
                     </table>
-
                 )}
 
             </div>
