@@ -142,7 +142,7 @@ function ParentAddEdit({ toast }) {
                             )}
                         />
 
-                        <p className="tea-error">{errors.name?.message}</p>
+                        <p className="tea-error">{errors.parentName?.message}</p>
                     </div>
 
                     {/* Email */}
