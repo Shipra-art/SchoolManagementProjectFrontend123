@@ -39,6 +39,7 @@ import AdminAttendance from "./Components/AdminAttendance"
 import EditAddMarks from './Components/EditAddMarks'
 import ParentList from './Components/ParentList'
 import ParentsAddEdit from './Components/ParentsAddEdit'
+import TimetableAddEdit from './Components/TimetableAddEdit'
 
 // import Notification from "./Components/Notification"
 // import Practice from "./Components/Practice"
@@ -97,6 +98,7 @@ const App = () => {
         <Route path="/parent-list" element={<ParentList toast={toast} />} />
         <Route path="/add-parent" element={<ParentsAddEdit toast={toast} />} />
         <Route path="/edit-parent/:id" element={<ParentsAddEdit toast={toast} />} />
+        <Route path="/TimetableAddEdit" element={<TimetableAddEdit />} />
       </Routes>
     </>
   )

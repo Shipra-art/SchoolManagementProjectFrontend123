@@ -214,6 +214,7 @@ function EditAddMarks() {
                         <li onClick={() => navigate("/parent-list")} className="adm-nav-item"> Parent List</li>
                         <li onClick={() => navigate("/AdminAttendance")} className="adm-nav-item"> Attendance List</li>
                         <li style={{ backgroundColor: "#007bff", color: "white" }}>Edit Marks </li>
+                        <li onClick={() => navigate("/TimetableAddEdit")} className="adm-nav-item">Time Table</li>
                         <li onClick={() => navigate("/")} className="adm-nav-item adm-logout"> Logout</li>
                     </ul>
 

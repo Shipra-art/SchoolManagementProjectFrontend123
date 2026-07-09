@@ -184,8 +184,10 @@ function Attendance() {
 
                         <li onClick={() => navigate("/student-list")} className="adm-nav-item"> Student List</li>
                         <li onClick={() => navigate("/teacher")} className="adm-nav-item"> Teacher List</li>
+                        <li onClick={() => navigate("/parent-list")} className="adm-nav-item"> Parent List</li>
                         <li onClick={() => navigate("/AdminAttendance")} className="adm-nav-item">Attendance List </li>
                         <li onClick={() => navigate("/EditAddMarks")} className="adm-nav-item"> Edit Marks</li>
+                        <li onClick={() => navigate("/TimetableAddEdit")} className="adm-nav-item"> Time Table</li>
                         <li onClick={() => navigate("/")} className="adm-nav-item adm-logout">Logout </li>
                     </ul>
 
