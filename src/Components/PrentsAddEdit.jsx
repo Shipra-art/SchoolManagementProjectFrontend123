@@ -199,12 +199,12 @@ function ParentAddEdit({ toast }) {
                     <div className="tea-field">
 
                         <label className="tea-label">
-                            Subject
+                            Email
                         </label>
 
                         <Controller
 
-                            name="subject"
+                            name="email"
                             control={control}
 
                             render={({ field }) => (
@@ -228,12 +228,12 @@ function ParentAddEdit({ toast }) {
                     <div className="tea-field">
 
                         <label className="tea-label">
-                            Email
+                            Password
                         </label>
 
                         <Controller
 
-                            name="email"
+                            name="password"
                             control={control}
 
                             render={({ field }) => (
@@ -245,7 +245,6 @@ function ParentAddEdit({ toast }) {
 
                             )}
                         />
-
                         {/* Error */}
                         <p className="tea-error">
                             {errors.email?.message}
@@ -253,7 +252,28 @@ function ParentAddEdit({ toast }) {
 
                     </div>
 
-                    {/* Submit Button */}
+                    <div className="tea-field">
+
+                        <label className="tea-label">
+                            Student ID
+                        </label>
+
+                        <Controller
+
+                            name="studentId"
+                            control={control}
+
+                            render={({ field }) => (
+
+                                <InputText
+                                    {...field}
+                                    className="tea-input"
+                                />
+
+                            )}
+                        />
+                    </div>
+
                     <Button
                         label="Submit"
                         type="submit"
