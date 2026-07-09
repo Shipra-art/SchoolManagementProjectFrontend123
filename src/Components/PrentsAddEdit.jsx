@@ -131,10 +131,11 @@ function ParentAddEdit({ toast }) {
                 const data = res.data
 
                 // Form me values set
-                setValue('name', data.name)
-                setValue('subject', data.subject)
+                setValue('ParentName', data.name)
+                setValue('studentId', data.studentId)
+                setValue('Password', data.password)
                 setValue('email', data.email)
-
+            
             })
         }
 
