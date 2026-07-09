@@ -44,7 +44,7 @@ function ParentAddEdit({ toast }) {
 
         // Default values
         defaultValues: {
-            name: "",
+            ParentName: "",
             email: "",
             studentId: "",
             password: "",
@@ -76,7 +76,7 @@ function ParentAddEdit({ toast }) {
                 });
             }
 
-            navigate("/parent");
+            navigate("/parent-list");
         } catch (error) {
             console.error("Submit Error:", error);
 
