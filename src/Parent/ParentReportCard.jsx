@@ -92,12 +92,6 @@ function ReportCard() {
                 <div className="student-info-card">
 
                     <p>
-                        <strong>Student ID:</strong>
-                        {" "}
-                        {report.studentId || "N/A"}
-                    </p>
-
-                    <p>
                         <strong>Student Name:</strong>
                         {" "}
                         {report.studentName || "N/A"}

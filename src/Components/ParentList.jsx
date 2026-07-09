@@ -140,10 +140,10 @@ function ParentList({ toast }) {
                     emptyMessage="No Parents Found"
                 >
                     <Column field="serialNo" header="Sr No" />
-                    <Column field="parentname" header="ParentName" />
+                    <Column field="parentName" header="ParentName" />
                     <Column field="email" header="Email" />
-                    <Column field="Password" header="Password" />
-                    <Column field="StudentId" header="Student ID" />
+                    <Column field="password" header="Password" />
+                    <Column field="studentId" header="Student ID" />
                     <Column header="Actions" body={actionTemplate} />
                 </DataTable>
 
