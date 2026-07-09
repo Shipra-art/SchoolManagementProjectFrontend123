@@ -133,7 +133,6 @@ function ParentAddEdit({ toast }) {
                 // Form me values set
                 setValue('ParentName', data.name)
                 setValue('studentId', data.studentId)
-                setValue('Password', data.password)
                 setValue('email', data.email)
             
             })
@@ -225,33 +224,7 @@ function ParentAddEdit({ toast }) {
 
                     </div>
 
-                    {/* Email Field */}
-                    <div className="tea-field">
-
-                        <label className="tea-label">
-                            Password
-                        </label>
-
-                        <Controller
-
-                            name="password"
-                            control={control}
-
-                            render={({ field }) => (
-
-                                <InputText
-                                    {...field}
-                                    className="tea-input"
-                                />
-
-                            )}
-                        />
-                        {/* Error */}
-                        <p className="tea-error">
-                            {errors.email?.message}
-                        </p>
-
-                    </div>
+                
 
                     <div className="tea-field">
 

@@ -142,7 +142,6 @@ function ParentList({ toast }) {
                     <Column field="serialNo" header="Sr No" />
                     <Column field="parentName" header="ParentName" />
                     <Column field="email" header="Email" />
-                    <Column field="password" header="Password" />
                     <Column field="studentId" header="Student ID" />
                     <Column header="Actions" body={actionTemplate} />
                 </DataTable>
