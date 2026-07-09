@@ -5,7 +5,7 @@ import "../App.css";
 
 function Timetable() {
     const navigate = useNavigate();
-
+    
     const [timetable, setTimetable] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -41,9 +41,7 @@ function Timetable() {
                     <li onClick={() => navigate("/Homework")}>Homework</li>
                     <li onClick={() => navigate("/marks")}>Marks</li>
                     <li onClick={() => navigate("/student-attendance")}>Attendance</li>
-                    <li style={{ backgroundColor: "#007bff", color: "#fff" }}>
-                        Time Table
-                    </li>
+                    <li style={{ backgroundColor: "#007bff" }}>Time Table</li>
                     <li onClick={() => navigate("/login")}>Logout</li>
                 </ul>
 
