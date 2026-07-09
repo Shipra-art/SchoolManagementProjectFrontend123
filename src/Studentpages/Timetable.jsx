@@ -1,17 +1,36 @@
-import React from "react";
-import { useState } from 'react'
-import { useNavigate } from "react-router-dom"
-import "../App.css"
-import CoursesImg from "../assets/courses.png"
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import api from "../api/axios";
+import "../App.css";
 
 function Timetable() {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
+    const [timetable, setTimetable] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        getTimetable();
+    }, []);
+
+    const getTimetable = async () => {
+        try {
+            const res = await api.get("/Timetable");
+            setTimetable(res.data);
+        } catch (err) {
+            console.log(err);
+            alert("Unable to load timetable.");
+        } finally {
+            setLoading(false);
+        }
+    };
 
     return (
-        <div className='dashboard'>
+        <div className="dashboard">
 
             {/* Sidebar */}
-            <div className='sidebar'>
+            <div className="sidebar">
+
                 <h2>Student Dashboard</h2>
 
                 <ul>
@@ -22,112 +41,72 @@ function Timetable() {
                     <li onClick={() => navigate("/Homework")}>Homework</li>
                     <li onClick={() => navigate("/marks")}>Marks</li>
                     <li onClick={() => navigate("/student-attendance")}>Attendance</li>
-                    <li style={{ backgroundColor: "#007bff", color: "white" }}>TimeTable</li>
+                    <li style={{ backgroundColor: "#007bff", color: "#fff" }}>
+                        Time Table
+                    </li>
                     <li onClick={() => navigate("/login")}>Logout</li>
-
                 </ul>
+
             </div>
 
             {/* Main Content */}
-            <div className='main-content'>
+
+            <div className="main-content">
 
                 <h1>Class Time Table</h1>
 
-                <div className='table-box'>
+                <div className="table-box">
 
-                    <table border="1" cellPadding="15">
+                    {loading ? (
+                        <h3>Loading...</h3>
+                    ) : (
+                        <table border="1" cellPadding="12">
 
-                        <thead>
-                            <tr>
-                                <th>Period</th>
-                                <th>Monday</th>
-                                <th>Tuesday</th>
-                                <th>Wednesday</th>
-                                <th>Thursday</th>
-                                <th>Friday</th>
-                                <th>Saturday</th>
-                            </tr>
-                        </thead>
+                            <thead>
+                                <tr>
+                                    <th>Period</th>
+                                    <th>Monday</th>
+                                    <th>Tuesday</th>
+                                    <th>Wednesday</th>
+                                    <th>Thursday</th>
+                                    <th>Friday</th>
+                                    <th>Saturday</th>
+                                </tr>
+                            </thead>
 
-                        <tbody>
+                            <tbody>
 
-                            <tr>
-                                <td>1st Period</td>
-                                <td>English</td>
-                                <td>Hindi</td>
-                                <td>Mathematics</td>
-                                <td>Games Period</td>
-                                <td>Science</td>
-                                <td>Social Studies</td>
-                            </tr>
+                                {timetable.length > 0 ? (
+                                    timetable.map((item) => (
+                                        <tr key={item.id}>
+                                            <td>{item.period}</td>
+                                            <td>{item.monday}</td>
+                                            <td>{item.tuesday}</td>
+                                            <td>{item.wednesday}</td>
+                                            <td>{item.thursday}</td>
+                                            <td>{item.friday}</td>
+                                            <td>{item.saturday}</td>
+                                        </tr>
+                                    ))
+                                ) : (
+                                    <tr>
+                                        <td colSpan="7" style={{ textAlign: "center" }}>
+                                            No Timetable Available
+                                        </td>
+                                    </tr>
+                                )}
 
-                            <tr>
-                                <td>2nd Period</td>
-                                <td>English</td>
-                                <td>Hindi</td>
-                                <td>Mathematics</td>
-                                <td>Science</td>
-                                <td>Games Period</td>
-                                <td>Social Studies</td>
-                            </tr>
+                            </tbody>
 
-                            <tr>
-                                <td>3rd Period</td>
-                                <td>English</td>
-                                <td>Games period</td>
-                                <td>Hindi</td>
-                                <td>Mathematics</td>
-                                <td>Science</td>
-                                <td>Social Studies</td>
-                            </tr>
-
-                            <tr>
-                                <td>Lunch Break</td>
-                                <td colSpan="5">12:00 PM - 12:30 PM</td>
-                            </tr>
-
-                            <tr>
-                                <td>4th Period</td>
-                                <td>English</td>
-                                <td>Hindi</td>
-                                <td>Mathematics</td>
-                                <td>Computer Science</td>
-                                <td>Science</td>
-                                <td>Social Studies</td>
-                            </tr>
-
-                            <tr>
-                                <td>5th Period</td>
-                                <td>English</td>
-                                <td>Hindi</td>
-                                <td>Mathematics</td>
-                                <td>Computer Science</td>
-                                <td>Science</td>
-                                <td>Social Studies</td>
-                            </tr>
-
-                            <tr>
-                                <td>6th Period</td>
-                                <td>Games Period</td>
-                                <td>Hindi</td>
-                                <td>Mathematics</td>
-                                <td>Computer Science</td>
-                                <td>Science</td>
-                                <td>Social Studies</td>
-                            </tr>
-
-                        </tbody>
-
-                    </table>
+                        </table>
+                    )}
 
                 </div>
 
             </div>
 
-
         </div>
-
-    )
+    );
 }
 
 export default Timetable;
