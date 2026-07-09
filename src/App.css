@@ -1117,7 +1117,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
 }
 
 .lunch-row td {
-  color: #92400e;
+  color: black;
 }
 
 /* Period Column */
@@ -1903,7 +1903,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
 .table-box tr:nth-child(4) {
   background: #fff3cd;
   font-weight: bold;
-  color: #856404;
+  color: #000;
 }
 
 .table-box tr:nth-child(4):hover {

@@ -97,7 +97,7 @@ function ParentAddEdit({ toast }) {
                     const res = await api.get(`/parent/${id}`);
                     const data = res.data;
 
-                    setValue("name", data.name || "");
+                    setValue("ParentName", data.ParentName || "");
                     setValue("email", data.email || "");
                     setValue("studentId", data.studentId || "");
                     setValue("password", data.password || "");
