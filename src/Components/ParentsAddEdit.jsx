@@ -39,14 +39,14 @@ function ParentAddEdit({ toast }) {
     control,
     setValue,
     formState: { errors },
-  } = useForm({
-    resolver: yupResolver(parentSchema),
+    } = useForm({
+     resolver: yupResolver(parentSchema),
 
     // Default values
     defaultValues: {
-      name: "",
-      email: "",
-      studentId: "",
+    name: "",
+    email: "",
+    studentId: "",
     },
   });
 
