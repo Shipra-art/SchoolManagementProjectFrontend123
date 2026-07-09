@@ -14,7 +14,7 @@ import { useForm, Controller } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 
 // Validation schema
-import { teacherSchema } from '../validations/TeacherSchema'
+import { parentSchema } from '../validations/ParentSchema'
 
 // PrimeReact Input
 import { InputText } from 'primereact/inputtext'
