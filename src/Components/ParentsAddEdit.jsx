@@ -27,169 +27,189 @@ import "../App.css";
 
 // Component Start
 function ParentAddEdit({ toast }) {
-  // Navigation function
-  const navigate = useNavigate();
+    // Navigation function
+    const navigate = useNavigate();
 
-  // URL se id fetch
-  const { id } = useParams();
+    // URL se id fetch
+    const { id } = useParams();
 
-  // React Hook Form setup
-  const {
-    handleSubmit,
-    control,
-    setValue,
-    formState: { errors },
+    // React Hook Form setup
+    const {
+        handleSubmit,
+        control,
+        setValue,
+        formState: { errors },
     } = useForm({
-     resolver: yupResolver(parentSchema),
+        resolver: yupResolver(parentSchema),
 
-    // Default values
-    defaultValues: {
-    name: "",
-    email: "",
-    studentId: "",
-    },
-  });
+        // Default values
+        defaultValues: {
+            name: "",
+            email: "",
+            studentId: "",
+            password: "",
+        },
+    });
 
-  // Form submit
-  const onSubmit = async (data) => {
-    try {
-      if (id) {
-        // Update
-        await api.put(`/parent/${id}`, data);
-
-        toast.current.show({
-          severity: "success",
-          summary: "Updated",
-          detail: "Parent updated successfully",
-          life: 3000,
-        });
-      } else {
-        // Add
-        await api.post("/parent", data);
-
-        toast.current.show({
-          severity: "success",
-          summary: "Added",
-          detail: "Parent added successfully",
-          life: 3000,
-        });
-      }
-
-      navigate("/parent");
-    } catch (error) {
-      console.error("Submit Error:", error);
-
-      toast.current.show({
-        severity: "error",
-        summary: "Error",
-        detail: "Something Went Wrong",
-        life: 3000,
-      });
-    }
-  };
-
-  // Edit mode
-  useEffect(() => {
-    if (id) {
-      const fetchParent = async () => {
+    // Form submit
+    const onSubmit = async (data) => {
         try {
-          const res = await api.get(`/parent/${id}`);
-          const data = res.data;
+            if (id) {
+                // Update
+                await api.put(`/parent/${id}`, data);
 
-          setValue("name", data.name || "");
-          setValue("email", data.email || "");
-          setValue("studentId", data.studentId || "");
+                toast.current.show({
+                    severity: "success",
+                    summary: "Updated",
+                    detail: "Parent updated successfully",
+                    life: 3000,
+                });
+            } else {
+                // Add
+                await api.post("/parent", data);
+
+                toast.current.show({
+                    severity: "success",
+                    summary: "Added",
+                    detail: "Parent added successfully",
+                    life: 3000,
+                });
+            }
+
+            navigate("/parent");
         } catch (error) {
-          console.error("Fetch Error:", error);
+            console.error("Submit Error:", error);
 
-          toast.current.show({
-            severity: "error",
-            summary: "Error",
-            detail: "Unable to load parent data",
-            life: 3000,
-          });
+            toast.current.show({
+                severity: "error",
+                summary: "Error",
+                detail: "Something Went Wrong",
+                life: 3000,
+            });
         }
-      };
+    };
 
-      fetchParent();
-    }
-  }, [id, setValue, toast]);
+    // Edit mode
+    useEffect(() => {
+        if (id) {
+            const fetchParent = async () => {
+                try {
+                    const res = await api.get(`/parent/${id}`);
+                    const data = res.data;
 
-  return (
-    <div className="tea-page">
-      <div className="tea-card">
-        <h2 className="tea-title">
-          {id ? "Edit Parent" : "Add Parent"}
-        </h2>
+                    setValue("name", data.name || "");
+                    setValue("email", data.email || "");
+                    setValue("studentId", data.studentId || "");
+                    setValue("password", data.password || "");
+                } catch (error) {
+                    console.error("Fetch Error:", error);
 
-        <form onSubmit={handleSubmit(onSubmit)} className="tea-form">
+                    toast.current.show({
+                        severity: "error",
+                        summary: "Error",
+                        detail: "Unable to load parent data",
+                        life: 3000,
+                    });
+                }
+            };
 
-          {/* Name */}
-          <div className="tea-field">
-            <label className="tea-label">Name</label>
+            fetchParent();
+        }
+    }, [id, setValue, toast]);
 
-            <Controller
-              name="name"
-              control={control}
-              render={({ field }) => (
-                <InputText
-                  {...field}
-                  value={field.value || ""}
-                  className="tea-input"
-                />
-              )}
-            />
+    return (
+        <div className="tea-page">
+            <div className="tea-card">
+                <h2 className="tea-title">
+                    {id ? "Edit Parent" : "Add Parent"}
+                </h2>
 
-            <p className="tea-error">{errors.name?.message}</p>
-          </div>
+                <form onSubmit={handleSubmit(onSubmit)} className="tea-form">
 
-          {/* Email */}
-          <div className="tea-field">
-            <label className="tea-label">Email</label>
+                    {/* Name */}
+                    <div className="tea-field">
+                        <label className="tea-label">Name</label>
 
-            <Controller
-              name="email"
-              control={control}
-              render={({ field }) => (
-                <InputText
-                  {...field}
-                  value={field.value || ""}
-                  className="tea-input"
-                />
-              )}
-            />
+                        <Controller
+                            name="ParentName"
+                            control={control}
+                            render={({ field }) => (
+                                <InputText
+                                    {...field}
+                                    value={field.value || ""}
+                                    className="tea-input"
+                                />
+                            )}
+                        />
 
-            <p className="tea-error">{errors.email?.message}</p>
-          </div>
+                        <p className="tea-error">{errors.name?.message}</p>
+                    </div>
 
-          {/* Student ID */}
-          <div className="tea-field">
-            <label className="tea-label">Student ID</label>
+                    {/* Email */}
+                    <div className="tea-field">
+                        <label className="tea-label">Email</label>
 
-            <Controller
-              name="studentId"
-              control={control}
-              render={({ field }) => (
-                <InputText
-                  {...field}
-                  value={field.value || ""}
-                  className="tea-input"
-                />
-              )}
-            />
+                        <Controller
+                            name="email"
+                            control={control}
+                            render={({ field }) => (
+                                <InputText
+                                    {...field}
+                                    value={field.value || ""}
+                                    className="tea-input"
+                                />
+                            )}
+                        />
 
-            <p className="tea-error">{errors.studentId?.message}</p>
-          </div>
+                        <p className="tea-error">{errors.email?.message}</p>
+                    </div>
 
-          <Button
-            label={id ? "Update Parent" : "Add Parent"}
-            type="submit"
-            className="tea-btn"
-          />
-        </form>
-      </div>
-    </div>
-  );
+                    {/* Student ID */}
+                    <div className="tea-field">
+                        <label className="tea-label">Student ID</label>
+
+                        <Controller
+                            name="studentId"
+                            control={control}
+                            render={({ field }) => (
+                                <InputText
+                                    {...field}
+                                    value={field.value || ""}
+                                    className="tea-input"
+                                />
+                            )}
+                        />
+
+                        <p className="tea-error">{errors.studentId?.message}</p>
+                    </div>
+
+                    <div className="tea-field">
+                        <label>Password</label>
+
+                        <Controller
+                            name="password"
+                            control={control}
+                            render={({ field }) => (
+                                <InputText
+                                    type="password"
+                                    {...field}
+                                />
+                            )}
+                        />
+
+                        <p>{errors.password?.message}</p>
+
+                    </div>
+
+                    <Button
+                        label={id ? "Update Parent" : "Add Parent"}
+                        type="submit"
+                        className="tea-btn"
+                    />
+                </form>
+            </div>
+        </div>
+    );
 }
 
 export default ParentAddEdit;
