@@ -656,43 +656,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
 /*
    Attendance Page */
 
-.dashboard {
-  display: flex;
-  min-height: 100vh;
-  background: #f4f6f9;
-}
 
-/* Sidebar */
-
-.sidebar {
-  width: 250px;
-  background: #1e293b;
-  color: white;
-  padding: 20px;
-}
-
-.sidebar h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  padding: 12px 15px;
-  margin-bottom: 10px;
-  background: #334155;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.sidebar ul li:hover {
-  background: #475569;
-}
 
 /* Main Content */
 
@@ -1397,16 +1361,14 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   line-height: 1.5;
 }
 
-/*
-   CARD ANIMATION */
+/* CARD ANIMATION */
 
 .homework-card:hover {
   transform: translateY(-3px);
   transition: 0.3s ease;
 }
 
-/*
-   STUDENT MARKS PAGE */
+/* STUDENT MARKS PAGE */
 
 .viewmarks-container {
   flex: 1;
@@ -1414,6 +1376,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   background: #f4f7fc;
   min-height: 50vh;
 }
+
 /* Action Column */
 .action-buttons {
   display: flex;
@@ -1436,8 +1399,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   margin-bottom: 25px;
 }
 
-/*
-   TABLE CARD */
+/* TABLE CARD */
 
 .table-box {
   background: #fff;
@@ -1447,8 +1409,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   overflow-x: auto;
 }
 
-/*
-   DATATABLE */
+/* DATATABLE */
 
 .p-datatable {
   width: 100%;
@@ -1480,16 +1441,14 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   border-top: 1px solid #ddd;
 }
 
-/*
-   MARKS COLORS */
+/* MARKS COLORS */
 
 .p-datatable .p-datatable-tbody > tr td:last-child {
   font-weight: bold;
   color: #2e7d32;
 }
 
-/*
-   STUDENT PROFILE PAGE */
+/* STUDENT PROFILE PAGE */
 
 .profile-card {
   flex: 1;
@@ -1531,16 +1490,14 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   margin-right: 5px;
 }
 
-/*
-   PROFILE HEADER EFFECT */
+/* PROFILE HEADER EFFECT */
 
 .profile-card:hover {
   transform: translateY(-4px);
   transition: 0.3s ease;
 }
 
-/*
-   STUDENT QUERY PAGE */
+/* STUDENT QUERY PAGE */
 
 .query-container {
   flex: 1;
@@ -1606,8 +1563,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   background: #0d47a1;
 }
 
-/*
-   STUDENT ATTENDANCE PAGE */
+/* STUDENT ATTENDANCE PAGE */
 
 .container {
   flex: 1;
@@ -1624,8 +1580,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   margin-bottom: 25px;
 }
 
-/*
-   DATATABLE CARD */
+/* DATATABLE CARD */
 
 .p-datatable {
   background: #fff;
@@ -1638,8 +1593,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   overflow-x: auto;
 }
 
-/*
-   TABLE HEADER */
+/* TABLE HEADER */
 
 .p-datatable .p-datatable-thead > tr > th {
   background: #1565c0;
@@ -1650,8 +1604,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   padding: 15px;
 }
 
-/*
-   TABLE BODY */
+/* TABLE BODY */
 
 .p-datatable .p-datatable-tbody > tr > td {
   text-align: center;
@@ -1663,16 +1616,14 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   background: #f1f8ff;
 }
 
-/*
-   PAGINATOR */
+/* PAGINATOR */
 
 .p-paginator {
   border-top: 1px solid #ddd;
   padding: 10px;
 }
 
-/*
-   SEARCH BAR */
+/* SEARCH BAR */
 
 .p-input-icon-left {
   position: relative;
@@ -1690,8 +1641,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   border-radius: 8px;
 }
 
-/*
-   STATUS COLORS */
+/* STATUS COLORS */
 
 .present-status {
   color: #2e7d32;
@@ -1703,8 +1653,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   font-weight: bold;
 }
 
-/*
-   STUDENT DASHBOARD */
+/* STUDENT DASHBOARD */
 
 .main-content {
   flex: 1;
@@ -1721,8 +1670,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   text-align: center;
 }
 
-/*
-   NOTIFICATION BELL */
+/*NOTIFICATION BELL */
 
 .ant-badge {
   cursor: pointer;
@@ -2221,7 +2169,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
 
 /*Sidebar */
 
-.sidebar {
+/* .sidebar {
   width: 280px;
   background: #0f2347;
   color: white;
@@ -2239,7 +2187,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
 .sidebar ul {
   list-style: none;
   padding: 0;
-}
+} */
 
 .sidebar ul li {
   background: #334766;
@@ -2696,9 +2644,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
 }
 
 
-/* ===========================
-   TIMETABLE PAGE
-=========================== */
+/* TIMETABLE PAGE */
 
 .dashboard {
     display: flex;
