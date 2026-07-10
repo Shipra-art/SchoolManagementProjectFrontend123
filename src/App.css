@@ -1920,8 +1920,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
 
 /* TEACHER PAGES */
 
-/*
-   TEACHER ATTENDANCE PAGE */
+/* TEACHER ATTENDANCE PAGE */
 
 .container {
   flex: 1;
@@ -1938,8 +1937,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   margin-bottom: 25px;
 }
 
-/*
-   ATTENDANCE CARD */
+/* ATTENDANCE CARD */
 
 .p-datatable {
   background: #ffffff;
@@ -1952,8 +1950,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   overflow-x: auto;
 }
 
-/*
-   TABLE HEADER */
+/* TABLE HEADER */
 
 .p-datatable .p-datatable-thead > tr > th {
   background: #1565c0;
@@ -1964,8 +1961,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   font-weight: 600;
 }
 
-/*
-   TABLE BODY */
+/* TABLE BODY */
 
 .p-datatable .p-datatable-tbody > tr > td {
   text-align: center;
@@ -1977,8 +1973,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   background: #eef6ff;
 }
 
-/*
-   STATUS BADGES */
+/* STATUS BADGES */
 
 .present-status {
   background: #e8f5e9;
@@ -1996,16 +1991,14 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   font-weight: 600;
 }
 
-/*
-   PAGINATOR */
+/* PAGINATOR */
 
 .p-paginator {
   border-top: 1px solid #ddd;
   padding: 10px;
 }
 
-/*
-   SEARCH BOX */
+/* SEARCH BOX */
 
 .p-input-icon-left {
   position: relative;
@@ -2023,15 +2016,13 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   border-radius: 8px;
 }
 
-/*
-   DELETE BUTTON */
+/* DELETE BUTTON */
 
 .p-button-danger {
   border-radius: 50%;
 }
 
-/*
-   TEACHER CLASSES PAGE */
+/* TEACHER CLASSES PAGE */
 
 .main-content {
   flex: 1;
@@ -2048,8 +2039,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   margin-bottom: 30px;
 }
 
-/*
-   TABLE CARD */
+/* TABLE CARD */
 
 .table-box {
   background: #ffffff;
@@ -2059,8 +2049,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/*
-   TIMETABLE TABLE */
+/* TIMETABLE TABLE */
 
 .table-box table {
   width: 100%;
@@ -2092,8 +2081,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   background: #eaf4ff;
 }
 
-/*
-   PERIOD COLUMN */
+/* PERIOD COLUMN */
 
 .table-box td:first-child {
   font-weight: 600;
@@ -2101,8 +2089,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   background: #f5f9ff;
 }
 
-/*
-   LUNCH BREAK */
+/*LUNCH BREAK */
 
 .lunch-row {
   background: #fff3cd;
@@ -2114,8 +2101,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   background: #ffe69c;
 }
 
-/*
-   TEACHER REPORT CARD PAGE */
+/* TEACHER REPORT CARD PAGE */
 
 .report-container {
   flex: 1;
@@ -2132,8 +2118,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   margin-bottom: 25px;
 }
 
-/*
-   STUDENT INFO CARD */
+/* STUDENT INFO CARD */
 
 .student-info {
   background: #ffffff;
@@ -2160,8 +2145,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   color: #1565c0;
 }
 
-/*
-   REPORT TABLE */
+/* REPORT TABLE */
 
 .report-container table {
   width: 100%;
@@ -2194,8 +2178,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   background: #eef6ff;
 }
 
-/*
-   REMARKS SECTION */
+/* REMARKS SECTION */
 
 .remarks-section {
   margin-top: 25px;
@@ -2218,8 +2201,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   font-size: 16px;
 }
 
-/*
-   LOADING & ERROR */
+/*LOADING & ERROR */
 
 .report-container h2 {
   text-align: center;
@@ -2227,12 +2209,9 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   margin-top: 100px;
 }
 
-/*
-   Teacher RESULT QUERY PAGE */
+/* Teacher RESULT QUERY PAGE */
 
-/* =========================
-   Dashboard Layout
-========================= */
+/* Dashboard Layout */
 
 .dashboard {
   display: flex;
@@ -2240,9 +2219,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   background: #f4f7fc;
 }
 
-/* =========================
-   Sidebar
-========================= */
+/*Sidebar */
 
 .sidebar {
   width: 280px;
@@ -2300,9 +2277,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   font-weight: bold;
 }
 
-/* =========================
-   Table Wrapper
-========================= */
+/*Table Wrapper */
 
 .table-wrapper {
   background: white;
@@ -2312,9 +2287,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* =========================
-   PrimeReact DataTable
-========================= */
+/*PrimeReact DataTable */
 
 .p-datatable {
   border-radius: 15px;
@@ -2339,9 +2312,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   background: #f7f9fc;
 }
 
-/* =========================
-   Query Message Column
-========================= */
+/* Query Message Column */
 
 .message-column {
   max-width: 350px;
@@ -2350,9 +2321,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   line-height: 1.5;
 }
 
-/* =========================
-   Action Buttons
-========================= */
+/* Action Buttons */
 
 .action-buttons {
   display: flex;
@@ -2367,9 +2336,7 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
   height: 45px;
 }
 
-/* =========================
-   Dialog
-========================= */
+/*Dialog */
 
 .p-dialog .p-dialog-header {
   font-size: 20px;
@@ -2727,3 +2694,192 @@ filter:drop-shadow(0 15px 30px rgba(0,0,0,.35));
 .register-btn:hover {
   background: #1d4ed8;
 }
+
+
+/* ===========================
+   TIMETABLE PAGE
+=========================== */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f7fc;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 250px;
+  
+    padding: 25px;
+    position: fixed;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.adm-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.adm-nav li {
+    padding: 13px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: rgba(255,255,255,0.08);
+}
+
+.adm-nav li:hover {
+    background: #2563eb;
+}
+
+.adm-logout {
+    margin-top: 40px;
+    background: #dc2626 !important;
+}
+
+/* Main */
+
+.main-content {
+    flex: 1;
+    margin-left: 250px;
+    padding: 35px;
+}
+
+.main-content h1 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 30px;
+    font-size: 38px;
+}
+
+/* Form */
+
+.table-form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    margin-bottom: 30px;
+}
+
+.table-form input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+}
+
+.table-form input:focus {
+    border-color: #2563eb;
+}
+
+.table-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.table-form button[type="submit"] {
+    background: #2563eb;
+    color: white;
+}
+
+.table-form button[type="submit"]:hover {
+    background: #1d4ed8;
+}
+
+.table-form button[type="button"] {
+    background: #6b7280;
+    color: white;
+}
+
+.table-form button[type="button"]:hover {
+    background: #4b5563;
+}
+
+/* Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table thead {
+    background: #2563eb;
+    color: white;
+}
+
+table th {
+    padding: 14px;
+    text-align: center;
+    font-size: 16px;
+}
+
+table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+table tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+table tbody tr:hover {
+    background: #eef4ff;
+}
+
+/* Action Buttons */
+
+table td button {
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    transition: .3s;
+}
+
+table td button:first-child {
+    background: #10b981;
+}
+
+table td button:first-child:hover {
+    background: #059669;
+}
+
+table td button:last-child {
+    background: #ef4444;
+    margin-left: 8px;
+}
+
+table td button:last-child:hover {
+    background: #dc2626;
+}
+
+
+
+
+
