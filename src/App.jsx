@@ -40,7 +40,7 @@ import EditAddMarks from './Components/EditAddMarks'
 import ParentList from './Components/ParentList'
 import ParentsAddEdit from './Components/ParentsAddEdit'
 import TimetableAddEdit from './Components/TimetableAddEdit'
-import Navbar from './Components/Navbar'
+
 
 // import Notification from "./Components/Notification"
 // import Practice from "./Components/Practice"
@@ -69,7 +69,6 @@ const App = () => {
         <Route path="/profile" element={<Profile />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/marks" element={<Marks />} />
-        <Route path="/navbar" element={<Navbar />} />
         <Route path="/view-marks" element={<Viewmarks />} />
         <Route path="/query" element={<ResultQuery />} />
         <Route path="/query-form" element={<Query />} />
