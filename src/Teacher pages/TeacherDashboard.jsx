@@ -116,7 +116,6 @@ function TeacherDashboard() {
                 setIsModalOpen(true)
               }
             />
-
           </Badge>
 
         </div>
