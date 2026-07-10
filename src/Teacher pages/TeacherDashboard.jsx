@@ -73,7 +73,7 @@ function TeacherDashboard() {
         <h2>Teacher Dashboard</h2>
 
         <ul>
-        <li style={{ backgroundColor: "#007bff", color: "white" }}> Dashboard</li>
+          <li style={{ backgroundColor: "#007bff", color: "white" }}> Dashboard</li>
           <li onClick={() => navigate("/teacher-profile")}>Profile</li>
           <li onClick={() => navigate("/classes")}>Classes</li>
           <li onClick={() => navigate("/report-card")}>Report Card</li>
@@ -149,7 +149,6 @@ function TeacherDashboard() {
             <h3>Exams</h3>
             <p>Midterm</p>
           </div>
-
         </div>
 
         {/* Notification Modal */}
@@ -161,14 +160,10 @@ function TeacherDashboard() {
           }
           footer={null}
         >
-
           {
             notifications.length === 0 ?
-
               <p>No Notifications</p>
-
               :
-
               notifications.map((n) => (
 
                 <div
@@ -218,14 +213,10 @@ function TeacherDashboard() {
                     >
                       Delete
                     </Button>
-
                   </div>
-
                 </div>
-
               ))
           }
-
         </Modal>
 
       </div>

@@ -1,5 +1,4 @@
 /*HOME PAGE */
-/* Home Page */
 
 .hero {
   width: 100%;
@@ -129,7 +128,6 @@
 }
 
 /* Images */
-
 .teacher-image {
   width: 180px;
   position: absolute;
@@ -171,7 +169,7 @@
 }
 
 /* LOGIN PAGE */
-/* Login Page */
+
 
 .login-page {
   width: 100%;
@@ -244,7 +242,6 @@
 }
 
 /* Register */
-/* Register Page */
 
 .register-page {
   width: 100%;
@@ -316,7 +313,6 @@
 }
 
 /* Admin Dashboard */
-/* ================= Dashboard ================= */
 
 .dashboard {
     display: flex;
@@ -324,8 +320,6 @@
     background: #eef3fb;
     font-family: "Poppins", sans-serif;
 }
-
-/* ================= Sidebar ================= */
 
 .sidebar {
     width: 240px;
@@ -376,8 +370,6 @@
     background: #c62828;
 }
 
-/* ================= Main Content ================= */
-
 .adm-main {
     flex: 1;
     margin-left: 240px;
@@ -385,8 +377,6 @@
     min-height: 100vh;
     box-sizing: border-box;
 }
-
-/* ================= Top Bar ================= */
 
 .adm-topbar {
     height: 80px;
@@ -412,7 +402,6 @@
     font-weight: 500;
 }
 
-/* ================= Cards ================= */
 
 .adm-cards {
     display: grid;
@@ -445,8 +434,6 @@
     margin-bottom: 20px;
     line-height: 1.5;
 }
-
-/* ================= Buttons ================= */
 
 .adm-btn {
     width: 100%;
