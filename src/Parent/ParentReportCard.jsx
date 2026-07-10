@@ -96,7 +96,7 @@ function ReportCard() {
                         {" "}
                         {report.studentName || "N/A"}
                     </p>
-W
+
                     <p>
                         <strong>Total Marks:</strong>
                         {" "}
