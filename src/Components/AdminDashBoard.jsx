@@ -40,12 +40,11 @@ function AdminDashboard() {
             <p className="adm-card-desc">
               Manage all students
             </p>
-            <button
-              onClick={() => navigate("/student-list")}
-              className="adm-btn adm-btn-green"
-            >
-              View Students
-            </button>
+            <p style={{ fontSize: "14px", color: "#000" }}>
+              The Student List enables administrators to efficiently manage all student records from a single location. <br></br>
+              View student details, update information, monitor enrollment,  <br></br>
+              and maintain accurate academic records to ensure smooth school administration. <br></br>
+            </p>
           </div>
 
           {/* Teacher Card */}
@@ -54,14 +53,50 @@ function AdminDashboard() {
             <p className="adm-card-desc">
               Manage all teachers
             </p>
-            <button
-              onClick={() => navigate("/teacher")}
-              className="adm-btn adm-btn-blue"
-            >
-              View Teachers
-            </button>
+            <p style={{ fontSize: "14px", color: "#000" }}>
+              The Teacher List enables administrators to efficiently manage all teacher records from a single location. <br></br>
+              View teacher details, update information, monitor attendance,  <br></br>
+              and maintain accurate professional records to ensure smooth school administration. <br></br>
+            </p>
+
+          </div>
+          <div className="adm-card">
+            <h3 className="adm-card-title">Parents List</h3>
+            <p className="adm-card-desc">
+              Manage all Parents
+            </p>
+            <p style={{ fontSize: "14px", color: "#000" }}>
+              The Parents List enables administrators to efficiently manage all parent records from a single location. <br></br>
+              View parent details, update information, monitor attendance,  <br></br>
+              and maintain accurate professional records to ensure smooth school administration. <br></br>
+            </p>
+
           </div>
 
+          <div className="adm-card">
+            <h3 className="adm-card-title">Attendance List</h3>
+            <p className="adm-card-desc">
+              Manage attendance records
+            </p>
+            <p style={{ fontSize: "14px", color: "#000" }}>
+              The Attendance List enables administrators to efficiently manage all attendance records from a single location. <br></br>
+              View attendance details, update information, monitor attendance,  <br></br>
+              and maintain accurate professional records to ensure smooth school administration. <br></br>
+            </p>
+
+          </div>
+            <div className="adm-card">
+            <h3 className="adm-card-title">Edit Marks</h3>
+            <p className="adm-card-desc">
+              Manage exam results
+            </p>
+            <p style={{ fontSize: "14px", color: "#000"   }}>
+              The Edit Marks feature allows administrators to efficiently update and manage student exam results from a single location. <br></br>
+              View marks details, update information, monitor attendance,  <br></br>
+              and maintain accurate professional records to ensure smooth school administration. <br></br>
+            </p>
+            
+          </div>
         </div>
       </div>
     </div>

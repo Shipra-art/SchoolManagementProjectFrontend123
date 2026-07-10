@@ -326,9 +326,6 @@
     background: #1e3a8a;
     color: white;
     padding: 25px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
     height: 100vh;
     overflow-y: auto;
     box-sizing: border-box;
@@ -553,7 +550,7 @@
 /* Buttons */
 
 .p-button {
-  padding: 8px 15px !important;
+  padding: 8px 15px;
 }
 
 /* DataTable */
@@ -1016,8 +1013,6 @@
 .tea-btn:hover {
     background: #0d47a1;
 }
-
-/* STUDENTEDITADD */
 
 
 /* Student Add/Edit Page */
