@@ -92,143 +92,175 @@ function StudentDashboard() {
       {/* Main Content */}
       <div className="main-content">
 
-        {/* Notification Bell */}
         <div
           style={{
             display: "flex",
-            justifyContent: "flex-end",
-            marginBottom: "20px"
+            justifyContent: "space-between",
+            alignItems: "center",
+            marginBottom: "30px"
           }}
         >
+          <div>
+            <h1>Welcome Back 👋</h1>
+            <p style={{ color: "#666" }}>
+              Hope you're having a productive day!
+            </p>
+          </div>
 
-          <Badge
-            count={
-              notifications.filter(
-                n => !n.isRead
-              ).length
-            }
-          >
-
+          <Badge count={notifications.filter(n => !n.isRead).length}>
             <BellOutlined
               style={{
-                fontSize: "30px",
-                cursor: "pointer"
+                fontSize: 30,
+                cursor: "pointer",
+                color: "#1565c0"
               }}
-              onClick={() =>
-                setIsModalOpen(true)
-              }
+              onClick={() => setIsModalOpen(true)}
             />
-
           </Badge>
-
         </div>
 
-        <h1>Welcome Back Student</h1>
+        {/* Top Cards */}
 
         <div className="cards">
 
           <div className="card">
-            <h3>Total Courses</h3>
-            <p>7</p>
-          </div>
-
-          <div className="card">
             <h3>Attendance</h3>
-            <p>95%</p>
+            <h2>95%</h2>
+            <small>Excellent</small>
           </div>
 
           <div className="card">
-            <h3>Assignments</h3>
-            <p>2 completed/<br></br>3 remaining</p>
+            <h3>Current GPA</h3>
+            <h2>8.9</h2>
+            <small>Semester 5</small>
           </div>
-          
+
           <div className="card">
-            <h3>Upcoming Events</h3>
-            <p>None</p>
+            <h3>Homework</h3>
+            <h2>3</h2>
+            <small>Pending</small>
           </div>
+
+          <div className="card">
+            <h3>Subjects</h3>
+            <h2>7</h2>
+            <small>Registered</small>
+          </div>
+
         </div>
 
-        {/* Notification Modal */}
-        <Modal
-          title="Notifications"
-          open={isModalOpen}
-          onCancel={() =>
-            setIsModalOpen(false)
-          }
-          footer={null}
-        >
+        {/* Middle Section */}
 
-          {
-            notifications.length === 0 ?
+        <div className="dashboard-grid">
 
-              <p>No Notifications</p>
+          <div className="dashboard-box">
 
-              :
+            <h2>Today's Classes</h2>
 
-              notifications.map((n) => (
+            <ul>
+
+              <li>09:00 AM - Mathematics</li>
+              <li>10:30 AM - English</li>
+              <li>12:00 PM - Computer Science</li>
+            </ul>
+
+          </div>
+
+          <div className="dashboard-box">
+
+            <h2>Upcoming Assignments</h2>
+
+            <ul>
+              <li>English Essay - Friday</li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* Notification Modal */}
+      <Modal
+        title="Notifications"
+        open={isModalOpen}
+        onCancel={() =>
+          setIsModalOpen(false)
+        }
+        footer={null}
+      >
+
+        {
+          notifications.length === 0 ?
+
+            <p>No Notifications</p>
+
+            :
+
+            notifications.map((n) => (
+
+              <div
+                key={n.id}
+                style={{
+                  border: "1px solid #ddd",
+                  padding: "10px",
+                  marginBottom: "10px",
+                  borderRadius: "8px"
+                }}
+              >
+
+                <p>
+                  <strong>
+                    {n.message}
+                  </strong>
+                </p>
+
+                <p>
+                  {
+                    new Date(
+                      n.createdAt
+                    ).toLocaleString()
+                  }
+                </p>
 
                 <div
-                  key={n.id}
                   style={{
-                    border: "1px solid #ddd",
-                    padding: "10px",
-                    marginBottom: "10px",
-                    borderRadius: "8px"
+                    display: "flex",
+                    gap: "10px"
                   }}
                 >
 
-                  <p>
-                    <strong>
-                      {n.message}
-                    </strong>
-                  </p>
-
-                  <p>
-                    {
-                      new Date(
-                        n.createdAt
-                      ).toLocaleString()
-                    }
-                  </p>
-
-                  <div
-                    style={{
-                      display: "flex",
-                      gap: "10px"
-                    }}
-                  >
-
-                    {
-                      !n.isRead &&
-
-                      <Button
-                        type="primary"
-                        onClick={() =>
-                          markAsRead(n.id)
-                        }
-                      >
-                        Read
-                      </Button>
-                    }
+                  {
+                    !n.isRead &&
 
                     <Button
-                      danger
+                      type="primary"
                       onClick={() =>
-                        deleteNotification(n.id)
+                        markAsRead(n.id)
                       }
                     >
-                      Delete
+                      Read
                     </Button>
+                  }
 
-                  </div>
+                  <Button
+                    danger
+                    onClick={() =>
+                      deleteNotification(n.id)
+                    }
+                  >
+                    Delete
+                  </Button>
 
                 </div>
 
-              ))
-          }
-        </Modal>
-      </div>
+              </div>
+
+            ))
+        }
+      </Modal>
     </div>
+
   );
 }
 
