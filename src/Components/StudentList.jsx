@@ -101,7 +101,7 @@ function StudentList({ toast }) {
 
       <ConfirmDialog />
 
-      {/* Sidebar */}
+      
       <div className="sidebar">
         <div className="adm-sidebar">
 
@@ -123,10 +123,10 @@ function StudentList({ toast }) {
         </div>
       </div>
 
-      {/* Main Content */}
+      
       <div className="main-content">
 
-        {/* Header */}
+        
         <div className="student-header">
 
           <h2 className="student-title">
@@ -142,18 +142,12 @@ function StudentList({ toast }) {
 
         </div>
 
-        {/* Table */}
+        
         <div className="student-card">
 
-          <DataTable
-            value={students}
-            paginator
-            rows={5}
-            stripedRows
-            showGridlines
-            responsiveLayout="scroll"
-            emptyMessage="No Students Found"
-          >
+          <DataTable  value={students} paginator rows={5} stripedRows showGridlines responsiveLayout="scroll" emptyMessage="No Students Found">
+
+
             <Column field="serialNo" header="Sr No" />
             <Column field="name" header="Name" />
             <Column field="age" header="Age" />
