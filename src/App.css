@@ -1791,9 +1791,7 @@ table button:hover {
 
 
 /* ParentReport  */
-/* ============================
-   Parent Dashboard Layout
-==========*/
+/* Parent Dashboard Layout */
 
 .dashboard,
 .dashboard-container {
@@ -1803,9 +1801,7 @@ table button:hover {
     font-family: "Poppins", sans-serif;
 }
 
-/* ============================
-   Sidebar
-==========*/
+/* Sidebar */
 
 .sidebar {
     width: 250px;
@@ -1841,9 +1837,7 @@ table button:hover {
     background: #2563eb;
 }
 
-/* ============================
-   Main Content
-==========*/
+/* Main Content */
 
 .main-content,
 .container,
@@ -1854,9 +1848,7 @@ table button:hover {
     padding: 35px;
 }
 
-/* ============================
-   Dashboard Cards
-==========*/
+/* Dashboard Cards */
 
 .cards {
     display: flex;
@@ -1885,9 +1877,7 @@ table button:hover {
     margin-bottom: 10px;
 }
 
-/* ============================
-   Student / Teacher / Parent Header
-==========*/
+/*Student / Teacher / Parent Header*/
 
 .student-header,
 .parent-header,
@@ -1921,28 +1911,24 @@ table button:hover {
     box-shadow: 0 5px 20px rgba(0,0,0,.08);
 }
 
-/* ============================
-   Buttons
-==========*/
+/*Buttons*/
 
 .student-add-btn,
 .parent-add-btn,
 .tea-btn,
 .sea-btn {
-    background: #2563eb !important;
-    border: none !important;
+    background: #2563eb;
+    border: none;
 }
 
 .student-add-btn:hover,
 .parent-add-btn:hover,
 .tea-btn:hover,
 .sea-btn:hover {
-    background: #1d4ed8 !important;
+    background: #1d4ed8;
 }
 
-/* ============================
-   Action Buttons
-==========*/
+/*Action Buttons*/
 
 .action-btns,
 .tch-actions {
@@ -1950,9 +1936,7 @@ table button:hover {
     gap: 10px;
 }
 
-/* ============================
-   Forms
-==========*/
+/*Forms*/
 
 .tea-page,
 .sea-page {
@@ -2006,9 +1990,7 @@ table button:hover {
     margin-top: 5px;
 }
 
-/* ============================
-   Timetable
-==========*/
+/*Timetable*/
 
 .table-form {
     display: grid;

@@ -156,8 +156,7 @@ function StudentList({ toast }) {
           >
             <Column field="serialNo" header="Sr No" />
             <Column field="name" header="Name" />
-            <Column
-              field="age" header="Age" />
+            <Column field="age" header="Age" />
             <Column field="course" header="Course" />
             <Column field="marks" header="Marks" />
             <Column header="Actions" body={actionTemplate} />
