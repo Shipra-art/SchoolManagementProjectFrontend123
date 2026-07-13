@@ -76,7 +76,7 @@ function StudentDashboard() {
         <h2>Student Dashboard</h2>
 
         <ul>
-          <li style={{ backgroundColor: "#007bff", color: "white" }}> Dashboard</li>
+          <li style={{ backgroundColor: "#007bff", color: "white" }}>  My Dashboard</li>
           <li onClick={() => navigate("/profile")}>My Profile</li>
           <li onClick={() => navigate("/courses")}>My Courses</li>
           <li onClick={() => navigate("/query-form")}>Queries</li>
