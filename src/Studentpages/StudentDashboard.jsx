@@ -129,19 +129,23 @@ function StudentDashboard() {
 
           <div className="card">
             <h3>Total Courses</h3>
-            <p>5</p>
+            <p>7</p>
           </div>
 
           <div className="card">
             <h3>Attendance</h3>
-            <p>85%</p>
+            <p>95%</p>
           </div>
 
           <div className="card">
-            <h3>Marks</h3>
-            <p>A Grade</p>
+            <h3>Assignments</h3>
+            <p>2 completed/<br></br>3 remaining</p>
           </div>
-
+          
+          <div className="card">
+            <h3>Upcoming Events</h3>
+            <p>None</p>
+          </div>
         </div>
 
         {/* Notification Modal */}

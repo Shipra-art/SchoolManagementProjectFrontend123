@@ -2984,9 +2984,7 @@ textarea {
 
 /* STUDENT DASHBOARD */
 
-/* ==========================================
-   STUDENT DASHBOARD
-========================*/
+
 
 .main-content {
     flex: 1;
@@ -3030,7 +3028,7 @@ textarea {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns:(3, 1fr);
     gap: 25px;
 }
 
@@ -3041,6 +3039,7 @@ textarea {
     text-align: center;
     box-shadow: 0 8px 20px rgba(0,0,0,.08);
     transition: .3s;
+    grid-row: 3;
 }
 
 .card:hover {
@@ -3060,9 +3059,7 @@ textarea {
     font-weight: bold;
 }
 
-/* ===========================
-   Notification Modal
-=========*/
+/*Notification Modal*/
 
 .ant-modal-content {
     border-radius: 12px !important;

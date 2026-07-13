@@ -33,56 +33,27 @@ function Courses() {
             {/* Main Content */}
             <div className="courses-container">
 
-                <h1 className="courses-title">
-                    My Subjects
-                </h1>
+                <h1 className="courses-title"> My Subjects </h1>
 
                 <div className="courses-card">
 
-                    <img
-                        src={CoursesImg}
-                        alt="Courses"
-                        className="courses-image"
-                    />
+                    <img src={CoursesImg} alt="Courses" className="courses-image" />
 
                     <div className="courses-details">
 
                         <h2>Available Subjects</h2>
 
                         <div className="subject-list">
-
-                            <div className="subject-item">
-                                Mathematics
-                            </div>
-
-                            <div className="subject-item">
-                                Computer Science
-                            </div>
-
-                            <div className="subject-item">
-                                Social Studies
-                            </div>
-
-                            <div className="subject-item">
-                                Science
-                            </div>
-
-                            <div className="subject-item">
-                                English
-                            </div>
-
-                            <div className="subject-item">
-                                Hindi
-                            </div>
-
+                            <div className="subject-item"> Mathematics</div>
+                            <div className="subject-item"> Computer Science</div>
+                            <div className="subject-item">  Social Studies </div>
+                            <div className="subject-item"> Science </div>
+                            <div className="subject-item"> English </div>
+                            <div className="subject-item"> Hindi </div>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
     );
 }
