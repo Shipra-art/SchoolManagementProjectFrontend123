@@ -56,7 +56,7 @@ function Query() {
         <h2>Student Dashboard</h2>
 
         <ul>
-          <li onClick={() => navigate("/student-dashboard")}>Dashboard</li>
+          <li onClick={() => navigate("/student-dashboard")}> My Dashboard</li>
           <li onClick={() => navigate("/profile")}>My Profile</li>
           <li onClick={() => navigate("/courses")}>My Courses</li>
           <li style={{ backgroundColor: "#007bff", color: "white" }}>Queries</li>
