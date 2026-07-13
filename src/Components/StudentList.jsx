@@ -126,9 +126,8 @@ function StudentList({ toast }) {
       
       <div className="main-content">
 
-        
         <div className="student-header">
-
+          
           <h2 className="student-title">
             Student Management
           </h2>

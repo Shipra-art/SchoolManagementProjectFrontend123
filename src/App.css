@@ -19,7 +19,6 @@
 /* Navbar */
 
 .navbar {
-  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -324,8 +323,7 @@
     color: white;
     padding: 25px 20px;
     height: 100vh;
-    overflow-y: auto;
-    box-sizing: border-box;
+   
 }
 
 .adm-sidebar-title {
@@ -699,6 +697,7 @@
 
 
 /* EDITADDMARKS */
+
 /* Main Container */
 
 .viewmarks-container {
@@ -889,24 +888,20 @@
     display: flex;
     min-height: 100vh;
 }
-
 .sidebar {
     width: 220px;
     background: #1565c0;
     color: white;
     padding: 20px;
 }
-
 .adm-sidebar-title {
     text-align: center;
     margin-bottom: 25px;
 }
-
 .adm-nav {
     list-style: none;
     padding: 0;
 }
-
 .adm-nav-item {
     padding: 12px;
     margin-bottom: 10px;
@@ -914,15 +909,12 @@
     border-radius: 5px;
     cursor: pointer;
 }
-
 .adm-nav-item:hover {
     background: #0d47a1;
 }
-
 .adm-logout {
     background: #d32f2f;
 }
-
 .adm-logout:hover {
     background: #b71c1c;
 }
