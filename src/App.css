@@ -8,12 +8,12 @@
 }
 
 /* Overlay */
-
+/* 
 .overlay {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-}
+} */
 
 /* Navbar */
 
@@ -25,7 +25,7 @@
 }
 
 .logo {
-  color: white;
+  color: #000;
   font-size: 28px;
   font-weight: bold;
 }
@@ -36,7 +36,7 @@
 }
 
 .nav-links a {
-  color: white;
+  color: #000;
   text-decoration: none;
   margin-right: 20px;
   font-size: 18px;
@@ -92,19 +92,20 @@
 }
 
 .hero-left h1 span {
-  color: yellow;
+  color: blue;
 }
 
 .hero-left p {
   font-size: 18px;
   line-height: 30px;
   margin-bottom: 25px;
+  color: black;
 }
 
 .admission-btn {
   padding: 12px 30px;
-  background: orange;
-  color: white;
+  background:#1565c0 ;
+  color: #000;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -117,31 +118,9 @@
   text-align: center;
 }
 
-.circle {
-  width: 300px;
-  height: 300px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  margin: auto;
-}
-
-/* Images */
-.teacher-image {
-  width: 180px;
-  top: 20px;
-  left: 20px;
-}
-
-.student-image {
-  width: 180px;
-  bottom: 0;
-  right: 20px;
-}
-
 /* Cards */
 
 .card {
-  background: white;
   padding: 12px;
   width: 160px;
   border-radius: 5px;
@@ -168,7 +147,7 @@
 .login-page {
   width: 100%;
   height: 100vh;
-  background: #e8f0fe;
+  background: lightblue;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -222,18 +201,16 @@
 
 .login-btn {
   width: 100%;
-  padding: 10px;
+  padding: 9px;
+  margin: 1px;
   background: #1565c0;
   color: white;
-  border: none;
-  border-radius: 4px;
+  outline: none;
+  border-radius: 3px;
   cursor: pointer;
   font-size: 16px;
 }
 
-.login-btn:hover {
-  background: #0d47a1;
-}
 
 /* Register */
 
@@ -294,6 +271,7 @@
 .register-btn {
   width: 100%;
   padding: 10px;
+  margin: 1px;
   background: #1565c0;
   color: white;
   border: none;
@@ -306,9 +284,8 @@
   background: #0d47a1;
 }
 
-/* Admin Dashboard */
-
-.dashboard {
+ /* Admin Dashboard  */
+.dashboard { 
   display: flex;
   min-height: 100vh;
   background: #eef3fb;
@@ -393,7 +370,7 @@
 
 .adm-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
   gap: 25px;
 }
 
@@ -448,6 +425,133 @@
 
 .adm-btn-blue:hover {
   background: #0d47a1;
+}
+
+/* AdminDashboard */
+/* Dashboard */
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 220px;
+  background-color: #1e88e5;
+  color: white;
+  padding: 20px;
+}
+
+.adm-sidebar-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.adm-nav {
+  list-style: none;
+  padding: 0;
+}
+
+.adm-nav-item {
+  padding: 12px;
+  margin-bottom: 10px;
+  background-color: #42a5f5;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.adm-nav-item:hover {
+  background-color: #1565c0;
+}
+
+.adm-logout {
+  background-color: #e53935;
+}
+
+.adm-logout:hover {
+  background-color: #c62828;
+}
+
+/* Main */
+
+.adm-main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Topbar */
+
+.adm-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #cccccc;
+  margin-bottom: 20px;
+}
+
+.adm-topbar-title {
+  color: #1565c0;
+}
+
+.adm-welcome {
+  font-size: 18px;
+}
+
+/* Cards */
+
+.adm-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 25px;
+}
+
+.adm-card {
+  width: 280px;
+  background-color: white;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.adm-card-title {
+  color: #1565c0;
+  margin-bottom: 10px;
+}
+
+.adm-card-desc {
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+
+.adm-btn {
+  width: 100%;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.adm-btn-green {
+  background-color: green;
+}
+
+.adm-btn-green:hover {
+  background-color: darkgreen;
+}
+
+.adm-btn-blue {
+  background-color: #1565c0;
+}
+
+.adm-btn-blue:hover {
+  background-color: #0d47a1;
 }
 
 /* ADMIN ATTENDANCE MANAGEMENT */
@@ -562,132 +666,6 @@
 
 .p-datatable tbody td {
   text-align: center;
-}
-
-/* AdminDashboard */
-/* Dashboard */
-
-.dashboard {
-  display: flex;
-  min-height: 100vh;
-  background-color: #f2f2f2;
-}
-
-/* Sidebar */
-
-.sidebar {
-  width: 220px;
-  background-color: #1e88e5;
-  color: white;
-  padding: 20px;
-}
-
-.adm-sidebar-title {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.adm-nav {
-  list-style: none;
-  padding: 0;
-}
-
-.adm-nav-item {
-  padding: 12px;
-  margin-bottom: 10px;
-  background-color: #42a5f5;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.adm-nav-item:hover {
-  background-color: #1565c0;
-}
-
-.adm-logout {
-  background-color: #e53935;
-}
-
-.adm-logout:hover {
-  background-color: #c62828;
-}
-
-/* Main */
-
-.adm-main {
-  flex: 1;
-  padding: 20px;
-}
-
-/* Topbar */
-
-.adm-topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  padding: 15px;
-  border: 1px solid #cccccc;
-  margin-bottom: 20px;
-}
-
-.adm-topbar-title {
-  color: #1565c0;
-}
-
-.adm-welcome {
-  font-size: 18px;
-}
-
-/* Cards */
-
-.adm-cards {
-  display: flex;
-  gap: 20px;
-}
-
-.adm-card {
-  width: 280px;
-  background-color: white;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  padding: 20px;
-}
-
-.adm-card-title {
-  color: #1565c0;
-  margin-bottom: 10px;
-}
-
-.adm-card-desc {
-  margin-bottom: 20px;
-}
-
-/* Buttons */
-
-.adm-btn {
-  width: 100%;
-  padding: 10px;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.adm-btn-green {
-  background-color: green;
-}
-
-.adm-btn-green:hover {
-  background-color: darkgreen;
-}
-
-.adm-btn-blue {
-  background-color: #1565c0;
-}
-
-.adm-btn-blue:hover {
-  background-color: #0d47a1;
 }
 
 /* EDITADDMARKS */
@@ -1226,8 +1204,7 @@
 }
 
 /* Table */
-
-.tch-table-wrapper {
+l .tch-table-wrapper {
   background: white;
   padding: 20px;
   border: 1px solid #cccccc;
@@ -1307,6 +1284,7 @@
 }
 
 /* TEACHEREDITADD */
+
 /* Teacher Add/Edit Page */
 
 .tea-page {
@@ -1393,6 +1371,7 @@
 }
 
 /* TIMETABLE */
+
 /* Main Content */
 
 .main-content {
@@ -1878,9 +1857,7 @@ table button:hover {
   color: #1e3a8a;
 }
 
-/* ============================
-   Table Cards
-==========*/
+/* Table Cards */
 
 .student-card,
 .parent-card,
@@ -2026,9 +2003,7 @@ table tr:nth-child(even) {
   background: #f8f8f8;
 }
 
-/* ============================
-   Report Card
-==========*/
+/* Report Card */
 
 .student-info-card {
   background: white;
@@ -2063,9 +2038,7 @@ table tr:nth-child(even) {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
-/* ============================
-   PrimeReact Table
-==========*/
+/* PrimeReact Table */
 
 .p-datatable {
   border-radius: 12px;
@@ -2082,10 +2055,7 @@ table tr:nth-child(even) {
   text-align: center;
 }
 
-/* PARENT TIMETABLE */
-/* =========================
-   Parent Timetable
-=======*/
+/*  Parent Timetable */
 
 .tt-container {
   flex: 1;
@@ -2161,9 +2131,7 @@ table tr:nth-child(even) {
 
 /* STUDENTPAGES */
 
-/* =========================
-   Student Courses Page
-=======*/
+/* Student Courses Page */
 
 .courses-container {
   flex: 1;
@@ -2230,10 +2198,7 @@ table tr:nth-child(even) {
   background: linear-gradient(135deg, #1d4ed8, #2563eb);
 }
 
-/* HOMEWORK */
-/* =========================
-   Student Homework
-=======*/
+/*  Student Homework*/
 
 .homework-container {
   flex: 1;
@@ -2312,41 +2277,7 @@ table tr:nth-child(even) {
   transition: 0.3s;
 }
 
-/* Responsive */
-
-@media (max-width: 992px) {
-  .homework-container {
-    padding: 20px;
-  }
-
-  .homework-title {
-    font-size: 28px;
-  }
-
-  .homework-card {
-    padding: 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  .homework-title {
-    font-size: 24px;
-  }
-
-  .homework-table {
-    font-size: 13px;
-  }
-
-  .subject-badge {
-    padding: 6px 12px;
-    font-size: 12px;
-  }
-}
-
-/* MARKS */
-/* ===========================
-   Student Marks Page
-=========*/
+/*  Student Marks Page */
 
 .viewmarks-container {
   flex: 1;
@@ -2409,40 +2340,7 @@ table tr:nth-child(even) {
   padding: 12px;
 }
 
-/* Responsive */
-
-@media (max-width: 992px) {
-  .viewmarks-container {
-    padding: 20px;
-  }
-
-  .heading {
-    font-size: 28px;
-  }
-
-  .table-box {
-    padding: 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  .heading {
-    font-size: 24px;
-  }
-
-  .table-box {
-    overflow-x: auto;
-  }
-
-  .table-box table {
-    min-width: 900px;
-  }
-}
-
-/* PROFILE */
-/* ==========================
-   Student Profile
-========*/
+/*  Student Profile */
 
 .profile-card {
   flex: 1;
@@ -2493,9 +2391,7 @@ table tr:nth-child(even) {
 }
 
 /* QUERY */
-/* ===========================
-   GLOBAL
-=========*/
+/* GLOBAL */
 
 * {
   margin: 0;
@@ -2508,9 +2404,7 @@ body {
   background: #f4f6fb;
 }
 
-/* ===========================
-   DASHBOARD
-=========*/
+/* DASHBOARD */
 
 .dashboard,
 .dashboard-container {
@@ -2519,9 +2413,7 @@ body {
   background: #eef2f7;
 }
 
-/* ===========================
-   SIDEBAR
-=========*/
+/* SIDEBAR */
 
 .sidebar {
   width: 250px;
@@ -2565,24 +2457,20 @@ body {
   padding: 30px;
 }
 
-/* ===========================
-   BUTTONS
-=========*/
+/* BUTTONS */
 
 button,
 .p-button {
-  border-radius: 6px !important;
+  border-radius: 6px;
 }
 
 .student-add-btn,
 .query-btn {
-  background: #2563eb !important;
-  border: none !important;
+  background: #2563eb;
+  border: none;
 }
 
-/* ===========================
-   TABLES
-=========*/
+/*  TABLES */
 
 .student-card,
 .tch-table-wrapper,
@@ -2610,9 +2498,7 @@ button,
   background: #edf5ff;
 }
 
-/* ===========================
-   HEADER
-=========*/
+/* HEADER */
 
 .student-header,
 .tch-header,
@@ -2633,9 +2519,7 @@ button,
   color: #1f2937;
 }
 
-/* ===========================
-   FORMS
-=========*/
+/* FORMS */
 
 .sea-card,
 .tea-card,
@@ -2692,9 +2576,7 @@ textarea {
   font-size: 13px;
 }
 
-/* ===========================
-   PROFILE
-=========*/
+/* PROFILE */
 
 .profile-card {
   width: 900px;
@@ -2722,9 +2604,7 @@ textarea {
   margin-bottom: 10px;
 }
 
-/* ===========================
-   COURSE
-=========*/
+/* COURSE */
 
 .courses-card {
   display: flex;
@@ -2754,9 +2634,7 @@ textarea {
   border-radius: 8px;
 }
 
-/* ===========================
-   QUERY
-=========*/
+/*  QUERY */
 
 .query-card {
   max-width: 700px;
@@ -2766,9 +2644,7 @@ textarea {
   margin-bottom: 15px;
 }
 
-/* ===========================
-   REPORT
-=========*/
+/*  REPORT */
 
 .student-info-card {
   background: white;
@@ -2805,9 +2681,7 @@ textarea {
   border-radius: 10px;
 }
 
-/* ===========================
-   TIMETABLE
-=========*/
+/* TIMETABLE */
 
 .tt-table {
   width: 100%;
@@ -2831,9 +2705,7 @@ textarea {
   font-weight: bold;
 }
 
-/* ===========================
-   HOMEWORK
-=========*/
+/*  HOMEWORK */
 
 .subject-badge {
   background: #2563eb;
@@ -2847,9 +2719,7 @@ textarea {
   font-weight: bold;
 }
 
-/* ===========================
-   ACTION BUTTONS
-=========*/
+/*  ACTION BUTTONS */
 
 .action-btns,
 .tch-actions {
@@ -2857,9 +2727,7 @@ textarea {
   gap: 10px;
 }
 
-/* ===========================
-   CARDS
-=========*/
+/* CARDS */
 
 .cards {
   display: grid;
@@ -2881,11 +2749,7 @@ textarea {
   transform: translateY(-5px);
 }
 
-/* STUDENT ATTENDANCE */
-
-/* ==========================
-   STUDENT ATTENDANCE
-========*/
+/*  STUDENT ATTENDANCE */
 
 .container {
   flex: 1;
@@ -2911,8 +2775,8 @@ textarea {
 
 /* Table Header */
 .container .p-datatable-thead > tr > th {
-  background: #2563eb !important;
-  color: white !important;
+  background: #2563eb;
+  color: white;
   text-align: center;
   font-size: 15px;
   padding: 14px;
@@ -3000,9 +2864,7 @@ textarea {
   transform: scale(1.1);
 }
 
-/* ===========================
-   STUDENT DASHBOARD
-=========================== */
+/*  STUDENT DASHBOARD */
 
 .main-content {
   flex: 1;
@@ -3274,10 +3136,7 @@ textarea {
   margin-top: 10px;
 }
 
-/* TIMETABLE */
-/* =====================================
-   STUDENT TIMETABLE
-===================*/
+/* STUDENT TIMETABLE */
 
 .main-content {
   flex: 1;
@@ -3354,9 +3213,7 @@ textarea {
 
 /* TEACHER PAGES */
 
-/* ===========================
-   GLOBAL
-=========*/
+/* GLOBAL */
 
 * {
   margin: 0;
@@ -3369,9 +3226,7 @@ body {
   background: #f4f7fc;
 }
 
-/* ===========================
-   DASHBOARD LAYOUT
-=========*/
+/* DASHBOARD LAYOUT */
 
 .dashboard,
 .dashboard-container {
@@ -3380,9 +3235,7 @@ body {
   background: #f4f7fc;
 }
 
-/* ===========================
-   SIDEBAR
-=========*/
+/* SIDEBAR */
 
 .sidebar {
   width: 250px;
@@ -3417,9 +3270,7 @@ body {
   background: #2563eb;
 }
 
-/* ===========================
-   MAIN CONTENT
-=========*/
+/* MAIN CONTENT */
 
 .main-content,
 .container,
@@ -3436,9 +3287,7 @@ body {
   padding: 30px;
 }
 
-/* ===========================
-   CARDS
-=========*/
+/* CARDS */
 
 .cards {
   display: flex;
@@ -3467,9 +3316,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* ===========================
-   FORM
-=========*/
+/* FORM */
 
 form {
   background: #fff;
@@ -3504,9 +3351,7 @@ button:hover {
   background: #1d4ed8;
 }
 
-/* ===========================
-   TABLE
-=========*/
+/* TABLE */
 
 table {
   width: 100%;
@@ -3533,9 +3378,7 @@ table tr:hover {
   background: #f8fbff;
 }
 
-/* ===========================
-   PRIMEREACT TABLE
-=========*/
+/* PRIMEREACT TABLE */
 
 .p-datatable {
   border-radius: 12px;
@@ -3552,9 +3395,7 @@ table tr:hover {
   background: #eef5ff;
 }
 
-/* ===========================
-   PROFILE
-=========*/
+/* PROFILE */
 
 .profile-card {
   margin-left: 280px;
@@ -3582,9 +3423,7 @@ table tr:hover {
   font-size: 16px;
 }
 
-/* ===========================
-   COURSES
-=========*/
+/* COURSES */
 
 .courses-card {
   display: flex;
@@ -3614,9 +3453,7 @@ table tr:hover {
   text-align: center;
 }
 
-/* ===========================
-   QUERY
-=========*/
+/* QUERY */
 
 .query-card {
   max-width: 700px;
@@ -3637,9 +3474,7 @@ table tr:hover {
   width: 100%;
 }
 
-/* ===========================
-   REPORT CARD
-=========*/
+/* REPORT CARD */
 
 .student-info-card {
   background: #fff;
@@ -3661,9 +3496,7 @@ table tr:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
-/* ===========================
-   TIMETABLE
-=========*/
+/* TIMETABLE */
 
 .table-box {
   background: #fff;
@@ -3677,9 +3510,7 @@ table tr:hover {
   font-weight: bold;
 }
 
-/* ===========================
-   HOMEWORK
-=========*/
+/* HOMEWORK */
 
 .homework-card,
 .ph-card {
@@ -3881,11 +3712,7 @@ h2 {
   margin-top: 100px;
 }
 
-/* STUDENTRESULTQUERY */
-
-/* ===========================
-   STUDENT RESULT QUERY
-=========*/
+/* STUDENT RESULTQUERY */
 
 .content {
   flex: 1;

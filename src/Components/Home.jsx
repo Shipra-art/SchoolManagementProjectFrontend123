@@ -13,9 +13,7 @@ function Home() {
       className="hero"
       style={{ backgroundImage: `url(${School})` }}
     >
-      {/* Overlay */}
-      <div className="overlay"></div>
-
+   
       {/* Navbar */}
       <nav className="navbar">
         <div className="logo">
