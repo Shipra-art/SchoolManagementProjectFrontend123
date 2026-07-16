@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import api from "../api/axios";
+import login from "../assets/login.png"
 import "../App.css";
 import { useNavigate } from "react-router-dom";
 
@@ -12,6 +13,7 @@ function Register() {
         password: "",
         role: ""
     });
+    const [error, setError] = useState("");
 
     const handleChange = (e) => {
         setFormData({
@@ -36,60 +38,81 @@ function Register() {
     };
 
     return (
-    
-        <div className="register-page">
-            <div className="register-card">
-                <h2 className="register-title">Register</h2>
 
-                <form onSubmit={handleRegister} className="register-form">
+        <div className="login-page">
+            <div className="login-container">
 
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Enter Name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="register-input"
-                    />
+                {/* Left Side */}
+                <div className="login-left">
 
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Enter Email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="register-input"
-                    />
+                    <h1 className="logo"></h1>
+                    <p className="subtitle">School Management System</p>
 
-                    <input
-                        type="password"
-                        name="password"
-                        placeholder="Enter Password"
-                        value={formData.password}
-                        onChange={handleChange}
-                        required
-                        className="register-input"
-                    />
+                    <h3 className="login-title">Register to your account</h3>
 
-                    <select
-                        name="role"
-                        value={formData.role}
-                        onChange={handleChange}
-                        className="register-input"
-                    >
-                        <option value="">Select Role</option>
-                        <option value="Student">Student</option>
-                        <option value="Teacher">Teacher</option>
-                        <option value="Parent">Parent</option>
-                    </select>
+                    {error && <p className="login-error">{error}</p>}
 
-                    <button type="submit" className="register-btn">
-                        Register
-                    </button>
+                    <form onSubmit={handleRegister} className="login-form">
 
-                </form>
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Enter Name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                            className="register-input"
+                        />
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Enter Email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                            className="register-input"
+                        />
+
+                        <input
+                            type="password"
+                            name="password"
+                            placeholder="Enter Password"
+                            value={formData.password}
+                            onChange={handleChange}
+                            required
+                            className="register-input"
+                        />
+
+                        <select
+                            name="role"
+                            value={formData.role}
+                            onChange={handleChange}
+                            className="register-input"
+                        >
+                            <option value="">Select Role</option>
+                            <option value="Student">Student</option>
+                            <option value="Teacher">Teacher</option>
+                            <option value="Parent">Parent</option>
+                        </select>
+
+                        <button type="submit" className="register-btn">
+                            Register
+                        </button>
+
+                        <div className="abc" >
+                            <p>Already have a account?</p>
+                            <a href="/login">Login</a>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div className="login-right">
+
+                    <img src={login} alt="Login" />
+
+                </div>
             </div>
         </div>
 

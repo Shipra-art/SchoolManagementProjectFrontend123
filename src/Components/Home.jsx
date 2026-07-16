@@ -1,113 +1,63 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import School from "../assets/school.jpg";
-import SchoolBoy from "../assets/Schoolboy.png";
-import Teacher from "../assets/Teacher.png";
-import "../App.css";
+import { Link } from "react-router-dom";
+import heroImage from "../assets/Hero.png"; // illustration image
 
 function Home() {
-  const navigate = useNavigate();
-
   return (
-    <div
-      className="hero"
-      style={{ backgroundImage: `url(${School})` }}
-    >
-   
-      {/* Navbar */}
+    <div className="home">
+
       <nav className="navbar">
         <div className="logo">
-          🎓 <span>Edu School</span>
+          STUDENT <span>LEARNING</span>
         </div>
 
         <div className="nav-links">
           <a href="/">Home</a>
-          <a href="/">About</a>
+          <a href="/">Tutorials</a>
+          <a href="/">Portfolio</a>
+          <a href="/">Work</a>
           <a href="/">Contact</a>
 
-          <button
-            className="login-btn"
-            onClick={() => navigate("/login")}
-          >
+          <Link to="/login" className="login-btn">
             Login
-          </button>
+          </Link>
 
-          <button
-            className="register-btn"
-            onClick={() => navigate("/Register")}
-          >
+          <Link to="/register" className="register-btn">
             Register
-          </button>
+          </Link>
         </div>
       </nav>
 
-      {/* Hero Section */}
       <div className="hero-content">
 
-        {/* Left Side */}
         <div className="hero-left">
-
-          <span className="tag">
-            School Management System
-          </span>
-
           <h1>
-            Your Kids <br />
-            Deserve The <br />
-            <span>Best Education</span>
+            STUDENT <br />
+            <span>GROWTH</span>
           </h1>
 
-          <p>
-            Manage Students, Teachers, Attendance,
-            Homework, Results, Parents and more with one
-            powerful school management platform.
-          </p>
+          <h3>
+            School Management System helps students,
+            teachers and parents manage academic activities
+            in one place.
+          </h3>
 
           <div className="hero-buttons">
-            <button
-              className="admission-btn"
-              onClick={() => navigate("/login")}
-            >
-              Get Started
-            </button>
+            <p className="try-btn">
+              Try Now
+            </p>
 
-         
+            <p className="learn-btn">
+              Learn More
+            </p>
           </div>
-
         </div>
 
-        {/* Right Side */}
         <div className="hero-right">
-
-          <div className="circle"></div>
-
-          {/* <img
-            src={Teacher}
-            alt="Teacher"
-            className="teacher-image"
-          />
-
-          <img
-            src={SchoolBoy}
-            alt="Student"
-            className="student-image"
-          /> */}
-
-          <div className="card card1">
-            👨‍🎓 500+ Students
-          </div>
-
-          <div className="card card2">
-            👩‍🏫 50+ Teachers
-          </div>
-
-          <div className="card card3">
-            🏆 98% Results
-          </div>
-
+          <img src={heroImage} alt="Student Learning" />
         </div>
 
       </div>
+
     </div>
   );
 }

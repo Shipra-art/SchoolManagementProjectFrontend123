@@ -1,4 +1,5 @@
 import { useState } from "react";
+import login from "../assets/login.png"
 import api from "../api/axios";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
@@ -26,7 +27,7 @@ function Login() {
     try {
       const res = await api.post("/auth/login", formData);
 
-      console.log("Response Data:",res.data)
+      console.log("Response Data:", res.data)
 
       const data = res.data;
 
@@ -41,7 +42,7 @@ function Login() {
         navigate("/student-dashboard");
       } else if (data.role === "Parent") {
         navigate("/parent-dashboard");
-      }else {
+      } else {
         navigate("/login");
       }
 
@@ -52,44 +53,67 @@ function Login() {
 
   return (
     <div className="login-page">
-      <div className="login-card">
+      <div className="login-container">
 
-        <h2 className="login-title">School Login</h2>
+        {/* Left Side */}
+        <div className="login-left">
 
-        {error && (
-          <p className="login-error">{error}</p>
-        )}
+          <h1 className="logo"></h1>
+          <p className="subtitle">School Management System</p>
 
-        <form onSubmit={handleLogin} className="login-form">
+          <h3 className="login-title">Login to your account</h3>
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter Email"
-            value={formData.email}
-            onChange={handleChange}
-            className="login-input"
-            required
-          />
+          {error && <p className="login-error">{error}</p>}
 
-          <input
-            type="password"
-            name="password"
-            placeholder="Enter Password"
-            value={formData.password}
-            onChange={handleChange}
-            className="login-input"
-            required
-          />
+          <form onSubmit={handleLogin} className="login-form">
 
-          <button type="submit" className="login-btn">
-            Login
-          </button>
+            <input
+              type="email"
+              name="email"
+              placeholder="Username or Email"
+              value={formData.email}
+              onChange={handleChange}
+              className="login-input"
+              required
+            />
 
-        </form>
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={formData.password}
+              onChange={handleChange}
+              className="login-input"
+              required
+            />
+
+            <a href="#" className="forgot">
+              Forgot Password?
+            </a>
+
+            <button type="submit" className="login-btn">
+              Login
+            </button>
+
+            <div className="abc">
+              <p>Don't have an account?</p>
+              <a href="/register">Register</a>
+            </div>
+
+          </form>
+
+        </div>
+
+        {/* Right Side */}
+        <div className="login-right">
+
+          <img src={login} alt="Login"/>
+
+        </div>
+
       </div>
-    </div>
-  );
-}
 
+    </div>
+  )
+};
 export default Login;
