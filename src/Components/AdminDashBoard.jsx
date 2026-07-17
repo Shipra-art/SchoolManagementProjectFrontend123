@@ -1,63 +1,36 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Calender from "../assets/Calender.png"
 import "../App.css";
 
 function AdminDashboard() {
-
   const navigate = useNavigate();
 
-  const cards = [
-    {
-      title: "Student List",
-      desc: "Manage all student records from one place.",
-      route: "/student-list"
-    },
-    {
-      title: "Teacher List",
-      desc: "Manage all teacher records.",
-      route: "/teacher"
-    },
-    {
-      title: "Parents List",
-      desc: "Manage parent information.",
-      route: "/parent-list"
-    },
-    {
-      title: "Attendance",
-      desc: "Manage attendance records.",
-      route: "/AdminAttendance"
-    },
-    {
-      title: "Edit Marks",
-      desc: "Manage examination results.",
-      route: "/EditAddMarks"
-    }
-  ];
-
   return (
-
     <div className="dashboard">
 
-      <div className="sidebar">
+      {/* Sidebar */}
+      <aside className="sidebar">
 
-        <h2 className="adm-sidebar-title">
-          School System
-        </h2>
+        <div className="logo">
+          <h2>Education</h2>
+        </div>
 
         <ul className="adm-nav">
+          <li className="adm-nav-item active">Dashboard</li>
 
           <li
             className="adm-nav-item"
             onClick={() => navigate("/student-list")}
           >
-            Student List
+            Students
           </li>
 
           <li
             className="adm-nav-item"
             onClick={() => navigate("/teacher")}
           >
-            Teacher List
+            Teachers
           </li>
 
           <li
@@ -71,7 +44,7 @@ function AdminDashboard() {
             className="adm-nav-item"
             onClick={() => navigate("/EditAddMarks")}
           >
-            Edit Marks
+            Results
           </li>
 
           <li
@@ -80,60 +53,149 @@ function AdminDashboard() {
           >
             Logout
           </li>
-
         </ul>
 
-      </div>
+        <div className="invite-box">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
+            alt="Invite"
+          />
+          <h4>Invite Friend</h4>
+          <button>Get the Link</button>
+        </div>
 
-      <div className="adm-main">
+      </aside>
 
+      {/* Main Content */}
+      <main className="adm-main">
+
+        {/* Topbar */}
         <div className="adm-topbar">
+          <h2>Dashboard</h2>
 
-          <h2 className="adm-topbar-title">
-            Dashboard
-          </h2>
+          <input
+            type="search"
+            className="search"
+            placeholder="Search..."
+          />
+        </div>
 
-          <span className="adm-welcome">
-            Welcome Admin 👋
-          </span>
+        {/* Stats */}
+        <div className="stats-row">
+
+          <div className="stat-card purple">
+            <h4>Total Students</h4>
+            <h2>1220</h2>
+          </div>
+
+          <div className="stat-card pink">
+            <h4>Total Teachers</h4>
+            <h2>120</h2>
+          </div>
+
+          <div className="stat-card blue">
+            <h4>Total Courses</h4>
+            <h2>15</h2>
+          </div>
+
+          <div className="stat-card orange">
+            <h4>Faculty Room</h4>
+            <h2>100</h2>
+          </div>
 
         </div>
 
-        <div className="adm-cards">
+        {/* Charts */}
+        <div className="content-row">
 
-          {
-            cards.map((card, index) => (
+          <div className="chart-box">
+            <h3>Statistics</h3>
 
-              <div className="adm-card" key={index}>
+            <div className="bars">
+              <span style={{ height: "60px" }}></span>
+              <span style={{ height: "120px" }}></span>
+              <span style={{ height: "90px" }}></span>
+              <span style={{ height: "160px" }}></span>
+              <span style={{ height: "130px" }}></span>
+            </div>
+          </div>
 
-                <h3 className="adm-card-title">
-                  {card.title}
-                </h3>
+          <div className="progress-box">
+            <h3>Course Activities</h3>
 
-                <p className="adm-card-desc">
-                  {card.desc}
-                </p>
-
-                <button
-                  className="adm-btn"
-                  onClick={() => navigate(card.route)}
-                >
-                  Open
-                </button>
-
-              </div>
-
-            ))
-          }
+            <div className="circle">
+              <span>75%</span>
+            </div>
+          </div>
 
         </div>
 
-      </div>
+        {/* Database */}
+        <div className="table-box">
+
+          <h3>Database</h3>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Student</th>
+                <th>Score</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Glenn Maxwell</td>
+                <td>80/100</td>
+                <td>Pass</td>
+              </tr>
+
+              <tr>
+                <td>Cathe Heovan</td>
+                <td>70/100</td>
+                <td>Pass</td>
+              </tr>
+
+              <tr>
+                <td>Yeador Gil</td>
+                <td>35/100</td>
+                <td>Fail</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </main>
+
+      {/* Right Sidebar */}
+      <aside className="right-sidebar">
+
+          <h3>January 2026</h3>
+        <div className="calendar">
+          <img src={Calender} alt="Calendar" className="calendar-img" />
+
+
+        </div>
+
+        <div className="notice-board">
+
+          <h3>Notice Board</h3>
+
+          <ul>
+            <li>Special Examination Notice</li>
+            <li>Admission Notice</li>
+            <li>COVID Vaccination Survey</li>
+            <li>Scholarship Notice</li>
+          </ul>
+
+        </div>
+
+      </aside>
 
     </div>
-
   );
-
 }
 
 export default AdminDashboard;

@@ -7,7 +7,7 @@ function Home() {
 
       <nav className="navbar">
         <div className="logo">
-          STUDENT <span>LEARNING</span>
+          STUDENT LEARNING
         </div>
 
         <div className="nav-links">
@@ -30,10 +30,10 @@ function Home() {
       <div className="hero-content">
 
         <div className="hero-left">
-          <h1>
+          {/* <h1>
             STUDENT <br />
             <span>GROWTH</span>
-          </h1>
+          </h1> */}
 
           <h3>
             School Management System helps students,
