@@ -336,12 +336,7 @@
   background: #0d47a1;
 }
 
-/* ===========================
-   ADMIN DASHBOARD
-=========================== */
-/* =========================
-   GLOBAL
-========================= */
+/* ADMIN DASHBOARD */
 
 * {
   margin: 0;
@@ -360,10 +355,7 @@ body {
   min-height: 100vh;
 }
 
-/* =========================
-   LEFT SIDEBAR
-========================= */
-
+/*/ LEFT SIDEBAR */
 .sidebar {
   position: fixed;
   left: 0;
@@ -381,7 +373,7 @@ body {
 
 .logo h2 {
   text-align: center;
-  color: #6c63ff;
+  color: white;
   margin-bottom: 30px;
 }
 
@@ -396,12 +388,12 @@ body {
   cursor: pointer;
   transition: 0.3s;
   font-size: 15px;
-  color: black;
+  color: white;
 }
 
 .adm-nav-item:hover,
 .adm-nav-item.active {
-  background: #6c63ff;
+  background: #3b82f6;
   color: white;
 }
 
@@ -439,9 +431,7 @@ body {
   cursor: pointer;
 }
 
-/* =========================
-   MAIN
-========================= */
+/* MAIN */
 
 .adm-main {
   flex: 1;
@@ -452,9 +442,7 @@ body {
   min-height: 100vh;
 }
 
-/* =========================
-   TOPBAR
-========================= */
+/* TOPBAR */
 
 .adm-topbar {
   height: 70px;
@@ -478,9 +466,7 @@ body {
   padding: 0 20px;
 }
 
-/* =========================
-   STAT CARDS
-========================= */
+/* STAT CARDS */
 
 .stats-row {
   display: grid;
@@ -522,10 +508,7 @@ body {
   background: #f59e0b;
 }
 
-/* =========================
-   CHART SECTION
-========================= */
-
+/* CHART SECTION */
 .content-row {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -565,34 +548,42 @@ body {
   border-radius: 8px 8px 0 0;
 }
 
-/* =========================
-   PROGRESS
-========================= */
-
+/*/ PROGRESS */
 .progress-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .circle {
   width: 180px;
   height: 180px;
   margin: auto;
-  border: 18px solid #7c3aed;
   border-radius: 50%;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #7c3aed;
   font-size: 28px;
   font-weight: bold;
+  color: #7c3aed;
+  background: conic-gradient(#7c3aed 0% 75%, #e5e7eb 75% 100% );
 }
 
-/* =========================
-   TABLE
-========================= */
+.circle::after {
+  content: "";
+  position: absolute;
+  width: 144px;
+  height: 144px;
+  background: #fff;
+  border-radius: 50%;
+}
 
+.circle span {
+  position: relative;
+  z-index: 1;
+}
+
+/*/ TABLE */
 .table-box {
   margin-top: 20px;
 }
@@ -621,10 +612,7 @@ tbody tr:hover {
   background: #f7f7ff;
 }
 
-/* =========================
-   RIGHT SIDEBAR
-========================= */
-
+/*/ RIGHT SIDEBAR */
 .right-sidebar {
   position: fixed;
   right: 0;
@@ -1506,6 +1494,7 @@ l .tch-table-wrapper {
   margin-bottom: 20px;
 }
 
+
 /* Form */
 
 .table-form {
@@ -1633,11 +1622,17 @@ table button:hover {
 
 /* Sidebar */
 
+
 .sidebar {
-  width: 220px;
-  background: #1565c0;
+  width: 240px;
+  background: #1e3a8a;
   color: white;
-  padding: 20px;
+  padding: 25px 20px;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .sidebar h2 {
@@ -2071,6 +2066,22 @@ table button:hover {
 }
 
 /*Timetable*/
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 240px;
+  height: 100vh;
+  background: #fff;
+  padding: 25px 20px;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 100;
+}
 
 .table-form {
   display: grid;

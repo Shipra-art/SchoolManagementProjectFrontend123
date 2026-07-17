@@ -73,11 +73,7 @@ function AdminDashboard() {
         <div className="adm-topbar">
           <h2>Dashboard</h2>
 
-          <input
-            type="search"
-            className="search"
-            placeholder="Search..."
-          />
+       
         </div>
 
         {/* Stats */}
@@ -146,19 +142,19 @@ function AdminDashboard() {
 
             <tbody>
               <tr>
-                <td>Glenn Maxwell</td>
+                <td>Esha</td>
                 <td>80/100</td>
                 <td>Pass</td>
               </tr>
 
               <tr>
-                <td>Cathe Heovan</td>
+                <td>Abhinav</td>
                 <td>70/100</td>
                 <td>Pass</td>
               </tr>
 
               <tr>
-                <td>Yeador Gil</td>
+                <td>Divyanshi</td>
                 <td>35/100</td>
                 <td>Fail</td>
               </tr>
