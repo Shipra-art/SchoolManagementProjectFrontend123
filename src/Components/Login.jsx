@@ -87,9 +87,7 @@ function Login() {
               required
             />
 
-            <a href="#" className="forgot">
-              Forgot Password?
-            </a>
+          
 
             <button type="submit" className="login-btn">
               Login

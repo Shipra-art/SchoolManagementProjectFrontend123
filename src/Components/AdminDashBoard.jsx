@@ -3,104 +3,137 @@ import { useNavigate } from "react-router-dom";
 import "../App.css";
 
 function AdminDashboard() {
+
   const navigate = useNavigate();
 
+  const cards = [
+    {
+      title: "Student List",
+      desc: "Manage all student records from one place.",
+      route: "/student-list"
+    },
+    {
+      title: "Teacher List",
+      desc: "Manage all teacher records.",
+      route: "/teacher"
+    },
+    {
+      title: "Parents List",
+      desc: "Manage parent information.",
+      route: "/parent-list"
+    },
+    {
+      title: "Attendance",
+      desc: "Manage attendance records.",
+      route: "/AdminAttendance"
+    },
+    {
+      title: "Edit Marks",
+      desc: "Manage examination results.",
+      route: "/EditAddMarks"
+    }
+  ];
+
   return (
+
     <div className="dashboard">
 
-      {/* Sidebar */}
-
       <div className="sidebar">
-        <h2 className="adm-sidebar-title">School System</h2>
+
+        <h2 className="adm-sidebar-title">
+          School System
+        </h2>
 
         <ul className="adm-nav">
-          <li onClick={() => navigate("/student-list")} className="adm-nav-item">Student List</li>
-          <li onClick={() => navigate("/teacher")} className="adm-nav-item">Teacher List</li>
-          <li onClick={() => navigate("/AdminAttendance")} className="adm-nav-item"> Attendance List</li>
-          <li onClick={() => navigate("/EditAddMarks")} className="adm-nav-item">Edit Marks</li>
-          <li onClick={() => navigate("/")} className="adm-nav-item adm-logout">Logout</li>
+
+          <li
+            className="adm-nav-item"
+            onClick={() => navigate("/student-list")}
+          >
+            Student List
+          </li>
+
+          <li
+            className="adm-nav-item"
+            onClick={() => navigate("/teacher")}
+          >
+            Teacher List
+          </li>
+
+          <li
+            className="adm-nav-item"
+            onClick={() => navigate("/AdminAttendance")}
+          >
+            Attendance
+          </li>
+
+          <li
+            className="adm-nav-item"
+            onClick={() => navigate("/EditAddMarks")}
+          >
+            Edit Marks
+          </li>
+
+          <li
+            className="adm-nav-item adm-logout"
+            onClick={() => navigate("/")}
+          >
+            Logout
+          </li>
+
         </ul>
+
       </div>
 
-      {/* Main Content */}
       <div className="adm-main">
 
-        {/* Topbar */}
         <div className="adm-topbar">
-          <h2 className="adm-topbar-title">Admin Dashboard</h2>
-          <span className="adm-welcome">Welcome Admin</span>
+
+          <h2 className="adm-topbar-title">
+            Dashboard
+          </h2>
+
+          <span className="adm-welcome">
+            Welcome Admin 👋
+          </span>
+
         </div>
 
-        {/* Cards */}
         <div className="adm-cards">
 
-          {/* Student Card */}
-          <div className="adm-card">
-            <h3 className="adm-card-title">Student List</h3>
-            <p className="adm-card-desc">
-              Manage all students
-            </p>
-            <p style={{ fontSize: "14px", color: "#000" }}>
-              The Student List enables administrators to efficiently manage all student records from a single location. <br></br>
-              View student details, update information, monitor enrollment,  <br></br>
-              and maintain accurate academic records to ensure smooth school administration. <br></br>
-            </p>
-          </div>
+          {
+            cards.map((card, index) => (
 
-          {/* Teacher Card */}
-          <div className="adm-card">
-            <h3 className="adm-card-title">Teacher List</h3>
-            <p className="adm-card-desc">
-              Manage all teachers
-            </p>
-            <p style={{ fontSize: "14px", color: "#000" }}>
-              The Teacher List enables administrators to efficiently manage all teacher records from a single location. <br></br>
-              View teacher details, update information, monitor attendance,  <br></br>
-              and maintain accurate professional records to ensure smooth school administration. <br></br>
-            </p>
+              <div className="adm-card" key={index}>
 
-          </div>
-          <div className="adm-card">
-            <h3 className="adm-card-title">Parents List</h3>
-            <p className="adm-card-desc">
-              Manage all Parents
-            </p>
-            <p style={{ fontSize: "14px", color: "#000" }}>
-              The Parents List enables administrators to efficiently manage all parent records from a single location. <br></br>
-              View parent details, update information, monitor attendance,  <br></br>
-              and maintain accurate professional records to ensure smooth school administration. <br></br>
-            </p>
+                <h3 className="adm-card-title">
+                  {card.title}
+                </h3>
 
-          </div>
+                <p className="adm-card-desc">
+                  {card.desc}
+                </p>
 
-          <div className="adm-card">
-            <h3 className="adm-card-title">Attendance List</h3>
-            <p className="adm-card-desc">
-              Manage attendance records
-            </p>
-            <p style={{ fontSize: "14px", color: "#000" }}>
-              The Attendance List enables administrators to efficiently manage all attendance records from a single location. <br></br>
-              View attendance details, update information, monitor attendance,  <br></br>
-              and maintain accurate professional records to ensure smooth school administration. <br></br>
-            </p>
+                <button
+                  className="adm-btn"
+                  onClick={() => navigate(card.route)}
+                >
+                  Open
+                </button>
 
-          </div>
-            <div className="adm-card">
-            <h3 className="adm-card-title">Edit Marks</h3>
-            <p className="adm-card-desc">
-              Manage exam results
-            </p>
-            <p style={{ fontSize: "14px", color: "#000"   }}>
-              The Edit Marks feature allows administrators to efficiently update and manage student exam results from a single location. <br></br>
-              View marks details, update information, monitor attendance,  <br></br>
-              and maintain accurate professional records to ensure smooth school administration. <br></br>
-            </p>
-            
-          </div>
+              </div>
+
+            ))
+          }
+
         </div>
+
       </div>
+
     </div>
+
   );
+
 }
 
 export default AdminDashboard;
