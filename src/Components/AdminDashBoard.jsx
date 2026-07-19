@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Calender from "../assets/Calender.png"
 import "../App.css";
 
 function AdminDashboard() {
@@ -73,7 +72,11 @@ function AdminDashboard() {
         <div className="adm-topbar">
           <h2>Dashboard</h2>
 
-       
+          <input
+            type="search"
+            className="search"
+            placeholder="Search..."
+          />
         </div>
 
         {/* Stats */}
@@ -154,8 +157,14 @@ function AdminDashboard() {
               </tr>
 
               <tr>
-                <td>Divyanshi</td>
-                <td>35/100</td>
+                <td>Yash</td>
+                <td>98/100</td>
+                <td>Pass</td>
+              </tr>
+
+              <tr>
+                <td>Gargee</td>
+                <td>22/100</td>
                 <td>Fail</td>
               </tr>
             </tbody>
@@ -168,11 +177,12 @@ function AdminDashboard() {
       {/* Right Sidebar */}
       <aside className="right-sidebar">
 
-          <h3>January 2026</h3>
         <div className="calendar">
-          <img src={Calender} alt="Calendar" className="calendar-img" />
+          <h3>January 2022</h3>
 
-
+          <div className="calendar-body">
+            <p>Calendar Here</p>
+          </div>
         </div>
 
         <div className="notice-board">
