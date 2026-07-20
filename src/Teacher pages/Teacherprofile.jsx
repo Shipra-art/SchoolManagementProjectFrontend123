@@ -15,17 +15,17 @@ function TeacherProfile() {
   };
 
   return (
-    <div className="teacher-profile-page">
+    <div className="teacher-dashboard">
 
       {/* Sidebar */}
-      <aside className="sidebar">
+      <aside className="teacher-sidebar">
 
-        <div className="logo">
-          <h2>Teacher Dashboard</h2>
+        <div className="teacher-logo">
+          <div className="teacher-logo-box">👩‍🏫</div>
+          <h2>Teacher Panel</h2>
         </div>
 
-        <ul className="teacher-nav">
-
+        <ul className="teacher-menu">
           <li onClick={() => navigate("/teacher-dashboard")}>Dashboard</li>
           <li className="active">Profile  </li>
           <li onClick={() => navigate("/classes")}> Classes</li>

@@ -65,29 +65,29 @@ function TeacherDashboard() {
   };
   return (
 
-    <div className="teacher-profile-page">
+    <div className="teacher-dashboard">
 
       {/* Sidebar */}
-      <aside className="sidebar">
+      <aside className="teacher-sidebar">
 
-        <div className="logo">
-          <h2>Teacher Dashboard</h2>
+        <div className="teacher-logo">
+          <div className="teacher-logo-box">👩‍🏫</div>
+          <h2>Teacher Panel</h2>
         </div>
 
-        <ul className="teacher-nav">
-
-          <li className="active">Dashboard  </li>
-          <li onClick={() => navigate("/profile")}>Profile</li>
-          <li onClick={() => navigate("/classes")}> Classes</li>
-          <li onClick={() => navigate("/report-card")}>  Report Card</li>
+        <ul className="teacher-menu">
+          <li className="active">Dashboard</li>
+          <li onClick={() => navigate("/teacher-profile")}>Profile</li>
+          <li onClick={() => navigate("/classes")}>Classes</li>
           <li onClick={() => navigate("/view-marks")}>Marks</li>
           <li onClick={() => navigate("/attendance")}>Attendance</li>
-          <li onClick={() => navigate("/query")}> Query </li>
-          <li onClick={() => navigate("/login")}>Logout</li>
-
+          <li onClick={() => navigate("/report-card")}>Report Card</li>
+          <li onClick={() => navigate("/query")}>Student Queries</li>
+          <li onClick={() => navigate("/login")}>  Logout </li>
         </ul>
 
       </aside>
+
       {/* Main */}
       <div className="teacher-main">
 
