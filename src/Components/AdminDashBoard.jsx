@@ -17,41 +17,11 @@ function AdminDashboard() {
 
         <ul className="adm-nav">
           <li className="adm-nav-item active">Dashboard</li>
-
-          <li
-            className="adm-nav-item"
-            onClick={() => navigate("/student-list")}
-          >
-            Students
-          </li>
-
-          <li
-            className="adm-nav-item"
-            onClick={() => navigate("/teacher")}
-          >
-            Teachers
-          </li>
-
-          <li
-            className="adm-nav-item"
-            onClick={() => navigate("/AdminAttendance")}
-          >
-            Attendance
-          </li>
-
-          <li
-            className="adm-nav-item"
-            onClick={() => navigate("/EditAddMarks")}
-          >
-            Results
-          </li>
-
-          <li
-            className="adm-nav-item adm-logout"
-            onClick={() => navigate("/")}
-          >
-            Logout
-          </li>
+          <li className="adm-nav-item" onClick={() => navigate("/student-list")}> Students </li>
+          <li className="adm-nav-item" onClick={() => navigate("/teacher")}>Teachers</li>
+          <li className="adm-nav-item" onClick={() => navigate("/AdminAttendance")}>Attendance</li>
+          <li className="adm-nav-item" onClick={() => navigate("/EditAddMarks")}> Results</li>
+          <li className="adm-nav-item adm-logout" onClick={() => navigate("/")}> Logout</li>
         </ul>
 
         <div className="invite-box">
@@ -71,7 +41,7 @@ function AdminDashboard() {
         {/* Topbar */}
         <div className="adm-topbar">
           <h2> Admin Dashboard</h2>
-          </div>
+        </div>
 
         {/* Stats */}
         <div className="stats-row">
@@ -105,7 +75,7 @@ function AdminDashboard() {
             <h3>Statistics</h3>
 
             <div className="bars">
-              <span style={{ height: "60px" }}></span>
+              <span style={{ height: "100px" }}></span>
               <span style={{ height: "120px" }}></span>
               <span style={{ height: "90px" }}></span>
               <span style={{ height: "160px" }}></span>
@@ -172,28 +142,85 @@ function AdminDashboard() {
       <aside className="right-sidebar">
 
         <div className="calendar">
-          <h3>January 2022</h3>
+          <h3>July 2026</h3>
 
-          <div className="calendar-body">
-            <p>Calendar Here</p>
+          <aside className="right-sidebar">
+            <div className="calendar">
+              <h3>July 2026</h3>
+
+              <div className="calendar-body">
+                <div className="calendar-grid">
+
+                  {/* Days */}
+                  <div className="day-name">Sun</div>
+                  <div className="day-name">Mon</div>
+                  <div className="day-name">Tue</div>
+                  <div className="day-name">Wed</div>
+                  <div className="day-name">Thu</div>
+                  <div className="day-name">Fri</div>
+                  <div className="day-name">Sat</div>
+
+                  {/* Empty cells before July 1 (Wednesday) */}
+                  <div className="day empty"></div>
+                  <div className="day empty"></div>
+                  <div className="day empty"></div>
+
+                  {/* Dates */}
+                  <div className="day">1</div>
+                  <div className="day">2</div>
+                  <div className="day">3</div>
+                  <div className="day">4</div>
+
+                  <div className="day">5</div>
+                  <div className="day">6</div>
+                  <div className="day">7</div>
+                  <div className="day">8</div>
+                  <div className="day">9</div>
+                  <div className="day">10</div>
+                  <div className="day">11</div>
+
+                  <div className="day">12</div>
+                  <div className="day">13</div>
+                  <div className="day">14</div>
+                  <div className="day">15</div>
+                  <div className="day">16</div>
+                  <div className="day">17</div>
+                  <div className="day">18</div>
+
+                  <div className="day">19</div>
+                  <div className="day today">20</div>
+                  <div className="day">21</div>
+                  <div className="day">22</div>
+                  <div className="day">23</div>
+                  <div className="day">24</div>
+                  <div className="day">25</div>
+
+                  <div className="day">26</div>
+                  <div className="day">27</div>
+                  <div className="day">28</div>
+                  <div className="day">29</div>
+                  <div className="day">30</div>
+                  <div className="day">31</div>
+
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <div className="notice-board">
+
+            <h3>Notice Board</h3>
+
+            <ul>
+              <li>Special Examination Notice</li>
+              <li>Admission Notice</li>
+              <li>COVID Vaccination Survey</li>
+              <li>Scholarship Notice</li>
+            </ul>
+
           </div>
         </div>
-
-        <div className="notice-board">
-
-          <h3>Notice Board</h3>
-
-          <ul>
-            <li>Special Examination Notice</li>
-            <li>Admission Notice</li>
-            <li>COVID Vaccination Survey</li>
-            <li>Scholarship Notice</li>
-          </ul>
-
-        </div>
-
       </aside>
-
     </div>
   );
 }
