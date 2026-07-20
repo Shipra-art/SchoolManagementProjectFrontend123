@@ -61,7 +61,7 @@ function Register() {
                             value={formData.name}
                             onChange={handleChange}
                             required
-                            className="register-input"
+                            className="login-input"
                         />
 
                         <input
@@ -71,7 +71,7 @@ function Register() {
                             value={formData.email}
                             onChange={handleChange}
                             required
-                            className="register-input"
+                            className="login-input"
                         />
 
                         <input
@@ -81,14 +81,14 @@ function Register() {
                             value={formData.password}
                             onChange={handleChange}
                             required
-                            className="register-input"
+                            className="login-input"
                         />
 
                         <select
                             name="role"
                             value={formData.role}
                             onChange={handleChange}
-                            className="register-input"
+                            className="login-input"
                         >
                             <option value="">Select Role</option>
                             <option value="Student">Student</option>

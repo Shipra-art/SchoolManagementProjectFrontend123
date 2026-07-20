@@ -52,10 +52,15 @@
 
 .nav-links .login-btn {
   color: white;
+  width:83px;
+  
 }
 
 .nav-links .register-btn {
   color: white;
+  width:83px;
+  height:45px;
+  
 }
 
 .hero-content {
@@ -346,12 +351,9 @@ body {
   min-height: 100vh;
 }
 
-/* =========================
-   LEFT SIDEBAR
-========================= */
+/* LEFT SIDEBAR*/
 
 .sidebar {
-  position: fixed;
   left: 0;
   top: 0;
   width: 240px;
@@ -436,9 +438,7 @@ body {
   min-height: 100vh;
 }
 
-/* =========================
-   TOPBAR
-========================= */
+/* TOPBAR */
 
 .adm-topbar {
   height: 70px;
@@ -462,9 +462,7 @@ body {
   padding: 0 20px;
 }
 
-/* =========================
-   STAT CARDS
-========================= */
+/* STAT CARDS */
 
 .stats-row {
   display: grid;
@@ -498,9 +496,8 @@ body {
 .blue { background: #3b82f6; }
 .orange { background: #f59e0b; }
 
-/* =========================
-   CHART SECTION
-========================= */
+/*
+/  CHART SECTION */
 
 .content-row {
   display: grid;
@@ -541,9 +538,8 @@ body {
   border-radius: 8px 8px 0 0;
 }
 
-/* =========================
-   PROGRESS
-========================= */
+/*
+/  PROGRESS */
 
 .progress-box {
   display: flex;
@@ -565,9 +561,8 @@ body {
   font-weight: bold;
 }
 
-/* =========================
-   TABLE
-========================= */
+/*
+/  TABLE */
 
 .table-box {
   margin-top: 20px;
@@ -597,9 +592,8 @@ tbody tr:hover {
   background: #f7f7ff;
 }
 
-/* =========================
-   RIGHT SIDEBAR
-========================= */
+/*
+/  RIGHT SIDEBAR */
 
 .right-sidebar {
   position: fixed;
@@ -675,55 +669,7 @@ tbody tr:hover {
   border-left: 4px solid #7c3aed;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
 
-@media (max-width:1200px){
-
-.right-sidebar{
-  display:none;
-}
-
-.adm-main{
-  margin-right:0;
-}
-
-.stats-row{
-  grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-@media (max-width:768px){
-
-.sidebar{
-  position:relative;
-  width:100%;
-  height:auto;
-}
-
-.adm-main{
-  margin-left:0;
-}
-
-.dashboard{
-  flex-direction:column;
-}
-
-.stats-row{
-  grid-template-columns:1fr;
-}
-
-.content-row{
-  grid-template-columns:1fr;
-}
-
-.search{
-  width:170px;
-}
-
-}
 
 /* ADMIN ATTENDANCE MANAGEMENT */
 
@@ -1454,7 +1400,6 @@ l .tch-table-wrapper {
   background: #b71c1c;
 }
 
-/* TEACHEREDITADD */
 
 /* Teacher Add/Edit Page */
 

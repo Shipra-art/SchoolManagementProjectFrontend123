@@ -70,14 +70,8 @@ function AdminDashboard() {
 
         {/* Topbar */}
         <div className="adm-topbar">
-          <h2>Dashboard</h2>
-
-          <input
-            type="search"
-            className="search"
-            placeholder="Search..."
-          />
-        </div>
+          <h2> Admin Dashboard</h2>
+          </div>
 
         {/* Stats */}
         <div className="stats-row">
