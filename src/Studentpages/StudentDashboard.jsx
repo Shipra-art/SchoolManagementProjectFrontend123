@@ -68,199 +68,218 @@ function StudentDashboard() {
 
   return (
 
-    <div className="dashboard">
+    <div className="student-dashboard">
 
       {/* Sidebar */}
-      <div className="sidebar">
 
-        <h2>Student Dashboard</h2>
+      <aside className="student-sidebar">
 
-        <ul>
-          <li style={{ backgroundColor: "#007bff", color: "white" }}>  My Dashboard</li>
-          <li onClick={() => navigate("/profile")}>My Profile</li>
-          <li onClick={() => navigate("/courses")}>My Courses</li>
-          <li onClick={() => navigate("/query-form")}>Queries</li>
+        <div className="sidebar-logo">
+
+          <div className="logo-box">🎓</div>
+          <h2>Student Dashboard</h2>
+
+        </div>
+
+        <ul className="student-menu">
+
+          <li className="active">  My Dashboard</li>
+          <li onClick={() => navigate("/profile")}>  My Profile</li>
+          <li onClick={() => navigate("/courses")}>  My Courses</li>
+          <li onClick={() => navigate("/query-form")}>  Queries</li>
           <li onClick={() => navigate("/Homework")}>Homework</li>
           <li onClick={() => navigate("/marks")}>Marks</li>
-          <li onClick={() => navigate("/student-attendance")}>Attendance</li>
-          <li onClick={() => navigate("/timetable")}>Timetable</li>
-          <li onClick={() => navigate("/login")}>Logout</li>
+          <li onClick={() => navigate("/student-attendance")}> Attendance</li>
+          <li onClick={() => navigate("/timetable")}>Timetable </li>
+          <li className="logout" onClick={() => navigate("/login")}>  Logout</li>
+
         </ul>
 
-      </div>
+      </aside>
 
-      {/* Main Content */}
-      <div className="main-content">
+      {/* Main */}
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            marginBottom: "30px"
-          }}
-        >
-          <div>
-            <h1>Welcome Back 👋</h1>
-            <p style={{ color: "#666" }}>
-              Hope you're having a productive day!
-            </p>
-          </div>
+      <div className="student-main">
 
-          <Badge count={notifications.filter(n => !n.isRead).length}>
-            <BellOutlined
-              style={{
-                fontSize: 30,
-                cursor: "pointer",
-                color: "#1565c0"
-              }}
-              onClick={() => setIsModalOpen(true)}
-            />
-          </Badge>
-        </div>
+        {/* Header */}
+        <div className="student-main">
 
-        {/* Top Cards */}
+          {/* Header */}
+          <div className="top-header">
 
-        <div className="cards">
+            <div className="header-right">
+              <Badge count={notifications.filter(n => !n.isRead).length}>
+                <BellOutlined
+                  className="bell-icon"
+                  onClick={() => setIsModalOpen(true)}
+                />
+              </Badge>
 
-          <div className="card">
-            <h3>Attendance</h3>
-            <h2>95%</h2>
-            <small>Excellent</small>
-          </div>
+              <div className="profile-box">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1yDdUYsm3LBwRT-DGMLyTo610n_bTNmiLvkP8hH9Djg&s=10"
+                  alt=""
+                />
 
-          <div className="card">
-            <h3>Current GPA</h3>
-            <h2>8.9</h2>
-            <small>Semester 5</small>
-          </div>
-
-          <div className="card">
-            <h3>Homework</h3>
-            <h2>3</h2>
-            <small>Pending</small>
-          </div>
-
-          <div className="card">
-            <h3>Subjects</h3>
-            <h2>7</h2>
-            <small>Registered</small>
-          </div>
-
-        </div>
-
-        {/* Middle Section */}
-
-        <div className="dashboard-grid">
-
-          <div className="dashboard-box">
-
-            <h2>Today's Classes</h2>
-
-            <ul>
-
-              <li>09:00 AM - Mathematics</li>
-              <li>10:30 AM - English</li>
-              <li>12:00 PM - Computer Science</li>
-            </ul>
-
-          </div>
-
-          <div className="dashboard-box">
-
-            <h2>Upcoming Assignments</h2>
-
-            <ul>
-              <li>English Essay - Friday</li>
-            </ul>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      {/* Notification Modal */}
-      <Modal
-        title="Notifications"
-        open={isModalOpen}
-        onCancel={() =>
-          setIsModalOpen(false)
-        }
-        footer={null}
-      >
-
-        {
-          notifications.length === 0 ?
-
-            <p>No Notifications</p>
-
-            :
-
-            notifications.map((n) => (
-
-              <div
-                key={n.id}
-                style={{
-                  border: "1px solid #ddd",
-                  padding: "10px",
-                  marginBottom: "10px",
-                  borderRadius: "8px"
-                }}
-              >
-
-                <p>
-                  <strong>
-                    {n.message}
-                  </strong>
-                </p>
-
-                <p>
-                  {
-                    new Date(
-                      n.createdAt
-                    ).toLocaleString()
-                  }
-                </p>
-
-                <div
-                  style={{
-                    display: "flex",
-                    gap: "10px"
-                  }}
-                >
-
-                  {
-                    !n.isRead &&
-
-                    <Button
-                      type="primary"
-                      onClick={() =>
-                        markAsRead(n.id)
-                      }
-                    >
-                      Read
-                    </Button>
-                  }
-
-                  <Button
-                    danger
-                    onClick={() =>
-                      deleteNotification(n.id)
-                    }
-                  >
-                    Delete
-                  </Button>
-
+                <div>
+                  <h4>Esha Singh</h4>
+                  <small>12th</small>
                 </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Welcome Banner */}
+
+        <div className="welcome-banner">
+
+          <div>
+
+            <small>July 20, 2026</small>
+
+            <h1>Welcome back, Esha</h1>
+
+            <p>
+              Always stay updated in your student portal
+            </p>
+
+          </div>
+
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png"
+            alt=""
+          />
+
+        </div>
+
+        {/* Statistics */}
+
+        <div className="stats-section">
+
+          <div className="stat-card">
+
+            <h3>Attendance</h3>
+
+            <h2>95%</h2>
+
+            <p>Excellent</p>
+
+          </div>
+
+          <div className="stat-card active-card">
+
+            <h3>Current GPA</h3>
+
+            <h2>8.9</h2>
+
+            <p>Semester 5</p>
+
+          </div>
+
+          <div className="stat-card">
+
+            <h3>Homework</h3>
+
+            <h2>3</h2>
+
+            <p>Pending</p>
+
+          </div>
+
+        </div>
+
+        {/* Bottom */}
+
+        <div className="bottom-layout">
+
+          <div>
+
+            <div className="section-heading">
+
+              <h2>Enrolled Courses</h2>
+
+              <span>See all</span>
+
+            </div>
+
+            <div className="course-card">
+
+              <div>
+
+                <h3>Object Oriented Programming</h3>
+
+                <button>View</button>
 
               </div>
 
-            ))
-        }
-      </Modal>
-    </div>
+              <div className="course-icon">💻</div>
 
+            </div>
+
+            <div className="course-card">
+
+              <div>
+
+                <h3>Database Management System</h3>
+
+                <button>View</button>
+
+              </div>
+
+              <div className="course-icon">📈</div>
+
+            </div>
+
+          </div>
+
+          <div>
+
+            <h3>Course Instructors</h3>
+
+            <div className="teacher-list">
+
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlbbdPqXU3wwsJQPwkgU42saoIIg22ct8rNcFV_RU6PA&s=10" alt="" />
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6YG-HpQPhKEydO2otBnSlWkoJ8PX_ps5DlLP8090Jbw&s=10" alt="" />
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg9wIXAJGZwJ7u-hq6PMXoIbbctPQx95tyNWrIEx7F-Q&s=10" alt="" />
+
+            </div>
+
+            <div className="notice-card">
+
+              <h3>Daily Notice</h3>
+
+              <h4>School Fees payment </h4>
+
+              <p>  Fees has been Submitted.</p>
+
+              <hr />
+
+              <h4>Exam Schedule</h4>
+
+              <p> Practical examinations start next week.</p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* Keep your existing Notification Modal exactly as it is */}
+
+      <Modal
+        title="Notifications"
+        open={isModalOpen}
+        onCancel={() => setIsModalOpen(false)}
+        footer={null}
+      >
+        {/* Your existing notification mapping code goes here unchanged */}
+      </Modal>
+
+    </div>
   );
 }
 

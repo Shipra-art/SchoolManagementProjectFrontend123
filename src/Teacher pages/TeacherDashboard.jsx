@@ -63,160 +63,187 @@ function TeacherDashboard() {
 
     }
   };
-
   return (
-    <div className="dashboard">
+
+    <div className="teacher-profile-page">
 
       {/* Sidebar */}
-      <div className="sidebar">
+      <aside className="sidebar">
 
-        <h2>Teacher Dashboard</h2>
+        <div className="logo">
+          <h2>Teacher Dashboard</h2>
+        </div>
 
-        <ul>
-          <li style={{ backgroundColor: "#007bff", color: "white" }}> Dashboard</li>
-          <li onClick={() => navigate("/teacher-profile")}>Profile</li>
-          <li onClick={() => navigate("/classes")}>Classes</li>
-          <li onClick={() => navigate("/report-card")}>Report Card</li>
+        <ul className="teacher-nav">
+
+          <li className="active">Dashboard  </li>
+          <li onClick={() => navigate("/profile")}>Profile</li>
+          <li onClick={() => navigate("/classes")}> Classes</li>
+          <li onClick={() => navigate("/report-card")}>  Report Card</li>
           <li onClick={() => navigate("/view-marks")}>Marks</li>
           <li onClick={() => navigate("/attendance")}>Attendance</li>
-          <li onClick={() => navigate("/query")}>Query</li>
+          <li onClick={() => navigate("/query")}> Query </li>
           <li onClick={() => navigate("/login")}>Logout</li>
 
         </ul>
 
-      </div>
+      </aside>
+      {/* Main */}
+      <div className="teacher-main">
 
-      {/* Main Content */}
-      <div className="main-content">
+        {/* Header */}
+        <div className="teacher-header">
 
-        {/* Notification Bell */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "flex-end",
-            marginBottom: "20px"
-          }}
-        >
-
-          <Badge
-            count={
-              notifications.filter(
-                n => !n.isRead
-              ).length
-            }
-            showZero={false}
-          >
-
+          <Badge count={notifications.filter(n => !n.isRead).length}>
             <BellOutlined
-              style={{
-                fontSize: "30px",
-                cursor: "pointer"
-              }}
-              onClick={() =>
-                setIsModalOpen(true)
-              }
+              className="teacher-bell"
+              onClick={() => setIsModalOpen(true)}
             />
           </Badge>
 
+          <div className="teacher-profile">
+
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png"
+              alt=""
+            />
+
+            <div>
+              <h4>Mr. Sanjay Purohit</h4>
+              <small>Computer Science</small>
+            </div>
+
+          </div>
+
         </div>
 
-        <h1>Welcome Back Teacher</h1>
+        {/* Welcome Banner */}
 
-        <p className="subtitle">
-          Manage students, classes,
-          and marks easily.
-        </p>
+        <div className="teacher-banner">
 
-        <div className="card-container">
+          <div>
 
-          <div className="cards">
+            <small>20 July 2026</small>
+
+            <h1>Welcome Back, Teacher 👋</h1>
+
+            <p>
+              Manage your classes, students and academic activities.
+            </p>
+
+          </div>
+
+          <img src="https://cdn-icons-png.flaticon.com/512/4207/4207249.png" alt="" />
+
+        </div>
+
+        {/* Statistics */}
+
+        <div className="teacher-stats">
+
+          <div className="teacher-card">
             <h3>Total Classes</h3>
-            <p>6</p>
+            <h2>6</h2>
+            <p>This Semester</p>
           </div>
 
-          <div className="cards">
+          <div className="teacher-card active">
             <h3>Total Students</h3>
-            <p>42</p>
+            <h2>42</h2>
+            <p>Registered</p>
           </div>
 
-          <div className="cards">
-            <h3>Pending Assignments</h3>
-            <p>3</p>
+          <div className="teacher-card">
+            <h3>Assignments</h3>
+            <h2>18</h2>
+            <p>Submitted</p>
           </div>
 
-          <div className="cards">
-            <h3>Exams</h3>
-            <p>Midterm</p>
+          <div className="teacher-card">
+            <h3>Queries</h3>
+            <h2>5</h2>
+            <p>Pending</p>
           </div>
+
         </div>
 
-        {/* Notification Modal */}
-        <Modal
-          title="Notifications"
-          open={isModalOpen}
-          onCancel={() =>
-            setIsModalOpen(false)
-          }
-          footer={null}
-        >
-          {
-            notifications.length === 0 ?
-              <p>No Notifications</p>
-              :
-              notifications.map((n) => (
+        {/* Bottom */}
 
-                <div
-                  key={n.id}
-                  style={{
-                    border: "1px solid #ddd",
-                    borderRadius: "8px",
-                    padding: "10px",
-                    marginBottom: "10px"
-                  }}
-                >
+        <div className="teacher-bottom">
 
-                  <p>
-                    <strong>
-                      {n.message}
-                    </strong>
-                  </p>
+          <div className="teacher-left">
 
-                  <small>
-                    {
-                      new Date(
-                        n.createdAt
-                      ).toLocaleString()
-                    }
-                  </small>
+            <div className="teacher-section-title">
 
-                  <div className="top-bar">
+              <h2>Today's Classes</h2>
 
-                    {
-                      !n.isRead &&
+              <span>View All</span>
 
-                      <Button
-                        type="primary"
-                        onClick={() =>
-                          markAsRead(n.id)
-                        }
-                      >
-                        Read
-                      </Button>
-                    }
+            </div>
 
-                    <Button
-                      danger
-                      onClick={() =>
-                        deleteNotification(n.id)
-                      }
-                    >
-                      Delete
-                    </Button>
-                  </div>
-                </div>
-              ))
-          }
-        </Modal>
+            <div className="class-card">
+
+              <div>
+
+                <h3>Object Oriented Programming</h3>
+
+                <p>10:00 AM - 11:00 AM</p>
+
+                <a href="/classes"><button>Open Class</button></a>
+
+              </div>
+
+              <div className="class-icon">💻</div>
+
+            </div>
+
+            <div className="class-card">
+
+              <div>
+
+                <h3>Database Management</h3>
+
+                <p>12:00 PM - 1:00 PM</p>
+
+                <a href="/classes"><button>Open Class</button></a>
+
+              </div>
+
+              <div className="class-icon">📘</div>
+
+            </div>
+
+          </div>
+
+          <div className="teacher-right">
+
+            <h3>Top Students</h3>
+
+            <div className="teacher-student-list">
+
+              <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="" />
+              <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="" />
+              <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="" />
+
+            </div>
+
+            <div className="teacher-notice">
+
+              <h3>Today's Tasks</h3>
+
+              <p>✔ Upload attendance</p>
+
+              <p>✔ Verify marks</p>
+
+              <p>✔ Reply student queries</p>
+
+              <p>✔ Upload homework</p>
+
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
 
