@@ -27,10 +27,10 @@
   z-index: 2;
 }
 
-.logo {
-  font-size: 45px;
+.sidebar .logo h2 {
+  font-size: 30px;
   font-weight: bold;
-  color: #15c7dc;
+  color:white ;
 }
 
 .logo span {
@@ -491,8 +491,7 @@ body {
   background: #f59e0b;
 }
 
-/*
-/  CHART SECTION */
+/* CHART SECTION */
 
 .content-row {
   display: grid;
@@ -533,8 +532,7 @@ body {
   border-radius: 8px 8px 0 0;
 }
 
-/*
-/  PROGRESS */
+/*  PROGRESS */
 
 .progress-box {
   display: flex;
@@ -548,15 +546,12 @@ body {
   margin: auto;
   border-radius: 50%;
   position: relative;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 28px;
   font-weight: bold;
   color: #7c3aed;
-
   background: conic-gradient(#7c3aed 0% 75%, #e5e7eb 75% 100%);
 }
 

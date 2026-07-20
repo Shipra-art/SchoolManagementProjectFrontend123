@@ -139,10 +139,6 @@ function AdminDashboard() {
       </main>
 
       {/* Right Sidebar */}
-      <aside className="right-sidebar">
-
-        <div className="calendar">
-          <h3>July 2026</h3>
 
           <aside className="right-sidebar">
             <div className="calendar">
@@ -206,23 +202,8 @@ function AdminDashboard() {
               </div>
             </div>
           </aside>
-
-          <div className="notice-board">
-
-            <h3>Notice Board</h3>
-
-            <ul>
-              <li>Special Examination Notice</li>
-              <li>Admission Notice</li>
-              <li>COVID Vaccination Survey</li>
-              <li>Scholarship Notice</li>
-            </ul>
-
-          </div>
         </div>
-      </aside>
-    </div>
-  );
-}
+    
+)};
 
 export default AdminDashboard;
