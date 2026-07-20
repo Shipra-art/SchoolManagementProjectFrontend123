@@ -25,7 +25,7 @@ function TeacherProfile() {
         </div>
 
         <ul className="teacher-nav">
-          
+
           <li onClick={() => navigate("/teacher-dashboard")}>Dashboard</li>
           <li className="active">Profile  </li>
           <li onClick={() => navigate("/classes")}> Classes</li>
