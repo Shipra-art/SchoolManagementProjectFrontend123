@@ -103,11 +103,9 @@ function StudentList({ toast }) {
 
       
       <div className="sidebar">
-        <div className="adm-sidebar">
+        <div className="logo">
+          <h2>School System</h2>
 
-          <h2 className="adm-sidebar-title">
-            School System
-          </h2>
 
           <ul className="adm-nav">
             <li style={{ backgroundColor: "#007bff", color: "white" }}> Student List</li>

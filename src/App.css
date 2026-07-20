@@ -329,6 +329,9 @@
   background: #0d47a1;
 }
 
+
+/* ADMIN DASHBOARD */
+
 /* GLOBAL */
 
 * {
@@ -372,6 +375,7 @@ body {
 
 .adm-nav {
   list-style: none;
+  margin-bottom: 0;
 }
 
 .adm-nav-item {
@@ -696,17 +700,7 @@ tbody tr:hover {
   font-weight: bold;
 }
 
-.notice-board ul {
-  list-style: none;
-}
 
-.notice-board li {
-  padding: 12px;
-  margin-bottom: 10px;
-  background: white;
-  border-radius: 8px;
-  border-left: 4px solid #7c3aed;
-}
 
 /* ADMIN ATTENDANCE MANAGEMENT */
 
