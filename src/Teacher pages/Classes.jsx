@@ -7,16 +7,17 @@ function Classes() {
   const navigate = useNavigate()
 
   return (
-    <div className='dashboard'>
+    <div className='teacher-dashboard'>
 
       {/* Sidebar */}
-      <div className='sidebar'>
-        <h2>Teacher Dashboard</h2>
+      <div className='teacher-sidebar'>
+        <div className="teacher-logo-box">👩‍🏫</div>
+        <h2>Teacher Panel</h2>
 
-        <ul>
+        <ul className="teacher-menu">
           <li onClick={() => navigate("/teacher-dashboard")}> Dashboard</li>
           <li onClick={() => navigate("/teacher-profile")}>Profile</li>
-          <li style={{backgroundColor: "#007bff", color: "white"}}>Classes</li>
+          <li className="active">Classes</li>
           <li onClick={() => navigate("/report-card")}>Report Card</li>
           <li onClick={() => navigate("/view-marks")}>Marks</li>
           <li onClick={() => navigate("/attendance")}>Attendance</li>
