@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import AboutImg from "../assets/About.png"
 import "../App.css";
 
 function About() {
@@ -54,7 +54,7 @@ function About() {
         </div>
 
         <div className="hero-right">
-           <img src="https://media.istockphoto.com/id/1360092910/photo/words-with-about-us-web-concept-idea.jpg?s=612x612&w=0&k=20&c=TyTppcG3XxtU8Oc8C9O455Lnc0auZHlPEOJBuMDzFBE="
+           <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY-JgvMG-1zYL1HXmRx3Ji5OCbkfN3rw7Ddg946CEiIQ&s=10"}
             alt="About" /> 
         </div>
 

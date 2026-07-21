@@ -6,6 +6,7 @@ function Services() {
   return (
     <div className="home">
 
+
       <nav className="navbar">
 
         <div className="logo">
@@ -23,12 +24,12 @@ function Services() {
 
       </nav>
 
-      <div className="hero">
+      <div className="hero-content">
 
         <div className="hero-left">
 
           <h1>
-            <span className="blue">OUR</span>
+            <span className="About">OUR</span>
             <br />
             <span className="dark">SERVICES</span>
           </h1>
@@ -47,7 +48,7 @@ function Services() {
         </div>
 
         <div className="hero-right">
-          {/* <img src={serviceImage} alt="Services" /> */}
+           <img src="https://img.magnific.com/premium-vector/service-filled-outline-doodle-design-illustration-symbol-white-background-eps-10-file_848977-350.jpg?semt=ais_hybrid&w=740&q=80" alt="Services" /> 
         </div>
 
       </div>

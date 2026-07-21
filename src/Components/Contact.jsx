@@ -23,12 +23,12 @@ function Contact() {
 
       </nav>
 
-      <div className="hero">
+      <div className="hero-content">
 
         <div className="hero-left">
 
           <h1>
-            <span className="blue">CONTACT</span>
+            <span className="About">CONTACT</span>
             <br />
             <span className="dark">US</span>
           </h1>
@@ -45,7 +45,7 @@ function Contact() {
         </div>
 
         <div className="hero-right">
-          {/* <img src={contactImage} alt="Contact" /> */}
+           <img src="https://cdn.vectorstock.com/i/500p/89/87/six-simple-contact-icons-vector-60988987.jpg" alt="Contact" /> 
         </div>
 
       </div>
