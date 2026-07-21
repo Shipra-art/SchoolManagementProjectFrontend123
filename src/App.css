@@ -49,7 +49,7 @@ body{
 
 .navbar{
     width:90%;
-    max-width:1400px;
+    max-width:1500px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -91,11 +91,23 @@ body{
 }
 
 /* Login/Register Buttons */
-
-.login-btn,
-.register-btn{
-    width:120px;
+.login-btn{
+   width:120px;
     height:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:8px;
+    color:#fff !important;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:500;
+    transition:.3s;
+}
+
+.register-btn{
+    
+    
     display:flex;
     justify-content:center;
     align-items:center;
@@ -109,10 +121,12 @@ body{
 
 .login-btn{
     background:#1e3d74;
+  
 }
 
 .register-btn{
     background:#2d6dbc;
+      width:200px;
 }
 
 .login-btn:hover,
@@ -298,7 +312,7 @@ body{
   font-size: 14px;
 }
 
-.login-btn {
+ .login-button {
   width: 140px;
   padding: 13px;
   border: none;
@@ -310,9 +324,9 @@ body{
   transition: 0.3s;
 }
 
-.login-btn:hover {
+.login-button:hover {
   background: #0f2d53;
-}
+} 
 
 .abc {
   display: flex;

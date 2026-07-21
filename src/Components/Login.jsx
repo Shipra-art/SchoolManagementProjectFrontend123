@@ -89,7 +89,7 @@ function Login() {
 
           
 
-            <button type="submit" className="login-btn">
+            <button type="submit" className="login-button">
               Login
             </button>
 

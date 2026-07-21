@@ -23,13 +23,13 @@ function Home() {
           <a href="/">Work</a>
           <a href="/">Contact</a>
 
-          <Link to="/login" className="login-btn">
+          {/* <Link to="/login" className="login-btn">
             Login
-          </Link>
+          </Link> */}
 
-          <Link to="/register" className="register-btn">
+          {/* <Link to="/register" className="register-btn">
             Register
-          </Link>
+          </Link> */}
 
         </div>
 
@@ -45,8 +45,8 @@ function Home() {
             STUDENT
             <br />
             <span>GROWTH</span>
-        
-           
+
+
           </h1>
 
           <h3>
@@ -57,13 +57,17 @@ function Home() {
 
           <div className="hero-buttons">
 
-            <button className="try-btn">
-              Try Now
-            </button>
+            <a href="/login"><button className="try-btn">
+              Login
+            </button></a>
 
-            <button className="learn-btn">
-              Learn More
+
+
+             <a href="/register">
+              <button className="learn-btn">
+              Register
             </button>
+             </a>
 
           </div>
 
