@@ -7,24 +7,25 @@ function Classes() {
   const navigate = useNavigate()
 
   return (
-    <div className='teacher-dashboard'>
 
+    <div className='teacher-dashboard'>
       {/* Sidebar */}
       <div className='teacher-sidebar'>
         <div className="teacher-logo-box">👩‍🏫</div>
         <h2>Teacher Panel</h2>
 
-        <ul className="teacher-menu">
-          <li onClick={() => navigate("/teacher-dashboard")}> Dashboard</li>
-          <li onClick={() => navigate("/teacher-profile")}>Profile</li>
-          <li className="active">Classes</li>
-          <li onClick={() => navigate("/report-card")}>Report Card</li>
-          <li onClick={() => navigate("/view-marks")}>Marks</li>
-          <li onClick={() => navigate("/attendance")}>Attendance</li>
-          <li onClick={() => navigate("/query")}>Query</li>
-          <li onClick={() => navigate("/login")}>Logout</li>
-        </ul>
+      <ul className="teacher-menu">
+        <li onClick={() => navigate("/teacher-dashboard")}> Dashboard</li>
+        <li onClick={() => navigate("/teacher-profile")}>Profile</li>
+        <li className="active">Classes</li>
+        <li onClick={() => navigate("/report-card")}>Report Card</li>
+        <li onClick={() => navigate("/view-marks")}>Marks</li>
+        <li onClick={() => navigate("/attendance")}>Attendance</li>
+        <li onClick={() => navigate("/query")}>Query</li>
+        <li onClick={() => navigate("/login")}>Logout</li>
+      </ul>
       </div>
+      {/* </div> */}
 
       {/* Main Content */}
       <div className='main-content'>

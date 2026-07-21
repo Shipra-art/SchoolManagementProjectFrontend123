@@ -58,24 +58,24 @@ function ReportCard() {
     }
 
     return (
-        <div className="dashboard">
-            {/* Sidebar */}
-            <div className="sidebar">
-                <h2>Teacher Dashboard</h2>
+       <div className='teacher-dashboard'>
 
-                <ul>
-                    <li onClick={() => navigate("/teacher-dashboard")}> Dashboard</li>
-                    <li onClick={() => navigate("/teacher-profile")}>Profile</li>
-                    <li onClick={() => navigate("/classes")}>Classes</li>
-                    <li style={{ backgroundColor: "#007bff", color: "white" }}>Report Card</li>
-                    <li onClick={() => navigate("/view-marks")}>Marks</li>
-                    <li onClick={() => navigate("/attendance")}>Attendance</li>
-                    <li onClick={() => navigate("/query")}>Query</li>
-                    <li onClick={() => navigate("/login")}>Logout</li>
+      {/* Sidebar */}
+      <div className='teacher-sidebar'>
+        <div className="teacher-logo-box">👩‍🏫</div>
+        <h2>Teacher Panel</h2>
 
-                </ul>
-
-            </div>
+        <ul className="teacher-menu">
+          <li onClick={() => navigate("/teacher-dashboard")}> Dashboard</li>
+          <li onClick={() => navigate("/teacher-profile")}>Profile</li>
+          <li onClick={() => navigate("/classes")}>Classes</li>
+          <li className="active">Report Card</li>
+          <li onClick={() => navigate("/view-marks")}>Marks</li>
+          <li onClick={() => navigate("/attendance")}>Attendance</li>
+          <li onClick={() => navigate("/query")}>Query</li>
+          <li onClick={() => navigate("/login")}>Logout</li>
+        </ul>
+      </div>
 
             {/* Report Card */}
             <div className="report-container">
