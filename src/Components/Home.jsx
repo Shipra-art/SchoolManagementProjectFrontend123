@@ -18,10 +18,9 @@ function Home() {
 
         <div className="nav-links">
           <a href="/">Home</a>
-          <a href="/">Tutorials</a>
-          <a href="/">Portfolio</a>
-          <a href="/">Work</a>
-          <a href="/">Contact</a>
+          <a href="/About">About</a>
+          <a href="/Service">Service</a>
+          <a href="/Contact">Contact</a>
 
           {/* <Link to="/login" className="login-btn">
             Login
@@ -63,11 +62,11 @@ function Home() {
 
 
 
-             <a href="/register">
+            <a href="/register">
               <button className="learn-btn">
-              Register
-            </button>
-             </a>
+                Register
+              </button>
+            </a>
 
           </div>
 
