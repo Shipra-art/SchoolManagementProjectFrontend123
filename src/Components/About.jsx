@@ -6,23 +6,7 @@ function About() {
   return (
     <div className="home">
 
-      {/* Navbar */}
-      <nav className="navbar">
-
-        <div className="logo">
-          STUDENT
-          <br />
-          <span>LEARNING</span>
-        </div>
-
-        <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/about" className="active">About</Link>
-          <Link to="/services">Service</Link>
-          <Link to="/contact">Contact</Link>
-        </div>
-
-      </nav>
+      
 
       {/* Hero */}
 

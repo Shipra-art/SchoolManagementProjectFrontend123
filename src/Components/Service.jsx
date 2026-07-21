@@ -6,24 +6,6 @@ function Services() {
   return (
     <div className="home">
 
-
-      <nav className="navbar">
-
-        <div className="logo">
-          STUDENT
-          <br />
-          <span>LEARNING</span>
-        </div>
-
-        <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/services" className="active">Service</Link>
-          <Link to="/contact">Contact</Link>
-        </div>
-
-      </nav>
-
       <div className="hero-content">
 
         <div className="hero-left">

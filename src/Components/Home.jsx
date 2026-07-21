@@ -1,83 +1,85 @@
 import { Link } from "react-router-dom";
 import heroImage from "../assets/Hero.png";
 import "../App.css";
+import About from "./About";
+import Service from "./Service";
+import Contact from "./Contact";
+import Navbar from "./Navbar";
 
 function Home() {
   return (
-    <div className="home">
+    <div>
+     
 
-      {/* Navbar */}
-      <nav className="navbar">
+      <div className="home">
+        <nav className="navbar">
 
-        <div className="logo">
-          STUDENT
-          <br />
-
-          <span>LEARNING</span>
-        </div>
-
-        <div className="nav-links">
-          <a href="/">Home</a>
-          <a href="/About">About</a>
-          <a href="/Service">Service</a>
-          <a href="/Contact">Contact</a>
-
-          {/* <Link to="/login" className="login-btn">
-            Login
-          </Link> */}
-
-          {/* <Link to="/register" className="register-btn">
-            Register
-          </Link> */}
-
-        </div>
-
-      </nav>
-
-      {/* Hero Section */}
-
-      <div className="hero-content">
-
-        <div className="hero-left">
-
-          <h1>
+          <div className="logo">
             STUDENT
             <br />
-            <span>GROWTH</span>
+
+            <span>LEARNING</span>
+          </div>
+
+          <div className="nav-links">
+            <a href="/">Home</a>
+            <a href="/About">About</a>
+            <a href="/Service">Service</a>
+            <a href="/Contact">Contact</a>
 
 
-          </h1>
+          </div>
 
-          <h3>
-            School Management System helps students,
-            teachers and parents manage academic
-            activities in one place.
-          </h3>
+        </nav>
+        {/* Hero Section */}
 
-          <div className="hero-buttons">
+        <div className="hero-content">
 
-            <a href="/login"><button className="try-btn">
-              Login
-            </button></a>
+          <div className="hero-left">
+
+            <h1>
+              STUDENT
+              <br />
+              <span>GROWTH</span>
+
+
+            </h1>
+
+            <h3>
+              School Management System helps students,
+              teachers and parents manage academic
+              activities in one place.
+            </h3>
+
+            <div className="hero-buttons">
+
+              <a href="/login"><button className="try-btn">
+                Login
+              </button></a>
 
 
 
-            <a href="/register">
-              <button className="learn-btn">
-                Register
-              </button>
-            </a>
+              <a href="/register">
+                <button className="learn-btn">
+                  Register
+                </button>
+              </a>
 
+            </div>
+
+          </div>
+
+          <div className="hero-right">
+            <img src={heroImage} alt="Hero" />
           </div>
 
         </div>
 
-        <div className="hero-right">
-          <img src={heroImage} alt="Hero" />
-        </div>
-
       </div>
 
+      <About />
+      <Service />
+      <Contact />
     </div>
   );
 }

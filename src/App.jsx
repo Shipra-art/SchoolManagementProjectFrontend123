@@ -45,6 +45,7 @@ import Contact from './Components/Contact'
 import Service from './Components/Service'
 
 
+
 // import Notification from "./Components/Notification"
 // import Practice from "./Components/Practice"
 
@@ -62,6 +63,7 @@ const App = () => {
         <Route path="/About" element={<About/>}/>
         <Route path="/Services" element={<Service/>}/>
         <Route path="/Contact" element={<Contact/>}/>
+        
         <Route path="/login" element={<Login />} />
 
         {/* Dashboard Routes */}

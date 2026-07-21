@@ -6,22 +6,6 @@ function Contact() {
   return (
     <div className="home">
 
-      <nav className="navbar">
-
-        <div className="logo">
-          STUDENT
-          <br />
-          <span>LEARNING</span>
-        </div>
-
-        <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/services">Service</Link>
-          <Link to="/contact" className="active">Contact</Link>
-        </div>
-
-      </nav>
 
       <div className="hero-content">
 
