@@ -1,13 +1,19 @@
 import { Link } from "react-router-dom";
-import heroImage from "../assets/Hero.png"; // illustration image
+import heroImage from "../assets/Hero.png";
+import "../App.css";
 
 function Home() {
   return (
     <div className="home">
 
+      {/* Navbar */}
       <nav className="navbar">
+
         <div className="logo">
-          STUDENT LEARNING
+          STUDENT
+          <br />
+
+          <span>LEARNING</span>
         </div>
 
         <div className="nav-links">
@@ -24,36 +30,47 @@ function Home() {
           <Link to="/register" className="register-btn">
             Register
           </Link>
+
         </div>
+
       </nav>
+
+      {/* Hero Section */}
 
       <div className="hero-content">
 
         <div className="hero-left">
-          {/* <h1>
-            STUDENT <br />
+
+          <h1>
+            STUDENT
+            <br />
             <span>GROWTH</span>
-          </h1> */}
+        
+           
+          </h1>
 
           <h3>
             School Management System helps students,
-            teachers and parents manage academic activities
-            in one place.
+            teachers and parents manage academic
+            activities in one place.
           </h3>
 
           <div className="hero-buttons">
-            <p className="try-btn">
-              Try Now
-            </p>
 
-            <p className="learn-btn">
+            <button className="try-btn">
+              Try Now
+            </button>
+
+            <button className="learn-btn">
               Learn More
-            </p>
+            </button>
+
           </div>
+
         </div>
 
         <div className="hero-right">
-          <img src={heroImage} alt="Student Learning" />
+          <img src={heroImage} alt="Hero" />
         </div>
 
       </div>
