@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import aboutImage from "../assets/about.png";
+
 import "../App.css";
 
 function About() {
@@ -26,12 +26,12 @@ function About() {
 
       {/* Hero */}
 
-      <div className="hero">
+      <div className="hero-content">
 
         <div className="hero-left">
 
           <h1>
-            <span className="blue">ABOUT</span>
+            <span className="About">ABOUT</span>
             <br />
             <span className="dark">OUR SCHOOL</span>
           </h1>
@@ -54,7 +54,8 @@ function About() {
         </div>
 
         <div className="hero-right">
-          <img src={aboutImage} alt="About" />
+           <img src="https://media.istockphoto.com/id/1360092910/photo/words-with-about-us-web-concept-idea.jpg?s=612x612&w=0&k=20&c=TyTppcG3XxtU8Oc8C9O455Lnc0auZHlPEOJBuMDzFBE="
+            alt="About" /> 
         </div>
 
       </div>

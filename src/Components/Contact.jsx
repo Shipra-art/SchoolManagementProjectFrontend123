@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import contactImage from "../assets/contact.png";
+
 import "../App.css";
 
 function Contact() {
@@ -45,7 +45,7 @@ function Contact() {
         </div>
 
         <div className="hero-right">
-          <img src={contactImage} alt="Contact" />
+          {/* <img src={contactImage} alt="Contact" /> */}
         </div>
 
       </div>

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import serviceImage from "../assets/services.png";
+
 import "../App.css";
 
 function Services() {
@@ -47,7 +47,7 @@ function Services() {
         </div>
 
         <div className="hero-right">
-          <img src={serviceImage} alt="Services" />
+          {/* <img src={serviceImage} alt="Services" /> */}
         </div>
 
       </div>
