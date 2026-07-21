@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import heroImage from "../assets/Hero.png";
 import "../App.css";
 import About from "./About";
@@ -8,30 +7,10 @@ import Navbar from "./Navbar";
 
 function Home() {
   return (
-    <div>
-     
-
-      <div className="home">
-        <nav className="navbar">
-
-          <div className="logo">
-            STUDENT
-            <br />
-
-            <span>LEARNING</span>
-          </div>
-
-          <div className="nav-links">
-            <a href="/">Home</a>
-            <a href="/About">About</a>
-            <a href="/Service">Service</a>
-            <a href="/Contact">Contact</a>
-
-
-          </div>
-
-        </nav>
-        {/* Hero Section */}
+    <>
+      <Navbar />
+      {/* Home Section */}
+      <section id="home" className="home">
 
         <div className="hero-content">
 
@@ -41,28 +20,26 @@ function Home() {
               STUDENT
               <br />
               <span>GROWTH</span>
-
-
             </h1>
 
             <h3>
-              School Management System helps students,
-              teachers and parents manage academic
-              activities in one place.
+              Sardar Doon Public School  has Academic Excellence. The school celebrates a consistent track record of
+              board exam success, including a perfect 100% pass rate across Science,
+              Commerce, and Humanities streams in recent CBSE evaluations.
+            </h3>
+            
+            <h3>
+              Students benefit from a highly supportive, hardworking teaching staff that focuses on individual student progress
             </h3>
 
             <div className="hero-buttons">
 
-              <a href="/login"><button className="try-btn">
-                Login
-              </button></a>
-
-
+              <a href="/login">
+                <button className="try-btn">Login</button>
+              </a>
 
               <a href="/register">
-                <button className="learn-btn">
-                  Register
-                </button>
+                <button className="learn-btn">Register</button>
               </a>
 
             </div>
@@ -75,12 +52,24 @@ function Home() {
 
         </div>
 
-      </div>
+      </section>
 
-      <About />
-      <Service />
-      <Contact />
-    </div>
+      {/* About */}
+      <section id="about">
+        <About />
+      </section>
+
+      {/* Services */}
+      <section id="service">
+        <Service />
+      </section>
+
+      {/* Contact */}
+      <section id="contact">
+        <Contact />
+      </section>
+
+    </>
   );
 }
 

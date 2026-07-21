@@ -12,6 +12,7 @@
 body {
   background: #21bfd6;
   overflow-x: hidden;
+    padding-top: 120px;
 }
 
 /* =========================
@@ -43,29 +44,47 @@ body {
   z-index: 0;
 }
 
-/*  Navbar */
+/* Navbar */
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
   width: 90%;
   max-width: 1500px;
+
+  margin: 20px;
+  padding: 15px 30px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  z-index: 2;
-  margin-bottom: 40px;
+
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+  z-index: 1000;
 }
 
 /* Logo */
 
 .logo {
-  font-size: 65px;
+  display: flex;
+  align-items: center;
+  gap:10px;
+  font-size: 60px;
   font-weight: 700;
-  line-height: 0.9;
+  line-height: 1;
+}
+
+.student {
   color: #22bdd7;
 }
 
-.logo span {
+.learning {
   color: #173b69;
 }
 
@@ -213,7 +232,7 @@ body {
 
 .hero-right img {
   width: 100%;
-  margin-left:450px;
+  margin-left: 450px;
   max-width: 620px;
   height: auto;
   display: block;

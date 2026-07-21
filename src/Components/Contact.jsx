@@ -18,9 +18,9 @@ function Contact() {
           </h1>
 
           <p>📍 Jodhpur, Rajasthan</p>
-          <p>📞 +91 9876543210</p>
-          <p>📧 support@school.com</p>
-          <p>🕒 Monday - Saturday (9 AM - 5 PM)</p>
+          <p>📞 +91 9876543210, 123456789</p>
+          <p>📧 SardarDoon@school.com</p>
+          <p>🕒 Monday - Saturday (9 AM - 3 PM)</p>
 
           <button className="register-btn">
             Contact Now

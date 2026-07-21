@@ -1,28 +1,26 @@
-import React from 'react'
+import React from "react";
+import "../App.css";
 
 function Navbar() {
   return (
-    
- <nav className="navbar">
+    <nav className="navbar">
 
-          <div className="logo">
-            STUDENT
-            <br />
+      {/* Logo */}
+      <div className="logo">
+        <span className="student">Sardar Doon </span>
+        <span className="learning">Public School</span>
+      </div>
 
-            <span>LEARNING</span>
-          </div>
+      {/* Navigation Links */}
+      <div className="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#service">Service</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-          <div className="nav-links">
-            <a href="/">Home</a>
-            <a href="/About">About</a>
-            <a href="/Service">Service</a>
-            <a href="/Contact">Contact</a>
-
-
-          </div>
-
-        </nav>
-  )
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;
