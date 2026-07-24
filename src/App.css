@@ -10,9 +10,7 @@ body {
   overflow-x: hidden;
 }
 
-/* =========================
-   Home
-========================= */
+/*  Home */
 
 .home {
   min-height: 100vh;
@@ -64,7 +62,7 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  gap:10px;
+  gap: 10px;
   font-size: 60px;
   font-weight: 700;
   line-height: 1;
@@ -229,201 +227,195 @@ body {
 }
 
 /* About Page */
-/* ===========================
-        ABOUT SECTION
-=========================== */
 
-.about-section{
-    width:100%;
-    padding:90px 0;
+.about-section {
+  width: 100%;
+  padding: 90px 0;
 }
 
-.about-container{
-    width:90%;
-    max-width:1400px;
-    margin:auto;
-    background:#fff;
-    border-radius:25px;
-    padding:70px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:80px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+.about-container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+  background: #fff;
+  border-radius: 25px;
+  padding: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-.about-left{
-    flex:1;
+.about-left {
+  flex: 1;
 }
 
-.about-right{
-    flex:1;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.about-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.about-right img{
-    width:100%;
-    max-width:500px;
+.about-right img {
+  width: 100%;
+  max-width: 500px;
 }
 
-.about-subtitle{
-    display:inline-block;
-    color:#27b7d6;
-    font-size:18px;
-    font-weight:600;
-    letter-spacing:2px;
-    margin-bottom:15px;
+.about-subtitle {
+  display: inline-block;
+  color: #27b7d6;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
 }
 
-.about-heading{
-    font-size:68px;
-    line-height:1;
-    color:#1e3d74;
-    margin-bottom:25px;
-    font-weight:700;
+.about-heading {
+  font-size: 68px;
+  line-height: 1;
+  color: #1e3d74;
+  margin-bottom: 25px;
+  font-weight: 700;
 }
 
-.about-text{
-    font-size:18px;
-    line-height:1.8;
-    color:#555;
-    max-width:560px;
-    margin-bottom:35px;
+.about-text {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  max-width: 560px;
+  margin-bottom: 35px;
 }
 
-.about-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
-.about-card{
-    display:flex;
-    align-items:flex-start;
-    gap:15px;
-    padding:20px;
-    background:#f8fbff;
-    border:1px solid #d7e8ff;
-    border-radius:15px;
-    transition:.3s;
+.about-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  background: #f8fbff;
+  border: 1px solid #d7e8ff;
+  border-radius: 15px;
+  transition: 0.3s;
 }
 
-.about-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 12px 25px rgba(0,0,0,.12);
-    background:#fff;
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  background: #fff;
 }
 
-.about-card span{
-    font-size:24px;
-    color:#29b8d8;
-    font-weight:bold;
+.about-card span {
+  font-size: 24px;
+  color: #29b8d8;
+  font-weight: bold;
 }
 
-.about-card h3{
-    color:#1e3d74;
-    font-size:18px;
-    margin-bottom:6px;
+.about-card h3 {
+  color: #1e3d74;
+  font-size: 18px;
+  margin-bottom: 6px;
 }
 
-.about-card p{
-    color:#666;
-    font-size:14px;
-    line-height:1.6;
+.about-card p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
 }
-
-
 
 /* Services Page */
 
-.service-section{
-    width:100%;
-    padding:80px 0;
+.service-section {
+  width: 100%;
+  padding: 80px 0;
 }
 
-.service-container{
-    width:90%;
-    max-width:1400px;
-    margin:auto;
-    background:#fff;
-    border-radius:25px;
-    padding:70px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:60px;
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
+.service-container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+  background: #fff;
+  border-radius: 25px;
+  padding: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-.service-left{
-    flex:1;
+.service-left {
+  flex: 1;
 }
 
-.service-subtitle{
-    color:#2cb9d8;
-    font-size:18px;
-    font-weight:600;
-    letter-spacing:2px;
-    margin-bottom:10px;
+.service-subtitle {
+  color: #2cb9d8;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
-.service-text{
-    color:#666;
-    line-height:1.8;
-    margin:20px 0 35px;
-    max-width:500px;
+.service-text {
+  color: #666;
+  line-height: 1.8;
+  margin: 20px 0 35px;
+  max-width: 500px;
 }
 
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
-.service-card{
-    background:#f8fbff;
-    border:1px solid #d8e7ff;
-    border-radius:15px;
-    padding:22px;
-    transition:.3s ease;
-    cursor:pointer;
+.service-card {
+  background: #f8fbff;
+  border: 1px solid #d8e7ff;
+  border-radius: 15px;
+  padding: 22px;
+  transition: 0.3s ease;
+  cursor: pointer;
 }
 
-.service-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 12px 25px rgba(0,0,0,.12);
-    background:#fff;
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  background: #fff;
 }
 
-.service-card span{
-    font-size:28px;
+.service-card span {
+  font-size: 28px;
 }
 
-.service-card h3{
-    color:#1f3d73;
-    margin:12px 0 10px;
-    font-size:20px;
+.service-card h3 {
+  color: #1f3d73;
+  margin: 12px 0 10px;
+  font-size: 20px;
 }
 
-.service-card p{
-    color:#666;
-    font-size:15px;
-    line-height:1.6;
+.service-card p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
-.service-right{
-    flex:1;
-    display:flex;
-    justify-content:center;
+.service-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
-.service-right img{
-    width:100%;
-    max-width:430px;
+.service-right img {
+  width: 100%;
+  max-width: 430px;
 }
-
 
 /* Contact Page */
 
@@ -3513,9 +3505,7 @@ textarea {
 
 /*  STUDENT DASHBOARD */
 
-/* ===========================
-   STUDENT DASHBOARD
-===========================*/
+/*  Dashboard */
 
 .student-dashboard {
   display: flex;
@@ -3523,56 +3513,64 @@ textarea {
   background: #e8dbff;
   font-family: "Poppins", sans-serif;
   padding: 20px;
-  gap: 20px;
+  box-sizing: border-box;
 }
 
-/* Sidebar */
+/*  Sidebar */
 
 .student-sidebar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
   width: 250px;
+  height: calc(100vh - 40px);
   background: linear-gradient(180deg, #9b6cff, #7c3aed);
   border-radius: 20px;
-  color: #fff;
+  color: white;
   padding: 25px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  z-index: 999;
+}
+
+.student-sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.student-sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
 }
 
 .sidebar-logo {
   text-align: center;
-  margin-bottom: 40px;
-}
-
-.logo-box {
-  width: 90px;
-  height: 90px;
-  margin: auto;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 42px;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
 }
 
 .sidebar-logo h2 {
   font-size: 28px;
+  margin: 0;
 }
 
 .student-menu {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .student-menu li {
   display: flex;
   align-items: center;
-  gap: 12px;
+
   padding: 14px 18px;
   margin-bottom: 12px;
+
   border-radius: 12px;
   cursor: pointer;
+
   transition: 0.3s;
-  font-size: 16px;
 }
 
 .student-menu li:hover {
@@ -3580,7 +3578,7 @@ textarea {
 }
 
 .student-menu .active {
-  background: #fff;
+  background: white;
   color: #7c3aed;
   font-weight: 600;
 }
@@ -3589,22 +3587,156 @@ textarea {
   margin-top: 40px;
 }
 
-/* Main */
+/* STUDENT PROFILE */
+
+/* Main Container */
+
+.student-main{
+    flex:1;
+    margin:20px;
+    background:#f4f6fb;
+    border-radius:25px;
+    padding:30px;
+    overflow-y:auto;
+}
+
+/* Top Profile Card */
+
+.profile-header{
+    position:relative;
+    margin-top:80px;
+    margin-bottom:50px;
+    background:linear-gradient(135deg,#8b5cf6,#6d28d9);
+    border-radius:25px;
+    padding:90px 30px 35px;
+    text-align:center;
+    box-shadow:0 12px 30px rgba(109,40,217,.25);
+}
+
+/* Profile Image */
+
+.profile-img{
+    position:absolute;
+    top:-70px;
+    left:50%;
+    transform:translateX(-50%);
+    width:140px;
+    height:140px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid #fff;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+.profile-header h1{
+    color:#fff;
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.profile-header p{
+    color:#f3f3f3;
+    font-size:18px;
+}
+
+/* Section Title */
+
+.section-title{
+    display:inline-block;
+    background:#7c3aed;
+    color:#fff;
+    padding:12px 28px;
+    border-radius:12px;
+    font-size:20px;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+/* Grid */
+
+.profile-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+/* Information Card */
+
+.profile-card{
+    background:#fff;
+    border-radius:15px;
+    padding:18px 22px;
+    border-left:5px solid #7c3aed;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.profile-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.profile-card h4{
+    color:#777;
+    font-size:15px;
+    margin-bottom:8px;
+    font-weight:500;
+}
+
+.profile-card p{
+    color:#222;
+    font-size:20px;
+    font-weight:600;
+    margin:0;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.profile-grid{
+    grid-template-columns:1fr;
+}
+
+.profile-header{
+    margin-top:60px;
+    padding-top:80px;
+}
+
+.profile-img{
+    width:120px;
+    height:120px;
+    top:-60px;
+}
+
+.profile-header h1{
+    font-size:28px;
+}
+
+}
+/* ==========================
+   Main Content
+========================== */
 
 .student-main {
   flex: 1;
-  background: #fff;
+  margin-left: 290px;
+  background: white;
   border-radius: 22px;
   padding: 30px;
+
+  min-height: calc(100vh - 40px);
+  box-sizing: border-box;
 }
 
-/* Header */
+/*  Header */
+
 .top-header {
   display: flex;
-  justify-content: flex-end; /* Push everything to the right */
+  justify-content: flex-end;
   align-items: center;
-  margin-bottom: 25px;
-  width: 100%;
+
+  margin-bottom: 30px;
 }
 
 .header-right {
@@ -3628,65 +3760,61 @@ textarea {
 .profile-box img {
   width: 55px;
   height: 55px;
-  border-radius: 50%;
   object-fit: cover;
+  border-radius: 50%;
 }
 
 .profile-box h4 {
   margin: 0;
-  font-size: 16px;
 }
 
 .profile-box small {
-  color: #777;
-  font-size: 13px;
+  color: gray;
 }
 
-/* Welcome Banner */
+/*  Banner */
 
 .welcome-banner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(90deg, #9b6cff, #7c3aed);
-  border-radius: 18px;
+  color: white;
+  border-radius: 20px;
   padding: 30px;
-  color: #fff;
   margin-bottom: 30px;
 }
 
-.welcome-banner small {
-  opacity: 0.8;
-}
-
 .welcome-banner h1 {
-  margin: 12px 0;
-  font-size: 36px;
-}
-
-.welcome-banner p {
-  opacity: 0.9;
+  margin: 10px 0;
 }
 
 .welcome-banner img {
-  width: 220px;
+  width: 180px;
 }
 
-/* Statistics */
+/* ==========================
+   Stats
+========================== */
 
 .stats-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+
   margin-bottom: 30px;
 }
 
 .stat-card {
-  background: #fff;
+  background: white;
   border-radius: 18px;
+
   padding: 25px;
+
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
   transition: 0.3s;
 }
 
@@ -3698,21 +3826,17 @@ textarea {
   border: 2px solid #7c3aed;
 }
 
-.stat-card h3 {
-  color: #555;
-}
-
 .stat-card h2 {
-  font-size: 42px;
   color: #7c3aed;
-  margin: 10px 0;
+  font-size: 40px;
 }
-
 .stat-card p {
-  color: #777;
+  color: black;
 }
 
-/* Bottom */
+/* ==========================
+   Bottom
+========================== */
 
 .bottom-layout {
   display: grid;
@@ -3723,6 +3847,8 @@ textarea {
 .section-heading {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
   margin-bottom: 15px;
 }
 
@@ -3735,23 +3861,29 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   background: #efe5ff;
+
   border-radius: 18px;
+
   padding: 20px;
-  margin-bottom: 18px;
+
+  margin-bottom: 20px;
 }
 
 .course-card h3 {
-  margin-bottom: 15px;
   color: #7c3aed;
 }
 
 .course-card button {
   border: none;
   background: #7c3aed;
-  color: #fff;
-  padding: 10px 28px;
+  color: white;
+
+  padding: 10px 25px;
+
   border-radius: 30px;
+
   cursor: pointer;
 }
 
@@ -3761,6 +3893,75 @@ textarea {
 
 .course-icon {
   font-size: 50px;
+}
+
+.teacher-list {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0 25px;
+}
+
+.teacher-list img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.notice-card {
+  background: white;
+
+  padding: 20px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.notice-card hr {
+  margin: 15px 0;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 992px) {
+  .student-dashboard {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .student-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 0;
+    margin-bottom: 20px;
+  }
+
+  .student-main {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .stats-section {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .welcome-banner img {
+    margin-top: 20px;
+  }
 }
 
 /* Teachers */
@@ -4093,7 +4294,11 @@ table tr:hover {
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid #2563eb;
+  border:5px solid #9b6cff, #7c3aed;
+}
+
+.student-main .details p {
+  color: #9b6cff, #7c3aed;
 }
 
 .details p {

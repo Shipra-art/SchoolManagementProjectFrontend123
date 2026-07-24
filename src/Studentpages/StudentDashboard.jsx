@@ -76,7 +76,7 @@ function StudentDashboard() {
 
         <div className="sidebar-logo">
 
-          <div className="logo-box">🎓</div>
+          <div className="logo-box"></div>
           <h2>Student Dashboard</h2>
 
         </div>
@@ -100,9 +100,6 @@ function StudentDashboard() {
       {/* Main */}
 
       <div className="student-main">
-
-        {/* Header */}
-        <div className="student-main">
 
           {/* Header */}
           <div className="top-header">
@@ -129,7 +126,7 @@ function StudentDashboard() {
             </div>
 
           </div>
-        </div>
+        
 
         {/* Welcome Banner */}
 
