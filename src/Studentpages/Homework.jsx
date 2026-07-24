@@ -46,27 +46,27 @@ function StudentHomework() {
     };
 
     return (
-
-        <div className="dashboard-container">
+        <div className="student-dashboard">
 
             {/* Sidebar */}
-            <div className="sidebar">
+            <aside className="student-sidebar">
+                <div className="sidebar-logo">
+                    <div className="logo-box"></div>
+                    <h2>Student Dashboard</h2>
+                </div>
 
-                <h2>Student Dashboard</h2>
-
-                <ul>
-                    <li onClick={() => navigate("/student-dashboard")}> My Dashboard</li>
+                <ul className="student-menu">
+                    <li className="active">My Dashboard</li>
                     <li onClick={() => navigate("/profile")}>My Profile</li>
                     <li onClick={() => navigate("/courses")}>My Courses</li>
                     <li onClick={() => navigate("/query-form")}>Queries</li>
-                    <li style={{ backgroundColor: "#007bff", color: "white" }}>Homework</li>
+                    <li onClick={() => navigate("/Homework")}>Homework</li>
                     <li onClick={() => navigate("/marks")}>Marks</li>
                     <li onClick={() => navigate("/student-attendance")}>Attendance</li>
                     <li onClick={() => navigate("/timetable")}>Timetable</li>
-                    <li onClick={() => navigate("/login")}>Logout</li>
+                    <li className="logout" onClick={() => navigate("/login")}>Logout</li>
                 </ul>
-
-            </div>
+            </aside>
 
             {/* Main Content */}
             <div className="homework-container">
@@ -77,13 +77,39 @@ function StudentHomework() {
 
                 <Card className="homework-card">
 
-                    <DataTable value={homeworks} paginator rows={5} stripedRows showGridlines  className="homework-table">
-                        
-                        <Column field="subject" header="Subject" body={subjectTemplate}/>
-                        <Column field="title" header="Title"/>
-                        <Column field="description" header="Description"/>
-                        <Column field="dueDate" header="Due Date" body={dueDateTemplate}/>
+                    <DataTable
+                        value={homeworks}
+                        paginator
+                        rows={5}
+                        stripedRows
+                        showGridlines
+                        responsiveLayout="scroll"
+                        className="homework-table"
+                    >
+                        <Column
+                            field="subject"
+                            header="Subject"
+                            body={subjectTemplate}
+                            style={{ width: "140px" }}
+                        />
 
+                        <Column
+                            field="title"
+                            header="Title"
+                            style={{ width: "240px" }}
+                        />
+
+                        <Column
+                            field="description"
+                            header="Description"
+                        />
+
+                        <Column
+                            field="dueDate"
+                            header="Due Date"
+                            body={dueDateTemplate}
+                            style={{ width: "170px" }}
+                        />
                     </DataTable>
 
                 </Card>
@@ -91,8 +117,6 @@ function StudentHomework() {
             </div>
 
         </div>
-
     );
-}
-
+};
 export default StudentHomework;
