@@ -7,8 +7,7 @@ function Navbar() {
 
       {/* Logo */}
       <div className="logo">
-        <span className="student">Sardar Doon </span>
-        <span className="learning">Public School</span>
+        <p className="student"> 🎓Sardar Doon <br/> <span>Public School</span> </p>
       </div>
 
       {/* Navigation Links */}

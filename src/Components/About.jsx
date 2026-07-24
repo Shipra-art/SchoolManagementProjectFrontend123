@@ -1,50 +1,73 @@
-import { Link } from "react-router-dom";
-import AboutImg from "../assets/About.png"
+import AboutImg from "../assets/About.png";
 import "../App.css";
 
 function About() {
   return (
-    <div className="home">
+    <section className="about-section">
+      <div className="about-container">
 
-      
+        {/* Left */}
+        <div className="about-left">
 
-      {/* Hero */}
+          <span className="about-subtitle">WHO WE ARE</span>
 
-      <div className="hero-content">
-
-        <div className="hero-left">
-
-          <h1>
-            <span className="About">ABOUT</span>
-            <br />
-            <span className="dark">OUR SCHOOL</span>
+          <h1 className="about-heading">
+            ABOUT <br />
+            OUR SCHOOL
           </h1>
 
-          <p>
-            School Management System is an all-in-one platform
-            that helps students, teachers, parents and
-            administrators manage academic activities easily.
+          <p className="about-text">
+            Our School Management System is an all-in-one digital platform
+            that helps students, teachers, parents and administrators
+            efficiently manage academic activities with ease.
           </p>
 
-          <div className="feature-list">
+          <div className="about-grid">
 
-            <div>✔ Student Management</div>
-            <div>✔ Teacher Management</div>
-            <div>✔ Attendance</div>
-            <div>✔ Report Cards</div>
+            <div className="about-card">
+              <span>✔</span>
+              <div>
+                <h3>Student Management</h3>
+                <p>Manage student records.</p>
+              </div>
+            </div>
+
+            <div className="about-card">
+              <span>✔</span>
+              <div>
+                <h3>Teacher Management</h3>
+                <p>Manage teacher information.</p>
+              </div>
+            </div>
+
+            <div className="about-card">
+              <span>✔</span>
+              <div>
+                <h3>Attendance</h3>
+                <p>Track daily attendance.</p>
+              </div>
+            </div>
+
+            <div className="about-card">
+              <span>✔</span>
+              <div>
+                <h3>Report Cards</h3>
+                <p>Generate academic reports.</p>
+              </div>
+            </div>
 
           </div>
 
         </div>
 
-        <div className="hero-right">
-           <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY-JgvMG-1zYL1HXmRx3Ji5OCbkfN3rw7Ddg946CEiIQ&s=10"}
-            alt="About" /> 
+        {/* Right */}
+
+        <div className="about-right">
+          <img src={AboutImg} alt="About" />
         </div>
 
       </div>
-
-    </div>
+    </section>
   );
 }
 
