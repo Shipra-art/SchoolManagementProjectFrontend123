@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import "../App.css";
-import CoursesImg from "../assets/courses.png";
+import WidthImg from "../assets/Width.jpg";
 
 function Courses() {
 
@@ -9,52 +9,72 @@ function Courses() {
 
     return (
 
-        <div className="dashboard">
+        <div className="student-dashboard">
 
             {/* Sidebar */}
-            <div className="sidebar">
 
-                <h2>Student Dashboard</h2>
+            <aside className="student-sidebar">
 
-                <ul>
-                    <li onClick={() => navigate("/student-dashboard")}>My Dashboard</li>
-                    <li onClick={() => navigate("/profile")}>My Profile</li>
-                    <li style={{ backgroundColor: "#007bff", color: "white" }}>Courses</li>
-                    <li onClick={() => navigate("/query-form")}>Queries</li>
+                <div className="sidebar-logo">
+
+                    <div className="logo-box"></div>
+                    <h2>Student Dashboard</h2>
+
+                </div>
+
+                <ul className="student-menu">
+
+                    <li className="active">  My Dashboard</li>
+                    <li onClick={() => navigate("/profile")}>  My Profile</li>
+                    <li onClick={() => navigate("/courses")}>  My Courses</li>
+                    <li onClick={() => navigate("/query-form")}>  Queries</li>
                     <li onClick={() => navigate("/Homework")}>Homework</li>
                     <li onClick={() => navigate("/marks")}>Marks</li>
-                    <li onClick={() => navigate("/student-attendance")}>Attendance</li>
-                    <li onClick={() => navigate("/timetable")}>Timetable</li>
-                    <li onClick={() => navigate("/login")}>Logout</li>
+                    <li onClick={() => navigate("/student-attendance")}> Attendance</li>
+                    <li onClick={() => navigate("/timetable")}>Timetable </li>
+                    <li className="logout" onClick={() => navigate("/login")}>  Logout</li>
+
                 </ul>
 
-            </div>
+            </aside>
 
             {/* Main Content */}
             <div className="courses-container">
 
-                <h1 className="courses-title"> My Subjects </h1>
+                <h1 className="courses-title">My Subjects</h1>
 
-                <div className="courses-card">
+                <div className="courses-main-card">
 
-                    <img src={CoursesImg} alt="Courses" className="courses-image" />
+                    <div className="courses-left">
 
-                    <div className="courses-details">
+                        <img
+                            src={WidthImg}
+                            alt="Courses"
+                            className="courses-image"
+                        />
+
+                    </div>
+
+                    <div className="courses-right">
 
                         <h2>Available Subjects</h2>
 
                         <div className="subject-list">
-                            <div className="subject-item"> Mathematics</div>
-                            <div className="subject-item"> Computer Science</div>
-                            <div className="subject-item">  Social Studies </div>
-                            <div className="subject-item"> Science </div>
-                            <div className="subject-item"> English </div>
-                            <div className="subject-item"> Hindi </div>
+
+                            <div className="subject-card">📘 Mathematics</div>
+                            <div className="subject-card">💻 Computer Science</div>
+                            <div className="subject-card">🌍 Social Studies</div>
+                            <div className="subject-card">🔬 Science</div>
+                            <div className="subject-card">📖 English</div>
+                            <div className="subject-card">📝 Hindi</div>
+
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
+
     );
 }
 

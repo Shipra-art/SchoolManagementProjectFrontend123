@@ -49,24 +49,34 @@ function Query() {
   };
 
   return (
-    <div className="dashboard">
+    <div className="student-dashboard">
+
       {/* Sidebar */}
 
-      <div className="sidebar">
-        <h2>Student Dashboard</h2>
+      <aside className="student-sidebar">
 
-        <ul>
-          <li onClick={() => navigate("/student-dashboard")}> My Dashboard</li>
-          <li onClick={() => navigate("/profile")}>My Profile</li>
-          <li onClick={() => navigate("/courses")}>My Courses</li>
-          <li style={{ backgroundColor: "#007bff", color: "white" }}>Queries</li>
+        <div className="sidebar-logo">
+
+          <div className="logo-box"></div>
+          <h2>Student Dashboard</h2>
+
+        </div>
+
+        <ul className="student-menu">
+
+          <li className="active">  My Dashboard</li>
+          <li onClick={() => navigate("/profile")}>  My Profile</li>
+          <li onClick={() => navigate("/courses")}>  My Courses</li>
+          <li onClick={() => navigate("/query-form")}>  Queries</li>
           <li onClick={() => navigate("/Homework")}>Homework</li>
           <li onClick={() => navigate("/marks")}>Marks</li>
-          <li onClick={() => navigate("/student-attendance")}>Attendance</li>
-          <li onClick={() => navigate("/timetable")}>Timetable</li>
-          <li onClick={() => navigate("/login")}>Logout</li>
+          <li onClick={() => navigate("/student-attendance")}> Attendance</li>
+          <li onClick={() => navigate("/timetable")}>Timetable </li>
+          <li className="logout" onClick={() => navigate("/login")}>  Logout</li>
+
         </ul>
-      </div>
+
+      </aside>
 
       {/* Query Form */}
 

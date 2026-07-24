@@ -8,13 +8,13 @@ function StudentProfile() {
 
   const [student] = useState({
     name: "Esha",
-    roll: "112",
+    roll: "12",
     className: "12th Grade",
-    email: "Esha@email.com",
+    email: "Esha@gmail.com",
     phone: "9876543210",
     attendance: "91%",
     address: "Jodhpur, India",
-    dob: "31/12/2008",
+    dob: "31/12/2007",
     gender: "Female",
     parent: "Anil Vyas",
     fees: "Paid",
@@ -52,81 +52,77 @@ function StudentProfile() {
 
       <div className="student-main">
 
-        <div className="profile-header">
+        {/* Student ID Card */}
+
+        <div className="student-card">
 
           <img
             src={ProfileImg}
             alt="Profile"
             className="profile-img"
-          />
+          /> 
 
-          <h1>Student Profile</h1>
+          <div className="student-card-content">
+            <h2>{student.name}</h2>
+
+            <p>Roll No : {student.roll}</p>
+
+            <p>Class : {student.className}</p>
+
+            <div className="student-status">
+              <span>Attendance : {student.attendance}</span>
+              <span>Fees : {student.fees}</span>
+            </div>
+          </div>
 
         </div>
 
-        <div className="profile-grid">
+        {/* Personal Information */}
 
-          <div className="profile-card">
-            <h4>Name</h4>
-            <p>{student.name}</p>
+        <div className="info-card">
+
+          <div className="info-title">
+            Personal Information
           </div>
 
-          <div className="profile-card">
-            <h4>Roll Number</h4>
-            <p>{student.roll}</p>
-          </div>
+          <div className="info-grid">
 
-          <div className="profile-card">
-            <h4>Class</h4>
-            <p>{student.className}</p>
-          </div>
+            <div className="info-item">
+              <label>Email</label>
+              <p>{student.email}</p>
+            </div>
 
-          <div className="profile-card">
-            <h4>Email</h4>
-            <p>{student.email}</p>
-          </div>
+            <div className="info-item">
+              <label>Phone</label>
+              <p>{student.phone}</p>
+            </div>
 
-          <div className="profile-card">
-            <h4>Phone</h4>
-            <p>{student.phone}</p>
-          </div>
+            <div className="info-item">
+              <label>Date of Birth</label>
+              <p>{student.dob}</p>
+            </div>
 
-          <div className="profile-card">
-            <h4>Attendance</h4>
-            <p>{student.attendance}</p>
-          </div>
+            <div className="info-item">
+              <label>Gender</label>
+              <p>{student.gender}</p>
+            </div>
 
-          <div className="profile-card">
-            <h4>Address</h4>
-            <p>{student.address}</p>
-          </div>
+            <div className="info-item">
+              <label>Parent</label>
+              <p>{student.parent}</p>
+            </div>
 
-          <div className="profile-card">
-            <h4>Date of Birth</h4>
-            <p>{student.dob}</p>
-          </div>
+            <div className="info-item">
+              <label>Address</label>
+              <p>{student.address}</p>
+            </div>
 
-          <div className="profile-card">
-            <h4>Gender</h4>
-            <p>{student.gender}</p>
-          </div>
-
-          <div className="profile-card">
-            <h4>Parent</h4>
-            <p>{student.parent}</p>
-          </div>
-
-          <div className="profile-card">
-            <h4>Fees</h4>
-            <p>{student.fees}</p>
           </div>
 
         </div>
 
       </div>
-
     </div>
-  );
-}
-
+  )
+};
 export default StudentProfile;
